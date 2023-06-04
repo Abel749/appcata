@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Menu, Col, Row } from 'antd';
 import SearchButton from '../components/searchbutton';
 import AvatarLogin from '../components/avatarlogin';
+import Image from "next/image";
 
 const items = [
   {
@@ -22,7 +23,9 @@ const items = [
 const TopContent = (props) => (
   <>
     <Row>
-      <Col span={8}>网站logo等</Col>
+      <Col span={8}>
+          <Image src="/u110.png" width={60} height={60}  priority  />
+      </Col>
 	  <Col span={8}>
 	    <Menu
           mode="horizontal"

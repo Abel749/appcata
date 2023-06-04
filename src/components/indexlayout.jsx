@@ -5,6 +5,7 @@ import Content2 from '../components/content2';
 import FootContent from '../components/footcontent';
 import AppCard from '../components/appcard';
 import { Layout, Space } from 'antd';
+import HotList from "./hotlist";
 const { Header, Footer, Content } = Layout;
 
 const headerStyle = {
@@ -18,7 +19,7 @@ const headerStyle = {
 
 const contentStyle = {
   textAlign: 'center',
-  minHeight: 220,
+  minHeight: 700,
   lineHeight: '220px',
   color: '#fff',
   //backgroundColor: '#108ee9',
@@ -37,6 +38,7 @@ const IndexLayout = () => (
       <Header style={headerStyle}><TopContent frompage="home" /></Header>
 	  <Header style={contentStyle}><ThisMonthStat /></Header>
 	  <Header style={contentStyle}><Content2 /></Header>
+      <Header style={contentStyle} ><HotList /></Header>
 	  <Footer style={footerStyle}><FootContent /></Footer>
     </Layout>
   </Space>

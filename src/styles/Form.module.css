@@ -1,0 +1,36 @@
+
+.row {
+    line-height: 25px;
+    padding: 5px; 
+}
+
+.form {
+    /* background: var(--tabs-bg); */
+    color: #000; 
+    overflow-x: auto;
+}
+
+.select {
+    margin: 0 12px;
+    min-width: 130px;/*20230505 modify */
+    /* background: var(--tabs-bg); */
+}
+
+.select option { 
+    overflow-x: auto;
+    /* font: var(--text-color);; */
+}
+
+.switch {
+    margin: 0 12px;
+}
+
+.button {
+    background: #1677ff;
+    color: white;
+    padding: 5px;
+}
+
+.label {
+    color: black;
+}
