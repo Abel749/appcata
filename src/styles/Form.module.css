@@ -38,19 +38,19 @@
 .ppss{
     width:300px;height:300px;
 }
-.xinzeng1{
+.top{
     width:260px;
     height:40px;
     float:left;
 }
 
-.xinzeng2{
+.left{
     width:80px;
     height:240px;
     float:left;
     clear: left;
 }
-.xinzeng3{
+.right{
     width:180px;
     height:240px;
     float:left;

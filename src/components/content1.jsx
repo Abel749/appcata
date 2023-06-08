@@ -216,13 +216,13 @@ const   Content1 = (props) => {
       renderItem={(item) => (
         <List.Item>
           <div className={styles.ppss}>
-            <div className={styles.xinzeng1}>
+            <div className={styles.top}>
               <Image src="/u1418.png"  alt="" width={260} height={40} priority />
             </div>
-            <div className={styles.xinzeng2}>
+            <div className={styles.left}>
               <Image src="/u595.png" alt="" width={80} height={240} priority />
             </div>
-            <div className={styles.xinzeng3}>
+            <div className={styles.right}>
               <h3>{item.ItemName}</h3>
               <br/>
               <span><button>{item.type1}</button><button>{item.type2}</button></span>

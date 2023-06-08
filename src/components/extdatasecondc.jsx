@@ -1,82 +1,74 @@
-import { Row,Col,Button,Image,Space } from 'antd';
+import {Row, Col, List, Image} from 'antd';
 import React from 'react';
+import axios from "axios";
 
-const ExtDataSecondC = () => (
-  
-  <Row>
-    <Col span={8}>
-      <Image  src="firstc.png" />
-    </Col>
- 
-    <Col span={16}>
-      <Space size="small" direction="vertical">
+import { useState,useEffect } from 'react';
+import styles from "../styles/extada.module.css";
+const data =[];
+
+const ExtDataSecondC = () => {
+const [dataItem, setDataItem] = useState(data);
+
+useEffect(() => {
+    getType2();
+
+}, []);
+
+//二级数据类型初始化
+const getType2 = async () => {
+    const result = await axios(
+        'http://localhost:1337/api/types',
+    );
+    const dataTypes = result.data.data.map((item,index) => {
+        return   item.attributes;
+    })
+    let dataType1 =[];
+    // 去除重复一级数据类型
+    let dataTypeName2 =[];
+    for (let item of dataTypes) {
+        let code = item.code;
+        let typeName2 = item.type2;
+        if(dataTypeName2.indexOf(typeName2) == -1 ){
+            dataTypeName2.push(typeName2);
+            const dataTypeTemp = {
+                code: code,
+                name: typeName2,
+            }
+            //添加一级数据类型
+            dataType1.push(dataTypeTemp);
+        }
+
+    }
+    setDataItem(dataType1);
+
+};
+
+return (
+    <>
+        <div>
         <Row>
-          <Space size="large">
-            <Button type="primary">发票类</Button>
-            <Button type="primary">证件类</Button>
-            <Button type="primary">手机号码</Button>
-          </Space>
-        </Row>  
-  
-        <Row>
-		  <Space size="large">
-            <Button type="primary">地址位置</Button>
-            <Button type="primary">单位信息</Button>
-            <Button type="primary">银行卡要素</Button>
-	      </Space>
-        </Row> 
-        <Row>
-		  <Space size="large">
-            <Button type="primary">人脸</Button>
-            <Button type="primary">航旅</Button>
-            <Button type="primary">个人偿债</Button>
-		  </Space> 
-        </Row> 
-        <Row>
-		  <Space size="large">
-            <Button type="primary">信用征信</Button>
-            <Button type="primary">个人画像</Button>
-            <Button type="primary">企业画像</Button>
-	      </Space> 
-        </Row> 
-        <Row>
-	      <Space size="large">
-            <Button type="primary">反欺诈黑名单</Button>
-            <Button type="primary">征信黑名单</Button>
-            <Button type="primary">黑名单数据</Button>
-	      </Space> 
-        </Row> 
-        <Row>
-	      <Space size="large">
-            <Button type="primary">市场信息</Button>
-            <Button type="primary">车辆信息</Button>
-            <Button type="primary">房产价值评估</Button>
-	      </Space> 
-        </Row> 
-        <Row>
-	      <Space size="large">
-            <Button type="primary">资讯类数据</Button>
-            <Button type="primary">司法数据</Button>
-            <Button type="primary">信用征信</Button>
-	      </Space> 
-        </Row> 
-        <Row>
-	      <Space size="large">
-            <Button type="primary">监管处罚</Button>
-            <Button type="primary">法规数据</Button>
-            <Button type="primary">财汇数据</Button>
-	      </Space> 
-        </Row> 
-        <Row>
-	      <Space size="large">
-            <Button type="primary">公积金</Button>
-            <Button type="primary">反欺诈黑名单</Button>
-            <Button type="primary">反欺诈黑名单</Button>
-	      </Space> 
-        </Row> 
-      </Space>
-    </Col>
-  </Row> 
-);
+            <Col span={8}>
+                <Image src="firstc.png" alt=""/>
+            </Col>
+
+            <Col span={16}>
+                <List
+                    grid={{
+                        column: 3,
+
+                    }}
+                    dataSource={dataItem}
+                    renderItem={(item) => (
+                        <List.Item className={styles.list}>
+                            <button className={styles.button2}>{item.name}</button>
+                        </List.Item>
+                    )}
+                />
+            </Col>
+        </Row>
+        </div>
+    </>
+)
+}
 
 export default ExtDataSecondC;

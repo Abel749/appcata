@@ -1,0 +1,16 @@
+.button1{
+    width:180px;
+    height:40px;
+    color: whitesmoke;
+    background-color: #1199cc;
+}
+
+.button2{
+    width:120px;
+    height:40px;
+    color: whitesmoke;
+    background-color: #3377aa;
+}
+.list{
+    margin-bottom: 10px;
+}
