@@ -24,7 +24,7 @@ const TopContent = (props) => (
   <>
     <Row>
       <Col span={8}>
-          <Image src="/u110.png" width={60} height={60}  priority  />
+          <Image src="/u110.png" alt="" width={60} height={60}  priority  />
       </Col>
 	  <Col span={8}>
 	    <Menu

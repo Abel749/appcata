@@ -7,7 +7,7 @@ const ExtDataFirstC = () => (
   
     <Row>	
 	  <Col span={8}>
-	    <Image src="firstc.png" />
+	    <Image src="firstc.png" alt="" />
 	  </Col>
 	  
 	  <Col span={16}>

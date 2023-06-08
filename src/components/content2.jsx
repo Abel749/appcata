@@ -47,7 +47,7 @@ const Content2 = () => {
           <Row gutter={24}>
               <Col span={6} onMouseOver={handleMouseOver}
                    onMouseOut={handleMouseOut}>
-                  <Image src="/u112_state0.png" width={280} height={360} priority />
+                  <Image src="/u112_state0.png" alt="" width={280} height={360} priority />
                   {isHovering && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
@@ -59,7 +59,7 @@ const Content2 = () => {
               </Col>
               <Col span={6} onMouseOver={handleMouseOver2}
                    onMouseOut={handleMouseOut2}>
-                  <Image src="/u119_state0.png" width={280} height={360} priority />
+                  <Image src="/u119_state0.png" alt="" width={280} height={360} priority />
                   {isHovering2 && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
@@ -70,7 +70,7 @@ const Content2 = () => {
               </Col >
               <Col span={6} onMouseOver={handleMouseOver3}
                    onMouseOut={handleMouseOut3}>
-                  <Image src="/u126_state0.png" width={280} height={360}  priority  />
+                  <Image src="/u126_state0.png" alt="" width={280} height={360}  priority  />
                   {isHovering3 && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
@@ -81,7 +81,7 @@ const Content2 = () => {
               </Col>
               <Col span={6} onMouseOver={handleMouseOver4}
                    onMouseOut={handleMouseOut4}>
-                 <Image src="/u133_state0.png" width={280} height={360}  priority  />
+                 <Image src="/u133_state0.png" alt="" width={280} height={360}  priority  />
                   {isHovering4 && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
