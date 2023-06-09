@@ -4,10 +4,11 @@ import { List,Radio,Form,Row} from 'antd';
 import { useState,useEffect } from 'react';
 import styles from '../styles/Form.module.css';
 import Image from "next/image";
+import Link from "next/link";
 
 const  firstlevelMap_temp = [{ code: '', name: ''}];
 const  secondlevelMap_temp = [{ code: '', name: ''}];
-const data =[];
+const  data =[];
 
 const   Content1 = (props) => {
   const [firstlevelMap, setFirstlevelMap] = useState(firstlevelMap_temp);
@@ -106,6 +107,7 @@ const   Content1 = (props) => {
         url
     );
     const dataItems = result.data.data.map((item,index) => {
+      item.attributes.id = item.id;
       return   item.attributes;
     });
     const dataList = [];
@@ -116,6 +118,7 @@ const   Content1 = (props) => {
         let types2 = types.attributes.type2;
         item.type1 = types1;
         item.type2 = types2;
+        item.url = '/datadetail?itemId='+ item.id
         dataList.push(item);
       }
     }
@@ -130,15 +133,15 @@ const   Content1 = (props) => {
     if(url.indexOf('firstType') >0){
       let arr = url.split('=');
       fetchData(1,arr[1]);
+      setFirstlevel(arr[1]);
+      alert(arr[1])
     } else if(url.indexOf('secondType') >0){
       let arr = url.split('=');
       fetchData(2,arr[1]);
+      setSecondlevel(arr[1]);
     }else{
       fetchData(0,null);
     }
-
-
-
 
   }, []);
 
@@ -169,12 +172,13 @@ const   Content1 = (props) => {
     console.log(e.target.value);
   };
 
+
   return (
   <>
   <Form  className={styles.form} >
       <Row className={styles.row}   >
     <label className={styles.label}> 一级数据类型:  </label>
-    <Radio.Group value={firstlevel} onChange={handleFirstlevel}>
+    <Radio.Group  value={firstlevel} defaultValue={firstlevel} onChange={handleFirstlevel}>
       {firstlevelMap.map((item)=>
           <Radio.Button key = {item.code} value={item.code}>{item.name}</Radio.Button>
       )}
@@ -182,7 +186,7 @@ const   Content1 = (props) => {
       </Row>
     <Row className={styles.row}   >
       <label className={styles.label}> 二级数据类型:  </label>
-      <Radio.Group value={secondlevel} onChange={handleSecondlevel}>
+      <Radio.Group value={secondlevel} defaultValue={secondlevel} onChange={handleSecondlevel}>
         {secondlevelMap.map((item)=>
             <Radio.Button  key = {item.code} value={item.code}>{item.name}</Radio.Button>
         )}
@@ -224,25 +228,27 @@ const   Content1 = (props) => {
       }}
       dataSource={dataItem}
       renderItem={(item) => (
-        <List.Item>
-          <div className={styles.ppss}>
-            <div className={styles.top}>
-              <Image src="/u1418.png"  alt="" width={260} height={40} priority />
+        <List.Item >
+          <Link href = {item.url} >
+            <div className={styles.pss} >
+              <div className={styles.top}>
+                <Image src="/u1418.png"  alt="" width={260} height={40} priority />
+              </div>
+              <div className={styles.left}>
+                <Image src="/u595.png" alt="" width={80} height={240} priority />
+              </div>
+              <div className={styles.right}>
+                <h3>{item.ItemName}</h3>
+                <br/>
+                <span><button>{item.type1}</button><button>{item.type2}</button></span>
+                <br/>
+                <text>{item.ApplicationScenario}</text>
+                <br/>
+                <br/>
+                <p>{item.DataSources}</p>
+              </div>
             </div>
-            <div className={styles.left}>
-              <Image src="/u595.png" alt="" width={80} height={240} priority />
-            </div>
-            <div className={styles.right}>
-              <h3>{item.ItemName}</h3>
-              <br/>
-              <span><button>{item.type1}</button><button>{item.type2}</button></span>
-              <br/>
-              <text>{item.ApplicationScenario}</text>
-              <br/>
-              <br/>
-              <p>{item.DataSources}</p>
-            </div>
-          </div>
+          </Link>
         </List.Item>
       )}
     />

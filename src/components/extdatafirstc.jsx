@@ -45,27 +45,24 @@ const ExtDataFirstC = () => {
 
 	return (
 		<>
-			<div>
-		<Row>
-			<Col span={8}>
-				<Image src="firstc.png" alt=""/>
-			</Col>
-
-			<Col span={16}>
-				<List
-					grid={{
-						column: 2,
-					}}
-					dataSource={dataItem}
-					renderItem={(item) => (
-						<List.Item className={styles.button1} >
-							<Link href={item.url}>{item.name}</Link>
-						</List.Item>
-					)}
-				/>
-			</Col>
-		</Row>
-			</div>
+			<Row>
+				<Col span={8}>
+					<Image src="firstc.png" alt=""/>
+				</Col>
+				<Col span={16}>
+					<List
+						grid={{
+							column: 2,
+						}}
+						dataSource={dataItem}
+						renderItem={(item) => (
+							<List.Item className={styles.button1} >
+								<Link href={item.url}>{item.name}</Link>
+							</List.Item>
+						)}
+					/>
+				</Col>
+			</Row>
 		</>
 	)
 }

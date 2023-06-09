@@ -2,10 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {Card, List, Radio, Form, Row, Table, Avatar, Col, Menu,Descriptions} from 'antd';
 import { useState,useEffect } from 'react';
-import styles from '../styles/Form.module.css';
 import Image from "next/image";
-import SearchButton from "./searchbutton";
-import AvatarLogin from "./avatarlogin";
 const h1Style = {
     color:'black',
     marginLeft:'350px',
@@ -35,7 +32,7 @@ const h2Style = {
     color:'black',
     marginLeft:'395px',
     fontSize:'16px',
-    backgroundColor:'#7dbcea',
+    backgroundColor:'#E6F1FB',
     height:'35px',
     width:'950px',
     display:'flex',
@@ -49,16 +46,34 @@ const imageStyle3 = {
 
 
 
-const data ={
-    code: "111",
-
-
-};
-
-
-
+const data =[];
+const type =[];
 const DetailContent = (props) =>
-    (
+    {
+        const [dataItem, setDataItem] = useState(data);
+        const [dataType, setDataType] = useState(type);``
+        useEffect(() => {
+            getItemDetail();
+
+        }, []);
+
+        const getItemDetail = async () => {
+            let detailUrl = window.location.href.toString();
+            if(detailUrl.indexOf('itemId') >0){
+                let arr = detailUrl.split('=');
+                detailUrl = "http://localhost:1337/api/items/"+arr[1]+"?populate=*";
+            }
+            const result = await axios(
+                detailUrl
+            );
+            const dataDetail = result.data.data.attributes;
+            const itemType = result.data.data.attributes.type.data.attributes;
+            setDataItem(dataDetail);
+            setDataType(itemType);
+        };
+
+
+return (
 
         <>
             <div>
@@ -76,27 +91,26 @@ const DetailContent = (props) =>
                 </Descriptions.Item>
             </Descriptions>
             <Descriptions column={1} contentStyle={productInfoStyle}>
-                <Descriptions.Item label="">{data.code}</Descriptions.Item>
-                <Descriptions.Item label="">检验类数据</Descriptions.Item>
-                <Descriptions.Itemcode
-                    label="">检验类数据指根据客户提供的原始信息进行一致性和准确性校验的数据，主要包括学籍、学历核验、发票核验、驾驶证核验等数据。</Descriptions.Itemcode>
-                <Descriptions.Item label="">KJHT2021100012</Descriptions.Item>
-                <Descriptions.Item label="">金蝶征信有限公司</Descriptions.Item>
+                <Descriptions.Item label="">{dataItem.ItemName}</Descriptions.Item>
+                <Descriptions.Item label="">{dataType.type1}</Descriptions.Item>
+                <Descriptions.Item label="">{dataItem.ApplicationScenario}</Descriptions.Item>
+                <Descriptions.Item label="">{dataItem.ContractNum}</Descriptions.Item>
+                <Descriptions.Item label="">{dataItem.DataSources}</Descriptions.Item>
             </Descriptions>
             <div>
                 <Image src="/u2613.svg" style={imageStyle3} width={6} height={35} priority/>
                 <h1 style={h2Style}>基本信息</h1>
             </div>
             <Descriptions column={1} style={publicStyle}>
-                <Descriptions.Item label="产品名称">金碟征信</Descriptions.Item>
-                <Descriptions.Item label="数据来源">金蝶征信有限公司</Descriptions.Item>
-                <Descriptions.Item label="一级数据类型">核验类数据</Descriptions.Item>
-                <Descriptions.Item label="二级数据类型">发票类</Descriptions.Item>
-                <Descriptions.Item label="协议编码">KJHT2021100012</Descriptions.Item>
-                <Descriptions.Item label="合同编号">KJHT2021100012</Descriptions.Item>
+                <Descriptions.Item label="产品名称">{dataItem.ItemName}</Descriptions.Item>
+                <Descriptions.Item label="数据来源">{dataItem.DataSources}</Descriptions.Item>
+                <Descriptions.Item label="一级数据类型">{dataType.type1}</Descriptions.Item>
+                <Descriptions.Item label="二级数据类型">{dataType.type2}</Descriptions.Item>
+                <Descriptions.Item label="协议编码">{dataItem.AgreementNum}</Descriptions.Item>
+                <Descriptions.Item label="合同编号">{dataItem.ContractNum}</Descriptions.Item>
                 <Descriptions.Item
-                    label="产品描述">检验类数据指根据客户提供的原始信息进行一致性和准确性校验的数据，主要包括学籍、学历核验、发票核验、驾驶证核验等数据。</Descriptions.Item>
-                <Descriptions.Item label="关键词">征信</Descriptions.Item>
+                    label="产品描述">{dataItem.Description}</Descriptions.Item>
+                <Descriptions.Item label="关键词">{dataItem.KeyWords}</Descriptions.Item>
             </Descriptions>
             <div>
                 <Image src="/u2613.svg" style={imageStyle3} width={6} height={35} priority/>
@@ -111,21 +125,22 @@ const DetailContent = (props) =>
                 <h1 style={h2Style}>物理信息</h1>
             </div>
             <Descriptions column={1} style={publicStyle}>
-                <Descriptions.Item label="接入方式">金碟征信</Descriptions.Item>
-                <Descriptions.Item label="下游系统">接口类</Descriptions.Item>
-                <Descriptions.Item label="下游业务">核验类数据</Descriptions.Item>
+                <Descriptions.Item label="接入方式">{dataItem.AccessMode}</Descriptions.Item>
+                <Descriptions.Item label="下游系统">{dataItem.FollowSys}</Descriptions.Item>
+                <Descriptions.Item label="下游业务">{dataItem.FollowBuss}</Descriptions.Item>
             </Descriptions>
             <div>
                 <Image src="/u2613.svg" style={imageStyle3} width={6} height={35} priority/>
                 <h1 style={h2Style}>问题咨询</h1>
             </div>
             <Descriptions column={1} style={publicStyle}>
-                <Descriptions.Item label="接入方式">金碟征信</Descriptions.Item>
-                <Descriptions.Item label="下游系统">接口类</Descriptions.Item>
-                <Descriptions.Item label="下游业务">核验类数据</Descriptions.Item>
+                <Descriptions.Item label="接入方式">{dataItem.AccessMode}</Descriptions.Item>
+                <Descriptions.Item label="下游系统">{dataItem.FollowSys}</Descriptions.Item>
+                <Descriptions.Item label="下游业务">{dataItem.FollowBuss}</Descriptions.Item>
             </Descriptions>
 
 
         </>
-    );
+    )
+    };
 export default DetailContent;

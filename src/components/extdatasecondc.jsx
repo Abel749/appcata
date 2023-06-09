@@ -47,12 +47,10 @@ const getType2 = async () => {
 
 return (
     <>
-        <div>
         <Row>
             <Col span={8}>
                 <Image src="firstc.png" alt=""/>
             </Col>
-
             <Col span={16}>
                 <List
                     grid={{
@@ -61,13 +59,12 @@ return (
                     dataSource={dataItem}
                     renderItem={(item) => (
                         <List.Item className={styles.button2} >
-                            <Link href={item.url}>{item.name}</Link>
+                            <Link href={item.url} >{item.name}</Link>
                         </List.Item>
                     )}
                 />
             </Col>
         </Row>
-        </div>
     </>
 )
 }
