@@ -1,10 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { Card,List,Radio,Form,Row,Table,Avatar} from 'antd';
+import { List,Radio,Form,Row} from 'antd';
 import { useState,useEffect } from 'react';
 import styles from '../styles/Form.module.css';
 import Image from "next/image";
-const { Meta } = Card;
 
 const  firstlevelMap_temp = [{ code: '', name: ''}];
 const  secondlevelMap_temp = [{ code: '', name: ''}];
@@ -94,7 +93,7 @@ const   Content1 = (props) => {
   const fetchData = async (level,typeCode) => {
     let url = 'http://localhost:1337/api/items';
     if( 0 == level){
-      url = url + '?populate[type][filters][code][$contains]=A01' ;
+      url = url + '?populate[type][filters][code][$contains]=A' ;
     }
     if(1 == level){
       typeCode = typeCode.toString().substr(0,3);
@@ -127,7 +126,19 @@ const   Content1 = (props) => {
   useEffect(() => {
     getType1();
 
-   fetchData(0,null);
+    let url = window.location.href.toString();
+    if(url.indexOf('firstType') >0){
+      let arr = url.split('=');
+      fetchData(1,arr[1]);
+    } else if(url.indexOf('secondType') >0){
+      let arr = url.split('=');
+      fetchData(2,arr[1]);
+    }else{
+      fetchData(0,null);
+    }
+
+
+
 
   }, []);
 
@@ -137,13 +148,12 @@ const   Content1 = (props) => {
 
   //二级数据类型
   const handleSecondlevel = (e) => {
-    console.log(e.target.value);
+    setSecondlevel(e.target.value);
     fetchData(2,e.target.value);
   };
 
   //一级数据类型
   const handleFirstlevel = (e) => {
-    console.log(e.target.value);
     setFirstlevel(e.target.value);
     fetchData(1,e.target.value);
   };

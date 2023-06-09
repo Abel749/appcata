@@ -1,8 +1,6 @@
 import React from 'react';
 import {Card, Col, Row} from 'antd';
-import AppCard from '../components/appcard';
 import Image from "next/image";
-import styles from "../styles/thismonthstat.module.css";
 import Link from "next/link";
 import {useState} from 'react';
 

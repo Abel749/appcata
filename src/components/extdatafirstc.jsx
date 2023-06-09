@@ -2,16 +2,15 @@
 import {Row, Col,  Image, List} from 'antd';
 
 import axios from "axios";
-import { useState,useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import styles from "../styles/extada.module.css";
+import Link from "next/link";
 const data =[];
 
 const ExtDataFirstC = () => {
 	const [dataItem, setDataItem] = useState(data);
-
 	useEffect(() => {
 		getType1();
-
 	}, []);
 
 	//一级数据类型初始化
@@ -33,6 +32,7 @@ const ExtDataFirstC = () => {
 				const dataTypeTemp = {
 					code: code,
 					name: typeName1,
+					url: "/datacenter?firstType="+code,
 				}
 				//添加一级数据类型
 				dataType1.push(dataTypeTemp);
@@ -45,6 +45,7 @@ const ExtDataFirstC = () => {
 
 	return (
 		<>
+			<div>
 		<Row>
 			<Col span={8}>
 				<Image src="firstc.png" alt=""/>
@@ -57,13 +58,14 @@ const ExtDataFirstC = () => {
 					}}
 					dataSource={dataItem}
 					renderItem={(item) => (
-						<List.Item>
-							<button className={styles.button1}>{item.name}</button>
+						<List.Item className={styles.button1} >
+							<Link href={item.url}>{item.name}</Link>
 						</List.Item>
 					)}
 				/>
 			</Col>
 		</Row>
+			</div>
 		</>
 	)
 }

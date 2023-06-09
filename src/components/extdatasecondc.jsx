@@ -4,6 +4,7 @@ import axios from "axios";
 
 import { useState,useEffect } from 'react';
 import styles from "../styles/extada.module.css";
+import Link from "next/link";
 const data =[];
 
 const ExtDataSecondC = () => {
@@ -33,6 +34,7 @@ const getType2 = async () => {
             const dataTypeTemp = {
                 code: code,
                 name: typeName2,
+                url: "/datacenter?secondType="+code,
             }
             //添加一级数据类型
             dataType1.push(dataTypeTemp);
@@ -55,12 +57,11 @@ return (
                 <List
                     grid={{
                         column: 3,
-
                     }}
                     dataSource={dataItem}
                     renderItem={(item) => (
-                        <List.Item className={styles.list}>
-                            <button className={styles.button2}>{item.name}</button>
+                        <List.Item className={styles.button2} >
+                            <Link href={item.url}>{item.name}</Link>
                         </List.Item>
                     )}
                 />

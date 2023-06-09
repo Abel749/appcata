@@ -18,6 +18,12 @@ const items = [
     ),
     key: 'datacenter',
   },
+    {
+        label: (
+            <Link href="/datadetail">详情</Link>
+        ),
+        key: 'datadetail',
+    },
 ]
 
 const TopContent = (props) => (
