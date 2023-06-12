@@ -23,16 +23,17 @@ const ExtDataFirstC = () => {
 		})
 		let dataType1 =[];
 		// 去除重复一级数据类型
-		let dataTypeName1 =[];
+		let dataTypeCode1 =[];
 		for (let item of dataTypes) {
-			let code = item.code;
-			let typeName1 = item.type1;
-			if(dataTypeName1.indexOf(typeName1) == -1 ){
-				dataTypeName1.push(typeName1);
+			let typeCode1 = item.code1;
+			if(dataTypeCode1.indexOf(typeCode1) == -1 ) {
+				dataTypeCode1.push(typeCode1);
 				const dataTypeTemp = {
-					code: code,
-					name: typeName1,
-					url: "/datacenter?firstType="+code,
+					code: item.code,
+					code1: item.code1,
+					code2: item.code2,
+					name: item.type1,
+					url: "/datacenter?firstType=" + item.code1,
 				}
 				//添加一级数据类型
 				dataType1.push(dataTypeTemp);

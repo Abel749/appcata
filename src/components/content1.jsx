@@ -9,7 +9,6 @@ import Link from "next/link";
 const  firstlevelMap_temp = [{ code: '', name: ''}];
 const  secondlevelMap_temp = [{ code: '', name: ''}];
 const  data =[];
-
 const   Content1 = (props) => {
   const [firstlevelMap, setFirstlevelMap] = useState(firstlevelMap_temp);
   const [secondlevelMap, setSecondlevelMap] = useState(secondlevelMap_temp);
@@ -32,29 +31,29 @@ const   Content1 = (props) => {
     let dataType1 =[];
     let dataType2 =[];
     // 去除重复一级数据类型
-    let dataTypeName1 =[];
+    let dataTypeCode1 =[];
     for (let item of dataTypes) {
-      let code = item.code;
-      let typeName1 = item.type1;
-      let typeName2 = item.type2;
-
-      if(dataTypeName1.indexOf(typeName1) == -1 ){
-        dataTypeName1.push(typeName1);
+      let typeCode1 = item.code1;
+      if(dataTypeCode1.indexOf(typeCode1) == -1 ){
+        dataTypeCode1.push(typeCode1);
         const dataTypeTemp = {
-          code: code,
-          name: typeName1,
+          code: item.code,
+          code1 : item.code1,
+          code2 : item.code2,
+          name : item.type1,
         }
         //添加一级数据类型
         dataType1.push(dataTypeTemp);
 
         //添加二级数据类型
-        let firstTypeName = dataTypes[0].type1;
-        if(typeName1 == firstTypeName){
+        let firstTypeCode = dataTypes[0].code1;
+        if(typeCode1 == firstTypeCode){
           const dataTypeTemp = {
-            code: code,
-            name: typeName2,
+            code: item.code,
+            code1 : item.code1,
+            code2 : item.code2,
+            name : item.type2,
           }
-          setFirstlevel(code);
           dataType2.push(dataTypeTemp);
         }
       }
@@ -66,10 +65,8 @@ const   Content1 = (props) => {
 
   //根据一级类型获取二级类型
   const getType2 = async (firstlevel) => {
-    let typeCode = firstlevel;
-    if( '' != typeCode && undefined != typeCode){
-      typeCode = firstlevel.toString().substr(0,3);
-      let url = 'http://localhost:1337/api/types?[filters][code][$contains]=' + typeCode;
+    if( '' != firstlevel && undefined != firstlevel){
+      let url = 'http://localhost:1337/api/types?[filters][code1][$eq]=' + firstlevel;
       const result = await axios(
           url,
       );
@@ -78,11 +75,11 @@ const   Content1 = (props) => {
       })
       let dataTypeName2 =[];
       for (let item of dataTypes) {
-        let code = item.code;
-        let typeName2 = item.type2;
         const dataTypeTemp = {
-          code: code,
-          name: typeName2,
+          code: item.code,
+          code1 : item.code1,
+          code2 : item.code2,
+          name : item.type2,
         }
         dataTypeName2.push(dataTypeTemp);
         setSecondlevelMap(dataTypeName2);
@@ -94,14 +91,13 @@ const   Content1 = (props) => {
   const fetchData = async (level,typeCode) => {
     let url = 'http://localhost:1337/api/items';
     if( 0 == level){
-      url = url + '?populate[type][filters][code][$contains]=A' ;
+      url = url + '?populate*' ;
     }
     if(1 == level){
-      typeCode = typeCode.toString().substr(0,3);
-      url = url + '?populate[type][filters][code][$contains]=' + typeCode;
+      url = url + '?populate[type][filters][code1][$eq]=' + typeCode;
     }
     if(2 == level){
-      url = url + '?populate[type][filters][code][$eq]=' + typeCode;
+      url = url + '?populate[type][filters][code2][$eq]=' + typeCode;
     }
     const result = await axios(
         url
@@ -114,31 +110,36 @@ const   Content1 = (props) => {
     for (let item of dataItems) {
       let  types = item.type.data;
       if( null != types){
-        let types1 = types.attributes.type1;
-        let types2 = types.attributes.type2;
-        item.type1 = types1;
-        item.type2 = types2;
+        item.code1 = types.attributes.code1;
+        item.type1 = types.attributes.type1;
+        item.code2 = types.attributes.code1;
+        item.type2 = types.attributes.type2;
         item.url = '/datadetail?itemId='+ item.id
         dataList.push(item);
       }
     }
-
+    if(1 == level){
+      setFirstlevel(typeCode);
+    }
+    if(2 == level && dataList.length >0 ){
+      getType2(dataList[0].code1);
+    }
     setDataItem(dataList);
   };
 
   useEffect(() => {
+
     getType1();
 
     let url = window.location.href.toString();
     if(url.indexOf('firstType') >0){
       let arr = url.split('=');
-      fetchData(1,arr[1]);
-      setFirstlevel(arr[1]);
-      alert(arr[1])
+      let typeCode = arr[1]
+      setFirstlevel(typeCode);
     } else if(url.indexOf('secondType') >0){
       let arr = url.split('=');
-      fetchData(2,arr[1]);
-      setSecondlevel(arr[1]);
+      let typeCode = arr[1];
+      setSecondlevel( typeCode);
     }else{
       fetchData(0,null);
     }
@@ -162,33 +163,39 @@ const   Content1 = (props) => {
   };
 
   useEffect( () =>{
-
-    getType2(firstlevel);
-
+    if( undefined != firstlevel ){
+      getType2(firstlevel);
+      fetchData(1,firstlevel);
+    }
   },[firstlevel]);
+
+  useEffect( () =>{
+    if( undefined != secondlevel ){
+      fetchData(2,secondlevel);
+    }
+  },[secondlevel]);
 
   //排序规则
   const handleSortChange = (e) => {
     console.log(e.target.value);
   };
 
-
   return (
   <>
   <Form  className={styles.form} >
       <Row className={styles.row}   >
     <label className={styles.label}> 一级数据类型:  </label>
-    <Radio.Group  value={firstlevel} defaultValue={firstlevel} onChange={handleFirstlevel}>
+    <Radio.Group  value={firstlevel}  onChange={handleFirstlevel}>
       {firstlevelMap.map((item)=>
-          <Radio.Button key = {item.code} value={item.code}>{item.name}</Radio.Button>
+          <Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
       )}
     </Radio.Group>
       </Row>
     <Row className={styles.row}   >
       <label className={styles.label}> 二级数据类型:  </label>
-      <Radio.Group value={secondlevel} defaultValue={secondlevel} onChange={handleSecondlevel}>
+      <Radio.Group value={secondlevel} onChange={handleSecondlevel}>
         {secondlevelMap.map((item)=>
-            <Radio.Button  key = {item.code} value={item.code}>{item.name}</Radio.Button>
+            <Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
         )}
       </Radio.Group>
     </Row>

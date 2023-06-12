@@ -23,25 +23,26 @@ const getType2 = async () => {
     const dataTypes = result.data.data.map((item,index) => {
         return   item.attributes;
     })
-    let dataType1 =[];
-    // 去除重复一级数据类型
-    let dataTypeName2 =[];
+    let dataType2 =[];
+    // 去除重复二级数据类型
+    let dataTypeCode2 =[];
     for (let item of dataTypes) {
-        let code = item.code;
-        let typeName2 = item.type2;
-        if(dataTypeName2.indexOf(typeName2) == -1 ){
-            dataTypeName2.push(typeName2);
+        let typeCode2 = item.code2;
+        if(dataTypeCode2.indexOf(typeCode2) == -1 ) {
+            dataTypeCode2.push(typeCode2);
             const dataTypeTemp = {
-                code: code,
-                name: typeName2,
-                url: "/datacenter?secondType="+code,
+                code: item.code,
+                code1: item.code1,
+                code2: item.code2,
+                name: item.type2,
+                url: "/datacenter?secondType=" + item.code2,
             }
-            //添加一级数据类型
-            dataType1.push(dataTypeTemp);
+            //添加二级数据类型
+            dataType2.push(dataTypeTemp);
         }
 
     }
-    setDataItem(dataType1);
+    setDataItem(dataType2);
 
 };
 
