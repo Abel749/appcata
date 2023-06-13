@@ -1,7 +1,6 @@
 import {Card, Col, Row} from 'antd';
 import React from 'react';
 import Image from "next/image";
-import * as url from "url";
 import styles from '../styles/thismonthstat.module.css';
 
 const ThisMonthStat = () => {

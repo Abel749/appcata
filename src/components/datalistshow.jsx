@@ -3,38 +3,37 @@ import { LeftOutlined, RightOutlined} from '@ant-design/icons';
 import React from 'react';
 
 const titleStyle = {
-  height: '60px',
-  color: '#fff',
-  lineHeight: '40px',
-  textAlign: 'center',
-  background: '#364d79',
+	height: '60px',
+	color: '#fff',
+	lineHeight: '40px',
+	textAlign: 'center',
+	background: '#364d79',
 };
 
 const rowStyle = {
-  margin: 0,
-  height: '450px',
-  color: '#fff',
-  lineHeight: '400px',
-  textAlign: 'center',
-  background: '#364d79',
+	margin: 0,
+	height: '450px',
+	color: '#fff',
+	lineHeight: '400px',
+	textAlign: 'center',
+	background: '#364d79',
 };
 
 const cardStyle = {
-  margin:0,
-  height: '300px',
-  color: '#fff',
-  lineHeight: '40px',
-  textAlign: 'center',
-  background: '#364d79',
+	margin: 0,
+	height: '300px',
+	color: '#fff',
+	lineHeight: '40px',
+	textAlign: 'center',
+	background: '#364d79',
 };
 
 const DataListShow = () => {
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
-  
+
   return (
-       
     <Carousel arrows prevArrow={<LeftOutlined />} nextArrow={<RightOutlined />} afterChange={onChange}>
       <div>
 	    <Row gutter = '5' style={titleStyle}>
@@ -64,7 +63,6 @@ const DataListShow = () => {
 		  </Col>
         </Row>
 	  </div>
-      
       <div>
         <h3 style={rowStyle}>2</h3>
       </div>
@@ -75,7 +73,7 @@ const DataListShow = () => {
         <h3 style={rowStyle}>4</h3>
       </div>
     </Carousel>
-	
+
   );
 };
 export default DataListShow;

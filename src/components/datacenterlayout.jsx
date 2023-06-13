@@ -35,10 +35,10 @@ const DataCenterLayout = () => (
     <Layout>
       <Header style={headerStyle}><TopContent frompage="datacenter" /></Header>
       <Header style={contentStyle}><Content1 /></Header>
-	  <Footer style={footerStyle}><FootContent /></Footer>
+      <Footer style={footerStyle}><FootContent /></Footer>
     </Layout>
   </Space>
-  );
+);
 
 
 export default DataCenterLayout;

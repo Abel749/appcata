@@ -4,73 +4,71 @@ import {Card, List, Radio, Form, Row, Table, Avatar, Col, Menu,Descriptions} fro
 import { useState,useEffect } from 'react';
 import Image from "next/image";
 const h1Style = {
-    color:'black',
-    marginLeft:'350px',
-    fontSize:'30px',
+	color: 'black',
+	marginLeft: '350px',
+	fontSize: '30px',
 };
 const imageStyle1 = {
-    marginLeft:'395px',
-    marginTop:'35px',
+	marginLeft: '395px',
+	marginTop: '35px',
 
 };
 
 const imageStyle2 = {
-    marginLeft:'700px',
-    marginTop:'-335px',
+	marginLeft: '700px',
+	marginTop: '-335px',
 };
 
 const productInfoStyle = {
-    marginLeft:'700px',
-    marginTop:'-265px',
+	marginLeft: '700px',
+	marginTop: '-265px',
 };
 
 const publicStyle = {
-    marginLeft:'395px',
+	marginLeft: '395px',
 };
 
 const h2Style = {
-    color:'black',
-    marginLeft:'395px',
-    fontSize:'16px',
-    backgroundColor:'#E6F1FB',
-    height:'35px',
-    width:'950px',
-    display:'flex',
-    alignItems:'center',
+	color: 'black',
+	marginLeft: '395px',
+	fontSize: '16px',
+	backgroundColor: '#E6F1FB',
+	height: '35px',
+	width: '950px',
+	display: 'flex',
+	alignItems: 'center',
 };
 
 const imageStyle3 = {
-    marginLeft:'365px',
-    float:'left',
+	marginLeft: '365px',
+	float: 'left',
 };
 
+const data = [];
+const type = [];
+const DetailContent = (props) => {
+	const [dataItem, setDataItem] = useState(data);
+	const [dataType, setDataType] = useState(type);
+	``
+	useEffect(() => {
+		getItemDetail();
 
+	}, []);
 
-const data =[];
-const type =[];
-const DetailContent = (props) =>
-    {
-        const [dataItem, setDataItem] = useState(data);
-        const [dataType, setDataType] = useState(type);``
-        useEffect(() => {
-            getItemDetail();
-
-        }, []);
-
-        const getItemDetail = async () => {
-            let detailUrl = window.location.href.toString();
-            if(detailUrl.indexOf('itemId') >0){
-                let arr = detailUrl.split('=');
-                detailUrl = "http://localhost:1337/api/items/"+arr[1]+"?populate=*";
-            }
-            const result = await axios(
-                detailUrl
-            );
-            const dataDetail = result.data.data.attributes;
-            const itemType = result.data.data.attributes.type.data.attributes;
-            setDataItem(dataDetail);
-            setDataType(itemType);
-        };
+	const getItemDetail = async() => {
+		let detailUrl = window.location.href.toString();
+		if(detailUrl.indexOf('itemId') > 0) {
+			let arr = detailUrl.split('=');
+			detailUrl = "http://localhost:1337/api/items/" + arr[1] + "?populate=*";
+		}
+		const result = await axios(
+			detailUrl
+		);
+		const dataDetail = result.data.data.attributes;
+		const itemType = result.data.data.attributes.type.data.attributes;
+		setDataItem(dataDetail);
+		setDataType(itemType);
+	};
 
 
 return (
@@ -138,8 +136,6 @@ return (
                 <Descriptions.Item label="下游系统">{dataItem.FollowSys}</Descriptions.Item>
                 <Descriptions.Item label="下游业务">{dataItem.FollowBuss}</Descriptions.Item>
             </Descriptions>
-
-
         </>
     )
     };
