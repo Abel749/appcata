@@ -43,6 +43,13 @@
     text-align: left;
 }
 
+.radioButton{
+    border-radius: 12px;
+    border:none;
+    background-color: ghostwhite;
+    gap: 4px;
+}
+
 .pss{
     width:390px;height:280px;
 }

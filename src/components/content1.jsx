@@ -185,7 +185,7 @@ const Content1 = (props) => {
 			<Row className={styles.row}  >
 				<Col className={styles.label}> 一级数据类型 </Col>
 				<Col className={styles.list}>
-					<Radio.Group  value={firstLevel}  onChange={ handlefirstLevel }>
+					<Radio.Group  className={styles.radioButton} value={firstLevel}  onChange={ handlefirstLevel }>
 						{firstLevelMap.map((item)=>
 						<Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
 					)}
@@ -195,7 +195,7 @@ const Content1 = (props) => {
 			<Row className={styles.row}   >
 				<Col className={styles.label}> 二级数据类型  </Col>
 				<Col className={styles.list}>
-					<Radio.Group value={secondLevel} onChange={handlesecondLevel}>
+					<Radio.Group className={styles.radioButton} value={secondLevel} onChange={handlesecondLevel}>
 					{secondLevelMap.map((item)=>
 						<Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
 					)}
@@ -206,7 +206,7 @@ const Content1 = (props) => {
 			<Row className={styles.row}   >
 				<Col className={styles.label}> 排序规则 </Col>
 				<Col className={styles.list}>
-				<Radio.Group value={sortOrder} onChange={handleSortChange}>
+				<Radio.Group className={styles.radioButton} value={sortOrder} onChange={handleSortChange}>
 					<Radio.Button value="hot">最热</Radio.Button>
 					<Radio.Button value="reCom">推荐</Radio.Button>
 					<Radio.Button value="new">最新</Radio.Button>
@@ -216,7 +216,7 @@ const Content1 = (props) => {
 			<Row className={styles.row}   >
 				<Col className={styles.label}> 关键词  </Col>
 				<Col className={styles.list}>
-					<Radio.Group value={keywords} onChange={handleKeyChange}>
+					<Radio.Group className={styles.radioButton} value={keywords} onChange={handleKeyChange}>
 						<Radio.Button value="identify">身份识别</Radio.Button>
 						<Radio.Button value="finance">金融信贷</Radio.Button>
 						<Radio.Button value="riskCon">风控核验</Radio.Button>
