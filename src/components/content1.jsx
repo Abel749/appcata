@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import { List, Radio, Form, Row } from 'antd';
+import {List, Radio, Form, Row, Col} from 'antd';
 import { useState, useEffect } from 'react';
 import styles from '../styles/Form.module.css';
 import Image from "next/image";
 import Link from "next/link";
 
-const firstLevelMap_temp = [{ code: '', name: '',code1 :'',ItemName :'',ApplicationScenario:'' ,DataSources:''}];
+const firstLevelMap_temp = [{ code: '', name: '',code1 :'',ItemName :'',ApplicationScenario:'' ,DataSources:'',Src1:'',DDSSrc:''}];
 const secondLevelMap_temp = [{ code: '', name: '' ,code2 :''}];
 const data = [];
 const Content1 = (props) => {
@@ -90,7 +90,7 @@ const Content1 = (props) => {
 	const fetchData = async(level, typeCode) => {
 		let url = 'http://localhost:1337/api/items';
 		if( 0 == level ) {
-			url = url + '?populate*';
+			url = url + '?populate[type][filters]*';
 		}
 		if( 1 == level ) {
 			url = url + '?populate[type][filters][code1][$eq]=' + typeCode;
@@ -114,6 +114,7 @@ const Content1 = (props) => {
 				item.type1 = types.attributes.type1;
 				item.code2 = types.attributes.code1;
 				item.type2 = types.attributes.type2;
+				item.Src1 = types.attributes.LogoSrc;
 				item.url = '/datadetail?itemId=' + item.id
 				dataList.push(item);
 			}
@@ -182,72 +183,99 @@ const Content1 = (props) => {
 	<>
 		<Form  className={styles.form} >
 			<Row className={styles.row}  >
-				<label className={styles.label}> 一级数据类型:  </label>
-				<Radio.Group  value={firstLevel}  onChange={ handlefirstLevel }>
-					{firstLevelMap.map((item)=>
-					<Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
-				)}
-				</Radio.Group>
+				<Col className={styles.label}> 一级数据类型 </Col>
+				<Col className={styles.list}>
+					<Radio.Group  value={firstLevel}  onChange={ handlefirstLevel }>
+						{firstLevelMap.map((item)=>
+						<Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
+					)}
+					</Radio.Group>
+				</Col>
 			</Row>
 			<Row className={styles.row}   >
-				<label className={styles.label}> 二级数据类型:  </label>
-				<Radio.Group value={secondLevel} onChange={handlesecondLevel}>
-				{secondLevelMap.map((item)=>
-					<Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
-				)}
-				</Radio.Group>
+				<Col className={styles.label}> 二级数据类型  </Col>
+				<Col className={styles.list}>
+					<Radio.Group value={secondLevel} onChange={handlesecondLevel}>
+					{secondLevelMap.map((item)=>
+						<Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
+					)}
+					</Radio.Group>
+				</Col>
 			</Row>
 
 			<Row className={styles.row}   >
-				<label className={styles.label}> 排序规则:  </label>
+				<Col className={styles.label}> 排序规则 </Col>
+				<Col className={styles.list}>
 				<Radio.Group value={sortOrder} onChange={handleSortChange}>
 					<Radio.Button value="hot">最热</Radio.Button>
 					<Radio.Button value="reCom">推荐</Radio.Button>
 					<Radio.Button value="new">最新</Radio.Button>
 				</Radio.Group>
+				</Col>
 			</Row>
 			<Row className={styles.row}   >
-				<label className={styles.label}> 关键词:  </label>
-				<Radio.Group value={keywords} onChange={handleKeyChange}>
-					<Radio.Button value="identify">身份识别</Radio.Button>
-					<Radio.Button value="finance">金融信贷</Radio.Button>
-					<Radio.Button value="riskCon">风控核验</Radio.Button>
-					<Radio.Button value="customer">客户营销</Radio.Button>
-					<Radio.Button value="custMarket">精准获客</Radio.Button>
-					<Radio.Button value="inclufin">普惠金融</Radio.Button>
-					<Radio.Button value="credit">信用评估</Radio.Button>
-					<Radio.Button value="risk">风险监控</Radio.Button>
-					<Radio.Button value="hedgepro">避险产品</Radio.Button>
-					<Radio.Button value="finanpro">金融产品</Radio.Button>
-					<Radio.Button value="insure">保险</Radio.Button>
-					<Radio.Button value="riskWarn">风险预警</Radio.Button>
-				</Radio.Group>
+				<Col className={styles.label}> 关键词  </Col>
+				<Col className={styles.list}>
+					<Radio.Group value={keywords} onChange={handleKeyChange}>
+						<Radio.Button value="identify">身份识别</Radio.Button>
+						<Radio.Button value="finance">金融信贷</Radio.Button>
+						<Radio.Button value="riskCon">风控核验</Radio.Button>
+						<Radio.Button value="customer">客户营销</Radio.Button>
+						<Radio.Button value="custMarket">精准获客</Radio.Button>
+						<Radio.Button value="inclufin">普惠金融</Radio.Button>
+						<Radio.Button value="credit">信用评估</Radio.Button>
+						<Radio.Button value="risk">风险监控</Radio.Button>
+						<Radio.Button value="hedgepro">避险产品</Radio.Button>
+						<Radio.Button value="finanpro">金融产品</Radio.Button>
+						<Radio.Button value="insure">保险</Radio.Button>
+						<Radio.Button value="riskWarn">风险预警</Radio.Button>
+					</Radio.Group>
+				</Col>
 			</Row>
 		</Form>
 
-		<List pagination={{ position, align }}
-			grid={{ gutter: 10, column: 5, }}
+		<List pagination={{ position, align,defaultPageSize:6 } }
+			grid={{ gutter: 10, column: 3, }}
 			dataSource={dataItem}
 			renderItem={(item) => (
 				<List.Item >
 					<Link href = {item.url} >
 						<div className={styles.pss} >
-							<div className={styles.top}>
-								<Image src="/u1418.png"  alt="" width={260} height={40} priority />
-							</div>
-							<div className={styles.left}>
-								<Image src="/u595.png" alt="" width={80} height={240} priority />
-							</div>
-							<div className={styles.right}>
-								<h3>{item.ItemName}</h3>
-								<br/>
-								<span><button>{item.type1}</button><button>{item.type2}</button></span>
-								<br/>
-								<p>{item.ApplicationScenario}</p>
-								<br/>
-								<br/>
-								<p>{item.DataSources}</p>
-							</div>
+							<Row>
+								<div className={styles.top}>
+									<Image src={item.DDSSrc} alt="" width={200} height={54} priority />
+								</div>
+							</Row>
+							<Row style ={{height:20}}></Row>
+							<Row>
+								<Col>
+								<div className={styles.left}>
+									<Row>
+									<Image src={item.Src1} alt="" width={150} height={185} priority />
+									</Row>
+								</div>
+								</Col>
+								<Col style={{width:4}}></Col>
+								<Col>
+									<div className={styles.right}>
+										<Row>
+											<h3>{item.ItemName}</h3>
+										</Row>
+										<Row className={styles.height6}></Row>
+										<Row>
+											&nbsp;<span><button>{item.type1}</button> &nbsp;&nbsp;<button>{item.type2}</button></span>
+										</Row>
+										<Row className={styles.height24}></Row>
+										<Row>
+											<textarea className={styles.dataSource}>{item.ApplicationScenario}</textarea>
+										</Row>
+										<Row className={styles.height36}></Row>
+										<Row>
+											<h4>{item.DataSources}</h4>
+										</Row>
+									</div>
+								</Col>
+							</Row>
 						</div>
 					</Link>
 				</List.Item>
