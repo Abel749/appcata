@@ -11,22 +11,22 @@ const imageDivStyle ={
 
 const h1Style = {
     color:'black',
-    marginLeft:'450px', // 350
+    marginLeft:'450px',
     fontSize:'30px',
 };
 const imageStyle1 = {
-    marginLeft:'495px', // 395
+    marginLeft:'495px',
     marginTop:'35px',
 
 };
 
 const imageStyle2 = {
-    marginLeft:'736px', // 636
+    marginLeft:'736px',
     marginTop:'-270px',
 };
 
 const productInfoStyle = {
-    marginLeft:'760px', // 660
+    marginLeft:'760px',
     marginTop:'-215px',
 };
 

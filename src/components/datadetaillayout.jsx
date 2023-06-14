@@ -9,10 +9,10 @@ const { Header, Footer, Content } = Layout;
 const headerStyle = {
     textAlign: 'center',
     color: '#fff',
-    height: 64,
+    height: 80,
     paddingInline: 50,
-    lineHeight: '64px',
-    backgroundColor: '#7dbcea',
+    lineHeight: '80px',
+    backgroundColor: '#036ED6',
 };
 
 const contentStyle = {
@@ -26,8 +26,7 @@ const contentStyle = {
 
 const footerStyle = {
     textAlign: 'center',
-    color: '#fff',
-    backgroundColor: '#7dbcea',
+    backgroundColor: '#555555',
 };
 
 const DataDetailLayout = () => (
@@ -35,7 +34,7 @@ const DataDetailLayout = () => (
         <Layout>
             <Header style={headerStyle}><TopContent frompage="datadetail" /></Header>
             <Header style={contentStyle}><DetailContent /></Header>
-            <Footer style={footerStyle}><FootContent /></Footer>
+            <div style={footerStyle}><FootContent /></div>
         </Layout>
     </Space>
 );

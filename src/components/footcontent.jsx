@@ -1,12 +1,15 @@
 import React from 'react';
 import { Col, Row } from 'antd';
 import AppCard from '../components/appcard';
+import Image from "next/image";
 
 const FootContent = () => {
 
   return (
-  <>
-    外部数据应用@hfbank
+  <> 
+    <div >
+      <Image src="/foot.png"  width={1100} height={170}  priority/>
+    </div>
   </>
   )
 };

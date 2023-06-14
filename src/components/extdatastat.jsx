@@ -15,7 +15,7 @@ const divStyle={
 
 const h1Style={
     fontSize:'40px',
-    color:'#358BDE',
+    color:'#036ED6',
 };
 
 const divPublicStyle={

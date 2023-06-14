@@ -9,10 +9,10 @@ const { Header, Footer, Content } = Layout;
 const headerStyle = {
   textAlign: 'center',
   color: '#fff',
-  height: 64,
+  height: 80,
   paddingInline: 50,
-  lineHeight: '64px',
-  backgroundColor: '#7dbcea',
+  lineHeight: '80px',
+  backgroundColor: '#036ED6',
 };
 
 const contentStyle = {
@@ -26,8 +26,8 @@ const contentStyle = {
 
 const footerStyle = {
   textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#7dbcea',
+  //color: '#fff',
+  backgroundColor: '#555555',
 };
 
 const DataCenterLayout = () => (
@@ -35,10 +35,10 @@ const DataCenterLayout = () => (
     <Layout>
       <Header style={headerStyle}><TopContent frompage="datacenter" /></Header>
       <Header style={contentStyle}><Content1 /></Header>
-      <Footer style={footerStyle}><FootContent /></Footer>
+	  <Footer style={footerStyle}><FootContent /></Footer>
     </Layout>
   </Space>
-);
+  );
 
 
 export default DataCenterLayout;

@@ -16,23 +16,30 @@ const items = [
 	},
 ]
 
+const menuStyle={
+    backgroundColor: '#036ED6',
+    color:'#fff'
+}
+
 const TopContent = (props) => (
-	<>
-		<Row >
-			<Col span = { 8 } >
-				<Image src = "/u110.png" alt = "" width = { 60 } height = { 60 } priority />
-			</Col>
-			<Col span = { 8 } >
-				<Menu mode = "horizontal" defaultSelectedKeys = { props.frompage } items = { items } />
-			</Col>
-			<Col span = { 4 } >
-				<SearchButton />
-			</Col>
-			<Col span = { 4 } >
-				<AvatarLogin />
-			</Col>
-		</Row>
-	</>
-);
+  <>
+    <Row >
+      <Col span={8}>
+          <Image src="/u110.png" alt="" width={100} height={60}  priority  />
+      </Col>
+	  <Col span={8}>
+	    <Menu style={menuStyle}
+          mode="horizontal"
+          defaultSelectedKeys={props.frompage}
+          items = {items}    
+        />	  
+	  </Col>
+	  <Col span={4} ><SearchButton /></Col>
+	  <Col span={4} ><AvatarLogin /></Col>
+    </Row>
+    
+  </>
+  );
+
 
 export default TopContent;

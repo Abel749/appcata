@@ -11,13 +11,13 @@ const { Header, Footer, Content } = Layout;
 const headerStyle = {
   textAlign: 'center',
   color: '#fff',
-  height: 64,
+  height: 80,
   paddingInline: 50,
-  lineHeight: '64px',
-  backgroundColor: '#7dbcea',
+  lineHeight: '80px',
+  backgroundColor: '#036ED6',
 };
 const ExtDataBackgroundStyle = {
-  height: 500,
+  height: 600,
   borderTopWidth:'1px',
   borderTopStyle:'solid',
   borderTopColor:'aliceblue',
@@ -27,7 +27,6 @@ const ExtDataStatStyle = {
   minHeight: 80,
   lineHeight: '20px',
   color: '#fff',
-  //backgroundColor: '#108ee9',
   backgroundColor: '#ffffff',
 };
 
@@ -51,8 +50,7 @@ const DataListShowStyle = {
 
 const footerStyle = {
   textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#7dbcea',
+  backgroundColor: '#555555',
 };
 
 const DataCenterLayout = () => (
@@ -63,7 +61,7 @@ const DataCenterLayout = () => (
       <Header style={ExtDataStatStyle}><ExtDataStat /></Header>
 	  <Header style={ExtDataCategoryStyle}><ExtDataCategory /></Header>
 	  <Header style={DataListShowStyle}><DataListShow /></Header>
-	  <Footer style={footerStyle}><FootContent /></Footer>
+	  <div style={footerStyle}><FootContent /></div>
     </Layout>
   </Space>
   );
