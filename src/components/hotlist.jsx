@@ -1,14 +1,33 @@
 
 import React from 'react';
 import Image from "next/image";
+import {Col, Row} from "antd";
 
-const Mainlogo = () => (
+const titleH1Style={
+    color:'#036ED6',
+    fontSize:'40px',
+};
+
+
+const row3Style={
+    marginLeft:'210px',
+    marginTop: '50px',
+
+};
+
+
+const HotList = () => (
+
     <div >
-        <h1>产品热力榜</h1>
-        <div><Image src="/hostlist.png" alt="" width={1160} height={460}    /></div>
+        <Row >
+            <Col span='24'><h1 style={titleH1Style}>热力排行榜</h1></Col>
+        </Row>
 
+        <Row style={row3Style}>
+            <Image src="/hostlist.png" width={1200} height={460} priority/>
+        </Row>
     </div>
 
 );
 
-export default Mainlogo;
+export default HotList;

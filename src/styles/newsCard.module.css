@@ -1,3 +1,7 @@
+.dev0{
+  margin-left: 75px;
+}
+
 
 .left{
   margin-left: 140px;
@@ -14,7 +18,8 @@
 }
 
 .hh1{
-  color: #83ddfb;
+  color: #036ED6;
+  font-size: 40px;
 }
 
 .list{
@@ -44,9 +49,12 @@
 }
 
 .button{
-  width: 100px;
+  width: 120px;
   text-align: center;
   border:1px solid #1677ff;
   border-radius:12px;
   margin-left: 300px;
+  padding: 10px;
+  color: #fff;
+  background-color: #036ED6;
 }

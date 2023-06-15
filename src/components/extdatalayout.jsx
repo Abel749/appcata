@@ -25,6 +25,7 @@ const ExtDataBackgroundStyle = {
   borderTopWidth:'1px',
   borderTopStyle:'solid',
   borderTopColor:'aliceblue',
+  backgroundColor: '#036ED6',
 };
 const ExtDataStatStyle = {
   textAlign: 'center',

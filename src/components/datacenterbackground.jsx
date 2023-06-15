@@ -16,7 +16,7 @@ const h0Style={
 }
 
 const searchDivStyle={
-    marginTop:'140px',
+    paddingTop:'140px',
     marginLeft:'750px',
 }
 

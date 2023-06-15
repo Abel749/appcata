@@ -5,9 +5,15 @@ import { Input, Space } from 'antd';
 import { useState,useEffect } from 'react';
 import Image from "next/image";
 
-const imageDivStyle ={
+
+const parentDevStyle={
     borderTop:'1px',
     borderTopStyle:'solid',
+    backgroundColor: '#036ED6',
+}
+
+const imageDivStyle ={
+
     //background:'url(/detail_baner.jpg) no-repeat',
     background:'url(/dataDetail/detail-baner.png) no-repeat',
     height: '320px',
@@ -121,7 +127,7 @@ const h0Style={
 }
 
 const searchDivStyle={
-    marginTop:'140px',
+    paddingTop:'140px',
     marginLeft:'750px',
 }
 
@@ -163,10 +169,12 @@ const DetailContent = (props) =>
 return (
 
         <>
-            <div style={imageDivStyle}>
-                <div style={searchDivStyle}>
-                    <h6 style={h0Style}>恒必应</h6>
-                    <Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton style={searchStyle} />
+            <div style={parentDevStyle}>
+                <div style={imageDivStyle}>
+                    <div style={searchDivStyle}>
+                        <h6 style={h0Style}>恒必应</h6>
+                        <Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton style={searchStyle} />
+                    </div>
                 </div>
             </div>
             <div>

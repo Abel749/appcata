@@ -32,20 +32,24 @@ const footerStyle = {
 };
 
 const DataCenterBackgroundStyle = {
-
-  borderTopWidth:'1px',
-  borderTopStyle:'solid',
-  borderTopColor:'aliceblue',
-  background:'url(/dataDetail/detail-baner.png) no-repeat',
+  background:'url(/dataDetail/detail-baner.png) no-repeat ',
   height: '300px',
   width: '1700px',
 };
+const BackGroundCorolStyle = {
+  borderTopWidth:'1px',
+  borderTopStyle:'solid',
+  borderTopColor:'aliceblue',
+  backgroundColor: '#036ED6',
+}
 
 const DataCenterLayout = () => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
     <Layout>
       <Header style={headerStyle}><TopContent frompage="datacenter" /></Header>
-      <div style={DataCenterBackgroundStyle}><DataCenterBackground /></div>
+      <div style={BackGroundCorolStyle}>
+        <div style={DataCenterBackgroundStyle}><DataCenterBackground /></div>
+      </div>
       <Header style={contentStyle}><Content1 /></Header>
 	  <Footer style={footerStyle}><FootContent /></Footer>
     </Layout>

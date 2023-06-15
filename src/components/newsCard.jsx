@@ -28,7 +28,7 @@ const Mainlogo = (props) =>
 
     return (
 
-    <div >
+    <div className={styles.dev0}>
         <h1 className={styles.hh1}> 新闻咨询</h1>
         <div>
             <div className={styles.left}>
