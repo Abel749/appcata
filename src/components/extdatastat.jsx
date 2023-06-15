@@ -3,14 +3,14 @@ import React from 'react';
 import Image from "next/image";
 
 const extDataCardStyle={
-    //with
     padding:'20px',
-    //textAlign:'center',
-    marginLeft:'350px',
+    marginLeft:'100px',
 }
 
 const divStyle={
+    width:'1200px',
     marginTop:'-48px',
+    marginLeft: '270px',
 };
 
 const h1Style={
@@ -27,16 +27,16 @@ const divPublicStyle={
 const ExtDataStat = () => (
   <Card title="" bordered={true} bodyStyle={extDataCardStyle} style={divStyle}>
     <Row gutter={{
-        xs: 8,
-        sm: 16,
-        md: 24,
-        lg: 32,
+        xs: 32,
+        sm: 64,
+        md: 96,
+        lg: 128,
     }}>
         <Col >
             <Row>
                 <Col>
                     <div style={divPublicStyle}>
-                        <Image src="/u466.svg"  width={60} height={60} priority/>
+                        <Image src="/extData/extData01.svg"  width={60} height={60} priority/>
                     </div>
                 </Col>
                 <Col>
@@ -57,7 +57,7 @@ const ExtDataStat = () => (
             <Row>
                 <Col>
                     <div style={divPublicStyle}>
-                        <Image src="/u466.svg"  width={60} height={60} priority/>
+                        <Image src="/extData/extData02.svg"  width={60} height={60} priority/>
                     </div>
                 </Col>
                 <Col >
@@ -79,7 +79,7 @@ const ExtDataStat = () => (
             <Row>
                 <Col>
                     <div style={divPublicStyle}>
-                        <Image src="/u466.svg"  width={60} height={60} priority/>
+                        <Image src="/extData/extData03.svg"  width={60} height={60} priority/>
                     </div>
                 </Col>
                 <Col >
@@ -102,7 +102,7 @@ const ExtDataStat = () => (
             <Row>
                 <Col>
                     <div style={divPublicStyle}>
-                        <Image src="/u466.svg"  width={60} height={60} priority/>
+                        <Image src="/extData/extData04.svg"  width={60} height={60} priority/>
                     </div>
                 </Col>
                 <Col >

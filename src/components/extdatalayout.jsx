@@ -6,6 +6,10 @@ import DataListShow from '../components/datalistshow';
 import FootContent from '../components/footcontent';
 import ExtDataBackground from '../components/extdatabackground';
 import { Layout, Space } from 'antd';
+import ExtDataReginData from "../components/extdataregiondata";
+import ExtDataCoverage from "../components/extdatacoverage";
+import ExtDataRequestMessage from "../components/extdatarequestmessage";
+import ExtDataWhere from "../components/extdatawhere";
 const { Header, Footer, Content } = Layout;
 
 const headerStyle = {
@@ -35,16 +39,50 @@ const ExtDataCategoryStyle = {
   minHeight: 510,
   lineHeight: '20px',
   color: '#fff',
-  //backgroundColor: '#108ee9',
   backgroundColor: '#ffffff',
+  marginTop:'50px',
 };
 
 const DataListShowStyle = {
   textAlign: 'center',
-  minHeight: 520,
+  minHeight: 560,
   lineHeight: '20px',
   color: '#fff',
-  //backgroundColor: '#108ee9',
+  backgroundColor: '#036ED6',
+  marginTop:'30px',
+};
+
+const ExtDataReginDataStyle = {
+  textAlign: 'center',
+  minHeight: 800,
+  lineHeight: '20px',
+  color: '#fff',
+  backgroundColor: '#ffffff',
+  marginTop:'50px',
+};
+
+const ExtDataCoverageStyle = {
+  textAlign: 'center',
+  minHeight: 600,
+  lineHeight: '20px',
+  color: '#fff',
+  backgroundColor: '#ffffff',
+  marginTop:'50px',
+};
+
+const ExtDataWhereStyle = {
+  textAlign: 'center',
+  minHeight: 400,
+  lineHeight: '20px',
+  color: '#fff',
+  backgroundColor: '#ffffff',
+};
+
+const ExtDataRequestMessageStyle = {
+  textAlign: 'center',
+  minHeight: 650,
+  lineHeight: '20px',
+  color: '#fff',
   backgroundColor: '#ffffff',
 };
 
@@ -55,12 +93,16 @@ const footerStyle = {
 
 const DataCenterLayout = () => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-    <Layout>
+    <Layout style={{ backgroundColor: '#ffffff' }}>
       <Header style={headerStyle}><TopContent frompage="home" /></Header>
       <div style={ExtDataBackgroundStyle}><ExtDataBackground /></div>
       <Header style={ExtDataStatStyle}><ExtDataStat /></Header>
 	  <Header style={ExtDataCategoryStyle}><ExtDataCategory /></Header>
 	  <Header style={DataListShowStyle}><DataListShow /></Header>
+      <Header style={ExtDataReginDataStyle}><ExtDataReginData/></Header>
+      <Header style={ExtDataCoverageStyle}><ExtDataCoverage/></Header>
+      <Header style={ExtDataWhereStyle}><ExtDataWhere/></Header>
+      <Header style={ExtDataRequestMessageStyle}><ExtDataRequestMessage/></Header>
 	  <div style={footerStyle}><FootContent /></div>
     </Layout>
   </Space>

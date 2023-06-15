@@ -38,7 +38,7 @@ const TopContent = (props) => (
           items = {items}    
         />	  
 	  </Col>
-	  <Col span={4} ><SearchButton /></Col>
+	  <Col span={4} ></Col>
 	  <Col span={4} ><AvatarLogin /></Col>
     </Row>
     
