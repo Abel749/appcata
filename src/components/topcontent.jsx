@@ -14,6 +14,10 @@ const items = [
 		label: ( <Link href = "/datacenter" > 资产中心 < /Link>),
 		key: 'datacenter',
 	},
+	{
+		label: ( <Link href = "/newslist" > 新闻咨讯 < /Link>),
+		key: 'newsList',
+	},
 ]
 
 const menuStyle={

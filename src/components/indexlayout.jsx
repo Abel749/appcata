@@ -7,6 +7,7 @@ import IndexBackground from '../components/indexbackground'
 import AppCard from '../components/appcard';
 import { Layout, Space } from 'antd';
 import HotList from "./hotlist";
+import NewsCard from "./newsCard";
 const { Header, Footer, Content } = Layout;
 
 const headerStyle = {
@@ -42,6 +43,10 @@ const hostListStyle = {
   textAlign: 'center',
   backgroundColor: '#ffffff',
 }
+const newsCardStyle = {
+  textAlign: 'center',
+  backgroundColor: '#ffffff',
+}
 
 const footerStyle = {
   textAlign: 'center',
@@ -56,6 +61,7 @@ const IndexLayout = () => (
 	  <Header style={monthStatStyle}><ThisMonthStat /></Header>
 	  <Header style={contentStyle}><Content2 /></Header>
       <div style={hostListStyle}><HotList /></div>
+      <div style={newsCardStyle}><NewsCard /></div>
 	  <div style={footerStyle}><FootContent /></div>
     </Layout>
   </Space>
