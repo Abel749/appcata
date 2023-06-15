@@ -59,7 +59,7 @@ const newsContent = (props) =>
                                               </div>
                                           </Col>
                                           <Col style={{width:4}}></Col>
-                                          <Link href="/newslist">
+                                          <Link href="/newsdetail">
                                               <Col>
                                                   <div className={styles.right}>
                                                       <Row >

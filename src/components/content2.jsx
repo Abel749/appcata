@@ -43,7 +43,7 @@ const Content2 = () => {
                   { isHovering2 && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
-                          <Link href="/extdata">了解更多</Link>
+                          <Link href="/errorpage">了解更多</Link>
                       </button>
                   </div>) }
                   <p>数据应用</p>
@@ -53,7 +53,7 @@ const Content2 = () => {
                   { isHovering3 && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
-                          <Link href="/extdata">了解更多</Link>
+                          <Link href="/errorpage">了解更多</Link>
                       </button>
                   </div>) }
                   <p>数据治理</p>
@@ -63,7 +63,7 @@ const Content2 = () => {
                   { isHovering4 && (<div>
                       <p>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                       <button>
-                          <Link href="/extdata">了解更多</Link>
+                          <Link href="/errorpage">了解更多</Link>
                       </button>
                   </div>) }
                   <p>数据安全</p>

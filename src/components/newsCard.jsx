@@ -38,7 +38,7 @@ const Mainlogo = (props) =>
                     dataSource={newsData}
                     renderItem={(item) => (
                         <List.Item className={styles.list} >
-                            <Link href="/newslist">
+                            <Link href="/newsdetail">
                                 <Row >
                                     <Row className={styles.row1} >
                                         <h3> {item.title}</h3>
