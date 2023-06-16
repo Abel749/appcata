@@ -3,7 +3,19 @@ import Image from "next/image";
 import styles from "../styles/newsContent.module.css";
 import { Row} from "antd";
 
+const imageDivStyle ={
+    borderTop:'1px',
+    borderTopStyle:'solid',
+    background:'url(/news/news-back.png) no-repeat ',
+    height: '200px',
+    width: '1700px',
+};
 
+const NewsH1Style = {
+
+    height: '200px',
+    width: '1700px',
+};
 
 const data =
     {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证',
@@ -19,8 +31,8 @@ const NewsDetail= () => {
     const [newsData] = useState(data);
     return (
         <>
-            <div className={styles.imageDivStyle}>
-                <Image src="/u249.svg" alt="" width={1920} height={200} priority />
+            <div style={imageDivStyle}>
+                <h1 style={{marginTop:'120px',marginLeft:'200px', fontSize:'35px'}}> 新闻资讯</h1>
             </div>
 
             <div className={styles.testDiv}>

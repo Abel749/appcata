@@ -23,7 +23,7 @@ const Content1 = (props) => {
 	//一级数据类型初始化
 	const getType1 = async() => {
 		const result = await axios(
-			'http://localhost:1337/api/types',
+			'http://localhost:1337/api/types?pagination[page]=1&pagination[pageSize]=1000',
 		);
 		const dataTypes = result.data.data.map((item, index) => {
 			return item.attributes;
@@ -65,7 +65,7 @@ const Content1 = (props) => {
 	//根据一级类型获取二级类型
 	const getType2 = async(firstLevel) => {
 		if('' != firstLevel && undefined != firstLevel) {
-			let url = 'http://localhost:1337/api/types?[filters][code1][$eq]=' + firstLevel;
+			let url = 'http://localhost:1337/api/types?[filters][code1][$eq]=' + firstLevel +'&pagination[page]=1&pagination[pageSize]=100';
 			const result = await axios(
 				url,
 			);
@@ -88,15 +88,17 @@ const Content1 = (props) => {
 
 	//数据产品明细
 	const fetchData = async(level, typeCode) => {
+		let code = firstLevel + secondLevel;
 		let url = 'http://localhost:1337/api/items';
 		if( 0 == level ) {
-			url = url + '?populate[type][filters]*';
+			url = url + '?populate[type][filters]*&pagination[page]=1&pagination[pageSize]=100';
 		}
 		if( 1 == level ) {
-			url = url + '?populate[type][filters][code1][$eq]=' + typeCode;
+			url = url + '?filters[type][code1][$eq]='+typeCode+'&populate[type][filters][code1][$eq]='+typeCode +'&pagination[page]=1&pagination[pageSize]=100';
 		}
 		if( 2 == level ) {
-			url = url + '?populate[type][filters][code2][$eq]=' + typeCode;
+			debugger;
+			url = url + '?filters[type][code2][$eq]='+typeCode+'&populate[type][filters][code2][$eq]='+typeCode +'&pagination[page]=1&pagination[pageSize]=100';
 		}
 		const result = await axios(
 			url

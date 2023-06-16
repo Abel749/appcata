@@ -4,7 +4,20 @@ import Image from "next/image";
 import styles from "../styles/newsContent.module.css";
 import Link from "next/link";
 
-const imageDivStyle ={ borderTop:'1px', borderTopStyle:'solid', };
+const imageDivStyle ={
+    borderTop:'1px',
+    borderTopStyle:'solid',
+    background:'url(/news/news-back.png) no-repeat ',
+    height: '200px',
+    width: '1700px',
+};
+
+const NewsH1Style = {
+
+    height: '200px',
+    width: '1700px',
+};
+
 
 const data = [
     {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证1',
@@ -14,22 +27,22 @@ const data = [
     },
     {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证2',
         content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/u279.svg',
+        img : '/news/news01.png',
         date : '2023-06-02'
     },
     {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证3',
         content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/u279.svg',
+        img : '/news/news01.png',
         date : '2023-06-03'
     },
     {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证4',
         content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/u279.svg',
+        img : '/news/news01.png',
         date : '2023-06-04'
     },
     {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证5',
         content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/u279.svg',
+        img : '/news/news01.png',
         date : '2023-06-05'
     },
     ];
@@ -42,10 +55,10 @@ const newsContent = (props) =>
         return (
             <>
                 <div style={imageDivStyle}>
-                    <Image src="/u249.svg" alt="" width={1920} height={200} priority />
+                    <h1 style={{marginTop:'120px',marginLeft:'200px', fontSize:'35px'}}> 新闻资讯</h1>
                 </div>
-                <div>
-                    <h1> 新闻咨询</h1>
+                <div style={{marginTop:'20px'}}>
+
                     <List pagination={{ position, align,defaultPageSize:2 } }
                           grid={{ gutter: 10, column: 1, }}
                           dataSource={newsData}
