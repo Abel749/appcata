@@ -88,7 +88,6 @@ const Content1 = (props) => {
 
 	//数据产品明细
 	const fetchData = async(level, typeCode) => {
-		let code = firstLevel + secondLevel;
 		let url = 'http://localhost:1337/api/items';
 		if( 0 == level ) {
 			url = url + '?populate[type][filters]*&pagination[page]=1&pagination[pageSize]=100';

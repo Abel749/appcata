@@ -18,11 +18,13 @@ const titleH3Style={
     marginLeft:'230px',
     fontSize:'25px',
     color: '#222222',
+
 };
 
 
 const row3Style={
-    marginLeft:'150px',
+    marginLeft:'160px',
+
 
 };
 
@@ -41,10 +43,10 @@ const Content2 = () => (
             </Row>
         </Row>
         <Row style={row3Style} gutter={{
-            xs: 8,
-            sm: 16,
-            md: 24,
-            lg: 32,
+            xs: 2,
+            sm: 4,
+            md: 6,
+            lg: 8,
         }}>
             <Col>
                 <div className={styles.container}>
@@ -53,15 +55,18 @@ const Content2 = () => (
                             <h3 style={{fontSize:"24px"} }>外部数据</h3>
                         </div>
                     </div>
-                        <div className={styles.two}>
-                            <Link href="/extdata">
+                    <div className={styles.two}>
+                        <div className={styles.twoDiv}>
+                            <Link href="/extdata" >
                                 <div className={styles.link}>
                                     <h3 style={{fontSize:"24px"} }>外部数据</h3>
-                                    <p className={styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
-                                     <button style={{width:"100px", height:"40px"}}>了解更多</button>
+                                    <p className={styles.content} >全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
+                                    <button style={{width:"100px", height:"40px"}} >了解更多 </button>
                                 </div>
                             </Link>
                         </div>
+
+                    </div>
                 </div>
             </Col>
             <Col>
@@ -71,50 +76,56 @@ const Content2 = () => (
                             <h3 style={{fontSize:"24px"} }>数据应用</h3>
                         </div>
                     </div>
+
                     <div className={styles.two2}>
-                        <Link href="/errorpage">
-                            <div className={styles.link}>
-                                <h3 style={{fontSize:"24px"} }>数据应用</h3>
-                                <p className={styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
-                                 <button style={{width:"100px", height:"40px"}}>了解更多</button>
-                            </div>
-                        </Link>
+                        <div className={styles.twoDiv}>
+                            <Link href="/errorpage">
+                                <div className={styles.link}>
+                                    <h3 style={{fontSize:"24px"} }>数据应用</h3>
+                                    <p className={styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
+                                     <button style={{width:"100px", height:"40px"}}>了解更多</button>
+                                </div></Link>
+                        </div>
                     </div>
                 </div>
             </Col>
             <Col>
-                <div className={styles.container2}>
+                <div className={styles.container3}>
                     <div className={styles.one3}>
                         <div style={{marginTop:"330px"} }>
                             <h3 style={{fontSize:"24px"} }>数据治理</h3>
                         </div>
                     </div>
+
                         <div className={styles.two3}>
+                            <div className={styles.twoDiv}>
                             <Link href="/errorpage">
                                 <div className={styles.link}>
                                     <h3 style={{fontSize:"24px"} }>数据治理</h3>
                                     <p className={styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                                     <button style={{width:"100px", height:"40px"}}>了解更多</button>
-                                </div>
-                            </Link>
+                                </div></Link>
+                            </div>
                         </div>
                 </div>
             </Col>
             <Col>
-                <div className={styles.container2}>
+                <div className={styles.container4}>
                     <div className={styles.one4}>
                         <div style={{marginTop:"330px"} }>
                             <h3 style={{fontSize:"24px"} }>数据安全</h3>
                         </div>
                     </div>
+
                         <div className={styles.two4}>
+                            <div className={styles.twoDiv}>
                             <Link href="/errorpage">
                                 <div className={styles.link}>
                                     <h3 style={{fontSize:"24px"} }>数据安全</h3>
                                     <p className={styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                                     <button style={{width:"100px", height:"40px"}}>了解更多</button>
-                                </div>
-                        </Link>
+                                </div></Link>
+                            </div>
                         </div>
                 </div>
             </Col>

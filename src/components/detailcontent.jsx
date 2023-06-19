@@ -221,14 +221,16 @@ return (
                         关键词: {dataItem.KeyWords}
                     </Descriptions.Item>
                 </Descriptions>
-                {/*<div>
+                <div>
                     <Image src="/u2613.svg" style={imageStyle3} width={6} height={35} priority/>
                     <h1 style={h2Style}>使用案例</h1>
                 </div>
                 <Descriptions column={1} style={publicStyle}>
-                    <Descriptions.Item label="">1、网络应收贷、网络预付贷、电子保函等业务今昔大数据风险检验；</Descriptions.Item>
-                    <Descriptions.Item label="">2、对工产品放款环节进行校验。</Descriptions.Item>
-                </Descriptions>*/}
+                    <Descriptions.Item contentStyle={descItemStyle}>
+                        1、网络应收贷、网络预付贷、电子保函等业务今昔大数据风险检验；<br/>
+                        2、对工产品放款环节进行校验。
+                    </Descriptions.Item>
+                </Descriptions>
                 <div>
                     <Image src="/u2613.svg" style={imageStyle3} width={6} height={35} priority/>
                     <h1 style={h2Style}>物理信息</h1>
