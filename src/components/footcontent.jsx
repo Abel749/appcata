@@ -8,11 +8,11 @@ const FootContent = () => {
   return (
   <> 
     <div >
-      <Image src="/foot.png"  width={1100} height={170}  priority/>
+      <Image src="/foot.png" alt=""  width={1100} height={170}  priority/>
     </div>
   </>
   )
-};
+}
 
 
 export default FootContent;

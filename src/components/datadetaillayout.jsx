@@ -3,7 +3,6 @@ import TopContent from '../components/topcontent';
 import DetailContent from '../components/detailcontent';
 import FootContent from '../components/footcontent';
 import { Layout, Space } from 'antd';
-import ThisMonthStat from "./thismonthstat";
 const { Header, Footer, Content } = Layout;
 
 const headerStyle = {

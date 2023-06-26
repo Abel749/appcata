@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Menu, Col, Row } from 'antd';
-import SearchButton from '../components/searchbutton';
 import AvatarLogin from '../components/avatarlogin';
 import Image from "next/image";
 
@@ -13,6 +12,10 @@ const items = [
 	{
 		label: ( <Link href = "/datacenter" > 资产中心 < /Link>),
 		key: 'datacenter',
+	},
+	{
+		label: ( <Link href = "/newslist" > 新闻咨讯 < /Link>),
+		key: 'newsList',
 	},
 ]
 
@@ -34,7 +37,7 @@ const TopContent = (props) => (
           items = {items}    
         />	  
 	  </Col>
-	  <Col span={4} ><SearchButton /></Col>
+	  <Col span={4} ></Col>
 	  <Col span={4} ><AvatarLogin /></Col>
     </Row>
     

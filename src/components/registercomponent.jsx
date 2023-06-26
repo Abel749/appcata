@@ -17,9 +17,9 @@ const RegisterComponent = () => {
       console(`response`,response);
 	  router.replace('/profile');
     } catch (err) {
-      console.log(err.response.data.error.status,
+/*      console.log(err.response.data.error.status,
 	  err.response.data.error.name,
-	  err.response.data.error.message);
+	  err.response.data.error.message);*/
     }
   }
 

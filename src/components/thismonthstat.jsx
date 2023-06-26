@@ -50,7 +50,7 @@ const ThisMonthStat = () => {
                 <Col>
                     <Row style={publicRowStyle}>
                         <Col>
-                            <Image src="/count.svg"  width={90} height={90}  priority  />
+                            <Image src="/count.svg" alt=""  width={90} height={90}  priority  />
                         </Col>
                         <Col>
                             <div style={div2Style}>
@@ -64,7 +64,7 @@ const ThisMonthStat = () => {
                 <Col>
                     <Row style={publicRowStyle}>
                         <Col >
-                            <Image src="/resource.svg"  width={90} height={90}  priority  />
+                            <Image src="/resource.svg" alt=""  width={90} height={90}  priority  />
                         </Col>
                         <Col >
                             <div style={div2Style}>
@@ -78,7 +78,7 @@ const ThisMonthStat = () => {
                 <Col>
                     <Row style={publicRowStyle}>
                         <Col>
-                            <Image src="/residue.svg"  width={90} height={90}  priority  />
+                            <Image src="/residue.svg" alt=""  width={90} height={90}  priority  />
                         </Col>
                         <Col >
                             <div style={div2Style}>
@@ -92,7 +92,7 @@ const ThisMonthStat = () => {
                 <Col>
                     <Row style={publicRowStyle}>
                         <Col >
-                            <Image src="/inventory.svg"  width={90} height={90}  priority  />
+                            <Image src="/inventory.svg" alt=""  width={90} height={90}  priority  />
                         </Col>
                         <Col >
                             <div style={div2Style}>

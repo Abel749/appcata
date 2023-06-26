@@ -6,7 +6,9 @@ import FootContent from '../components/footcontent';
 import IndexBackground from '../components/indexbackground'
 import AppCard from '../components/appcard';
 import { Layout, Space } from 'antd';
-import HotList from "./hotlist";
+import HotList from "../components/hotlist";
+import NewsCard from "./newsCard";
+import comp from "./comp";
 const { Header, Footer, Content } = Layout;
 
 const headerStyle = {
@@ -23,6 +25,7 @@ const indexBackgroundStyle={
   borderTopWidth:'1px',
   borderTopStyle:'solid',
   borderTopColor:'aliceblue',
+  backgroundColor: '#036ED6',
 };
 
 const monthStatStyle={
@@ -32,8 +35,8 @@ const monthStatStyle={
 };
 const contentStyle = {
   textAlign: 'center',
-  minHeight: 700,
-  lineHeight: '220px',
+  minHeight: 750,
+  //lineHeight: '220px',
   color: '#fff',
   backgroundColor: '#ffffff',
 };
@@ -42,6 +45,11 @@ const hostListStyle = {
   textAlign: 'center',
   backgroundColor: '#ffffff',
 }
+const newsCardStyle = {
+  textAlign: 'center',
+  backgroundColor: '#ffffff',
+  marginTop:'50px',
+}
 
 const footerStyle = {
   textAlign: 'center',
@@ -49,16 +57,21 @@ const footerStyle = {
 };
 
 const IndexLayout = () => (
+    <comp>
+
+
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-    <Layout>
+    <Layout style={{ backgroundColor: '#ffffff' }}>
       <Header style={headerStyle}><TopContent frompage="home" /></Header>
       <div style={indexBackgroundStyle}><IndexBackground /></div>
 	  <Header style={monthStatStyle}><ThisMonthStat /></Header>
 	  <Header style={contentStyle}><Content2 /></Header>
       <div style={hostListStyle}><HotList /></div>
+      <div style={newsCardStyle}><NewsCard /></div>
 	  <div style={footerStyle}><FootContent /></div>
     </Layout>
   </Space>
+    </comp>
   );
 
 

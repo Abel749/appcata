@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {List, Radio, Form, Row, Col} from 'antd';
 import { useState, useEffect } from 'react';
-import styles from '../styles/Form.module.css';
+import formStyles1 from '../styles/Form.module.css';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +23,7 @@ const Content1 = (props) => {
 	//一级数据类型初始化
 	const getType1 = async() => {
 		const result = await axios(
-			'http://localhost:1337/api/types',
+			'http://localhost:1337/api/types?pagination[page]=1&pagination[pageSize]=1000',
 		);
 		const dataTypes = result.data.data.map((item, index) => {
 			return item.attributes;
@@ -65,7 +65,7 @@ const Content1 = (props) => {
 	//根据一级类型获取二级类型
 	const getType2 = async(firstLevel) => {
 		if('' != firstLevel && undefined != firstLevel) {
-			let url = 'http://localhost:1337/api/types?[filters][code1][$eq]=' + firstLevel;
+			let url = 'http://localhost:1337/api/types?[filters][code1][$eq]=' + firstLevel +'&pagination[page]=1&pagination[pageSize]=100';
 			const result = await axios(
 				url,
 			);
@@ -90,13 +90,13 @@ const Content1 = (props) => {
 	const fetchData = async(level, typeCode) => {
 		let url = 'http://localhost:1337/api/items';
 		if( 0 == level ) {
-			url = url + '?populate[type][filters]*';
+			url = url + '?populate[type][filters]*&pagination[page]=1&pagination[pageSize]=100';
 		}
 		if( 1 == level ) {
-			url = url + '?populate[type][filters][code1][$eq]=' + typeCode;
+			url = url + '?filters[type][code1][$eq]='+typeCode+'&populate[type][filters][code1][$eq]='+typeCode +'&pagination[page]=1&pagination[pageSize]=100';
 		}
 		if( 2 == level ) {
-			url = url + '?populate[type][filters][code2][$eq]=' + typeCode;
+			url = url + '?filters[type][code2][$eq]='+typeCode+'&populate[type][filters][code2][$eq]='+typeCode +'&pagination[page]=1&pagination[pageSize]=100';
 		}
 		const result = await axios(
 			url
@@ -143,7 +143,7 @@ const Content1 = (props) => {
 			fetchData(0, null).then();
 		}
 
-	}, []);
+	}, []);// eslint-disable-line
 
 	const handleKeyChange = (e) => {
 		console.log(e.target.value);
@@ -152,7 +152,7 @@ const Content1 = (props) => {
 	//二级数据类型
 	const handlesecondLevel = (e) => {
 		setSecondLevel(e.target.value);
-		fetchData(2, e.target.value).then();
+		fetchData(2, e.target.value);
 	};
 
 	//一级数据类型
@@ -166,13 +166,13 @@ const Content1 = (props) => {
 			getType2(firstLevel).then();
 			fetchData(1, firstLevel).then();
 		}
-	}, [firstLevel]);
+	}, [firstLevel]);// eslint-disable-line
 
 	useEffect(() => {
 		if( undefined != secondLevel) {
 			fetchData(2, secondLevel).then();
 		}
-	}, [secondLevel]);
+	}, [secondLevel]);// eslint-disable-line
 
 	//排序规则
 	const handleSortChange = (e) => {
@@ -181,21 +181,21 @@ const Content1 = (props) => {
 
   return (
 	<>
-		<Form  className={styles.form} >
-			<Row className={styles.row}  >
-				<Col className={styles.label}> 一级数据类型 </Col>
-				<Col className={styles.list}>
-					<Radio.Group  value={firstLevel}  onChange={ handlefirstLevel }>
+		<Form  className={formStyles1.form} >
+			<Row className={formStyles1.row}  >
+				<Col className={formStyles1.label}> 一级数据类型 </Col>
+				<Col className={formStyles1.list}>
+					<Radio.Group  className={formStyles1.radioButton} value={firstLevel}  onChange={ handlefirstLevel }>
 						{firstLevelMap.map((item)=>
 						<Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
 					)}
 					</Radio.Group>
 				</Col>
 			</Row>
-			<Row className={styles.row}   >
-				<Col className={styles.label}> 二级数据类型  </Col>
-				<Col className={styles.list}>
-					<Radio.Group value={secondLevel} onChange={handlesecondLevel}>
+			<Row className={formStyles1.row}   >
+				<Col className={formStyles1.label}> 二级数据类型  </Col>
+				<Col className={formStyles1.list}>
+					<Radio.Group className={formStyles1.radioButton} value={secondLevel} onChange={handlesecondLevel}>
 					{secondLevelMap.map((item)=>
 						<Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
 					)}
@@ -203,20 +203,20 @@ const Content1 = (props) => {
 				</Col>
 			</Row>
 
-			<Row className={styles.row}   >
-				<Col className={styles.label}> 排序规则 </Col>
-				<Col className={styles.list}>
-				<Radio.Group value={sortOrder} onChange={handleSortChange}>
+			<Row className={formStyles1.row}   >
+				<Col className={formStyles1.label}> 排序规则 </Col>
+				<Col className={formStyles1.list}>
+				<Radio.Group className={formStyles1.radioButton} value={sortOrder} onChange={handleSortChange}>
 					<Radio.Button value="hot">最热</Radio.Button>
 					<Radio.Button value="reCom">推荐</Radio.Button>
 					<Radio.Button value="new">最新</Radio.Button>
 				</Radio.Group>
 				</Col>
 			</Row>
-			<Row className={styles.row}   >
-				<Col className={styles.label}> 关键词  </Col>
-				<Col className={styles.list}>
-					<Radio.Group value={keywords} onChange={handleKeyChange}>
+			<Row className={formStyles1.row}   >
+				<Col className={formStyles1.label}> 关键词  </Col>
+				<Col className={formStyles1.list}>
+					<Radio.Group className={formStyles1.radioButton} value={keywords} onChange={handleKeyChange}>
 						<Radio.Button value="identify">身份识别</Radio.Button>
 						<Radio.Button value="finance">金融信贷</Radio.Button>
 						<Radio.Button value="riskCon">风控核验</Radio.Button>
@@ -240,16 +240,16 @@ const Content1 = (props) => {
 			renderItem={(item) => (
 				<List.Item >
 					<Link href = {item.url} >
-						<div className={styles.pss} >
+						<div className={formStyles1.pss} >
 							<Row>
-								<div className={styles.top}>
+								<div className={formStyles1.top}>
 									<Image src={item.DDSSrc} alt="" width={200} height={54} priority />
 								</div>
 							</Row>
 							<Row style ={{height:20}}></Row>
 							<Row>
 								<Col>
-								<div className={styles.left}>
+								<div className={formStyles1.left}>
 									<Row>
 									<Image src={item.Src1} alt="" width={150} height={185} priority />
 									</Row>
@@ -257,19 +257,19 @@ const Content1 = (props) => {
 								</Col>
 								<Col style={{width:4}}></Col>
 								<Col>
-									<div className={styles.right}>
+									<div className={formStyles1.right}>
 										<Row>
 											<h3>{item.ItemName}</h3>
 										</Row>
-										<Row className={styles.height6}></Row>
+										<Row className={formStyles1.height6}></Row>
 										<Row>
 											&nbsp;<span><button>{item.type1}</button> &nbsp;&nbsp;<button>{item.type2}</button></span>
 										</Row>
-										<Row className={styles.height24}></Row>
+										<Row className={formStyles1.height24}></Row>
 										<Row>
-											<textarea className={styles.dataSource}>{item.ApplicationScenario}</textarea>
+											<textarea className={formStyles1.dataSource}>{item.ApplicationScenario}</textarea>
 										</Row>
-										<Row className={styles.height36}></Row>
+										<Row className={formStyles1.height36}></Row>
 										<Row>
 											<h4>{item.DataSources}</h4>
 										</Row>

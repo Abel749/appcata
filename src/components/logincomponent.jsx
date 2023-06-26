@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { parseCookies, setCookie } from 'nookies'
 import axios from 'axios';
 
 const LoginComponent = () => {
