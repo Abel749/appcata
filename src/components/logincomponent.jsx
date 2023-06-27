@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import config from "../../next.config";
 
 const LoginComponent = () => {
   const router = useRouter();
@@ -13,14 +14,10 @@ const LoginComponent = () => {
     e.preventDefault();
 	console.log(`haha`,{ ...userData });
     try {
-	  //const response = await axios.post('http://127.0.0.1:1337/api/auth/local',{ ...userData });
-	  //console.log(`response1`,response1);
-      const response = await axios.post('api/login', { ...userData });
-      //const response1 = await axios('http://127.0.0.1:1337/api/restaurants');
+      const baseUrl = config.baseUrl.Url + 'api/auth/local';
+	  const response = await axios.post( baseUrl ,{ ...userData });
 	  console.log(`response`,response);
-	  //console.log(`response1`,response1);
-	  
-      router.push('/profile');  
+      router.push('/profile');
       
     } catch (err) {
       console.log(err);
