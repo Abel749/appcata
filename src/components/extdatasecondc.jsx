@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState,useEffect } from 'react';
 import extadaStyles2 from "../styles/extada.module.css";
 import Link from "next/link";
+import config from "../../next.config";
 const data =[];
 
 const ExtDataSecondC = () => {
@@ -17,8 +18,9 @@ useEffect(() => {
 
 //二级数据类型初始化
 const getType2 = async () => {
+    let detailUrl = config.baseUrl.Url + 'api/types?pagination[page]=1&pagination[pageSize]=100';
     const result = await axios(
-        'http://localhost:1337/api/types?pagination[page]=1&pagination[pageSize]=100',
+        detailUrl
     );
     const dataTypes = result.data.data.map((item,index) => {
         return   item.attributes;

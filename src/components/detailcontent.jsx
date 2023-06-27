@@ -4,6 +4,7 @@ import {Card, List, Radio, Form, Row, Table, Avatar, Col, Menu,Descriptions} fro
 import { Input, Space } from 'antd';
 import { useState,useEffect } from 'react';
 import Image from "next/image";
+import config from "../../next.config";
 
 
 const parentDevStyle={
@@ -154,7 +155,7 @@ const DetailContent = (props) =>
             let detailUrl = window.location.href.toString();
             if(detailUrl.indexOf('itemId') >0){
                 let arr = detailUrl.split('=');
-                detailUrl = "http://localhost:1337/api/items/"+arr[1]+"?populate=*";
+                detailUrl = config.baseUrl.Url +"api/items/"+arr[1]+"?populate=*";
             }
             const result = await axios(
                 detailUrl
