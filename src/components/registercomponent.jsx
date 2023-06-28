@@ -19,9 +19,6 @@ const RegisterComponent = () => {
         console(`response`,response);
         router.replace('/profile');
     } catch (err) {
-/*      console.log(err.response.data.error.status,
-	  err.response.data.error.name,
-	  err.response.data.error.message);*/
     }
   }
 
@@ -31,7 +28,7 @@ const RegisterComponent = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{width:"500px",height :"300px",backgroundColor : "red",marginLeft:"36%"}}>
       <label>
         Username:
         <input type="text" name="username" onChange={e => handleChange(e)} />
