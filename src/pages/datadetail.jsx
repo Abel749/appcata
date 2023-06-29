@@ -1,11 +1,13 @@
 import DataDetailLayout from '../components/datadetaillayout';
-
+import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 const DataDetail = () => {
 
     return (
-        <div>
-            <DataDetailLayout />
-        </div>
+        <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
+            <div>
+                <DataDetailLayout />
+            </div>
+        </StyleProvider>
     )
 }
 

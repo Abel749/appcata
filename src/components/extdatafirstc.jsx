@@ -36,6 +36,7 @@ const ExtDataFirstC = () => {
 						code2: item.code2,
 						name: item.type1,
 						url: "/datacenter?firstType=" + item.code1,
+					    logo:item.LogoSrc,
 					}
 					//添加一级数据类型
 				dataType1.push(dataTypeTemp);
@@ -48,11 +49,18 @@ const ExtDataFirstC = () => {
 
 	return (
 		<>
-			<Row>
-				<Col span={8}>
-					<Image src="firstc.png" alt=""/>
+			<Row gutter={{
+				xs: 8,
+				sm: 16,
+				md: 24,
+				lg: 32,
+			}}>
+				<Col span={8} className={extadaStyles.col}>
+					<h1 className={extadaStyles.backgroundH1}>一级数据分类</h1>
+					<div className={extadaStyles.firstBackground}></div>
 				</Col>
-				<Col span={16}>
+
+				<Col span={10}>
 					<List
 						grid={{
 							column: 2,
@@ -60,7 +68,8 @@ const ExtDataFirstC = () => {
 						dataSource={dataItem}
 						renderItem={(item) => (
 							<List.Item className={extadaStyles.button1} >
-								<Link href={item.url}>{item.name}</Link>
+								<Image src={item.logo} alt=""  width={40} height={36}  priority  />
+								<Link href={item.url} style={{color:'#fff'}}>{item.name}</Link>
 							</List.Item>
 						)}
 					/>

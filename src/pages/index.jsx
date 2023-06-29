@@ -1,11 +1,13 @@
 import IndexLayout from '../components/indexlayout';
-
+import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 const Home = () => {
   
   return (
-    <div>
-	  <IndexLayout />      
-    </div>
+      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
+        <div>
+          <IndexLayout />
+        </div>
+    </StyleProvider>
   )
 }
 

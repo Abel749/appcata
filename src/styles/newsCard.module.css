@@ -18,8 +18,8 @@
 }
 
 .hh1{
-  color: #012C56;
-  font-size: 24px;
+  color: #036ED6;
+  font-size: 40px;
 }
 
 .list{
@@ -42,11 +42,13 @@
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   display: -webkit-box;
-  -webkit-box-orient: vertical
+  -webkit-box-orient: vertical;
+  color: black;
 }
 .row3{
   height: 10px;
   margin-left: 640px;
+  color: black;
 }
 
 .button{

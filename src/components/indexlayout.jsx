@@ -8,7 +8,7 @@ import AppCard from '../components/appcard';
 import { Layout, Space } from 'antd';
 import HotList from "../components/hotlist";
 import NewsCard from "./newsCard";
-import comp from "./comp";
+import {StyleProvider} from '@ant-design/cssinjs';
 const { Header, Footer, Content } = Layout;
 
 const headerStyle = {
@@ -35,7 +35,7 @@ const monthStatStyle={
 };
 const contentStyle = {
   textAlign: 'center',
-  minHeight: 750,
+  minHeight: 630,
   //lineHeight: '220px',
   color: '#fff',
   backgroundColor: '#ffffff',
@@ -48,7 +48,7 @@ const hostListStyle = {
 const newsCardStyle = {
   textAlign: 'center',
   backgroundColor: '#ffffff',
-  marginTop:'50px',
+  marginTop:'70px',
 }
 
 const footerStyle = {
@@ -57,22 +57,23 @@ const footerStyle = {
 };
 
 const IndexLayout = () => (
-    <comp>
 
 
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
     <Layout style={{ backgroundColor: '#ffffff' }}>
-      <Header style={headerStyle}><TopContent frompage="home" /></Header>
-      <div style={indexBackgroundStyle}><IndexBackground /></div>
-	  <Header style={monthStatStyle}><ThisMonthStat /></Header>
-	  <Header style={contentStyle}><Content2 /></Header>
-      <div style={hostListStyle}><HotList /></div>
-      <div style={newsCardStyle}><NewsCard /></div>
-	  <div style={footerStyle}><FootContent /></div>
+      <StyleProvider>
+        <Header style={headerStyle}><TopContent frompage="home" /></Header>
+        <div style={indexBackgroundStyle}><IndexBackground /></div>
+        <Header style={monthStatStyle}><ThisMonthStat /></Header>
+        <Header style={contentStyle}><Content2 /></Header>
+        <div style={hostListStyle}><HotList /></div>
+        <div style={newsCardStyle}><NewsCard /></div>
+        <div style={footerStyle}><FootContent /></div>
+      </StyleProvider>
     </Layout>
   </Space>
-    </comp>
   );
+
 
 
 export default IndexLayout;

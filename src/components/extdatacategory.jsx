@@ -13,8 +13,8 @@ const titleStyle = {
 
 const tabStyle = {
 	margin: 0,
-	width:'1200px',
-	height: '440px',
+	width:'1600px',
+	height: '450px',
 	color: '#000',
 	lineHeight: '50px',
 	textAlign: 'center',

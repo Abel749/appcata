@@ -37,7 +37,7 @@ const ExtDataStatStyle = {
 
 const ExtDataCategoryStyle = {
   textAlign: 'center',
-  minHeight: 510,
+  minHeight: 770,
   lineHeight: '20px',
   color: '#fff',
   backgroundColor: '#ffffff',
@@ -99,7 +99,6 @@ const DataCenterLayout = () => (
       <div style={ExtDataBackgroundStyle}><ExtDataBackground /></div>
       <Header style={ExtDataStatStyle}><ExtDataStat /></Header>
 	  <Header style={ExtDataCategoryStyle}><ExtDataCategory /></Header>
-	  <Header style={DataListShowStyle}><DataListShow /></Header>
       <Header style={ExtDataReginDataStyle}><ExtDataReginData/></Header>
       <Header style={ExtDataCoverageStyle}><ExtDataCoverage/></Header>
       <Header style={ExtDataWhereStyle}><ExtDataWhere/></Header>

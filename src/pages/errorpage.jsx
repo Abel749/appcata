@@ -1,12 +1,14 @@
 import ErrorPageLayout from "../components/errorpagelayout";
-
+import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 
 const ErrorPage = () => {
   
   return (
-    <div>
-	  <ErrorPageLayout />
-    </div>
+      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
+            <div>
+              <ErrorPageLayout />
+            </div>
+      </StyleProvider>
   )
 }
 

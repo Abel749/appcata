@@ -1,11 +1,13 @@
 import NewsDetailLayout from "../components/newsDetaillayout";
-
+import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 const NewsDetail = () => {
   
   return (
-    <div>
-	  <NewsDetailLayout />
-    </div>
+      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
+            <div>
+              <NewsDetailLayout />
+            </div>
+      </StyleProvider>
   )
 }
 

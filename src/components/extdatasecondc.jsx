@@ -6,6 +6,7 @@ import { useState,useEffect } from 'react';
 import extadaStyles2 from "../styles/extada.module.css";
 import Link from "next/link";
 import config from "../../next.config";
+import extadaStyles from "../styles/extada.module.css";
 const data =[];
 
 const ExtDataSecondC = () => {
@@ -50,19 +51,26 @@ const getType2 = async () => {
 
 return (
     <>
-        <Row>
-            <Col span={8}>
-                <Image src="firstc.png" alt=""/>
+        <Row gutter={{
+            xs: 8,
+            sm: 16,
+            md: 24,
+            lg: 32,
+        }}>
+            <Col span={8} className={extadaStyles.col}>
+                <h1 className={extadaStyles.backgroundH1}>二级数据分类</h1>
+                <div className={extadaStyles.secondBackground}></div>
             </Col>
-            <Col span={16}>
+            <Col span={10}>
                 <List
                     grid={{
-                        column: 3,
+                        column: 4,
                     }}
                     dataSource={dataItem}
                     renderItem={(item) => (
                         <List.Item className={extadaStyles2.button2} >
-                            <Link href={item.url} >{item.name}</Link>
+
+                            <Link href={item.url} style={{color:'#fff'}}>{item.name}</Link>
                         </List.Item>
                     )}
                 />

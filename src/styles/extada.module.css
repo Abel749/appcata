@@ -1,10 +1,42 @@
+.col{
+    background-color: #036ED6 ;
+}
+.firstBackground{
+    background-image: url("/firstc.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    width: 1250px;
+    height: 350px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.backgroundH1{
+    margin-top: 50px;
+    color: #fff;
+    font-size: 25px;
+
+}
+
+.secondBackground{
+    background-image: url("/extData/secondc.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    width: 1250px;
+    height: 350px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+
 .button1{
-    width:180px;
-    height:40px;
-    line-height : 40px;
+    width:240px;
+    height:80px;
+    line-height : 80px;
     text-align: center;
     color: whitesmoke;
-    background-color: #1199cc;
+    background-color: #4F9AE2;
+    font-size: 20px;
 }
 
 .button2{
@@ -12,8 +44,8 @@
     height:40px;
     line-height : 40px;
     text-align: center;
-    color: whitesmoke;
-    background-color: #3377aa;
+    background-color: #4F9AE2;
+    border-radius:10px;
 }
 .list{
     margin-bottom: 10px;
