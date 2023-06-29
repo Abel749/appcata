@@ -18,8 +18,8 @@
 }
 
 .hh1{
-  color: #036ED6;
-  font-size: 40px;
+  color: #012C56;
+  font-size: 24px;
 }
 
 .list{
@@ -31,6 +31,7 @@
 .row1{
   margin: 3px 3px 3px 3px;
   height: 20px;
+  width: 500px;
 }
 
 .row2{
@@ -57,4 +58,9 @@
   padding: 10px;
   color: #fff;
   background-color: #036ED6;
+}
+
+.img{
+  width: 400px;
+  height: 250px;
 }

@@ -2,40 +2,18 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import nookies from 'nookies';
 import LoginComponent from '../components/LoginComponent';
-import TopContent from '../components/topcontent';
-import FootContent from '../components/footcontent';
-import { Layout, Space } from 'antd';
-const { Header, Footer, Content } = Layout;
-
-
-
-
-const contentStyle = {
-  height: "592px",
-  color: '#fff',
-  padding:0,
-  //backgroundColor: '#108ee9',
-  backgroundColor: '#ffffff',
-};
-
-const footerStyle = {
-  textAlign: 'center',
-  backgroundColor: '#555555',
-};
-
+import { Layout } from 'antd';
+const {  Content } = Layout;
 const Login = () => {
   const router = useRouter();
   const goToRegister = () => {
-    router.push('/register');
+   router.push('/register');
   }
 
   return (
-  <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-    <Layout>
-      <Content style={contentStyle}><LoginComponent /></Content>
-	  <Footer style={footerStyle}><FootContent /></Footer>
-    </Layout>
-  </Space>  
+  <div>
+      <Content><LoginComponent /></Content>
+  </div>
   )
 }
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import config from "../../next.config";
+import loginStyle from '../styles/login.module.css';
 
 const LoginComponent = () => {
 
@@ -33,21 +34,21 @@ const LoginComponent = () => {
     }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} style={{width:"500px",height :"300px",backgroundColor : "red",marginLeft:"46%",marginTop:"16%"}}>
-        <label>
-          Email:
-          <input type="text" name="identifier" onChange={e => handleChange(e)} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" name="password" onChange={e => handleChange(e)} />
-        </label>
-        <br />
-        <button>Login</button>
-        <button onClick={goToRegister}>Register</button>
-      </form>
+      <div className={loginStyle.contentStyle} >
+        <form onSubmit={handleSubmit} className={loginStyle.baseBox}>
+            <button>Login</button>
+            <button onClick={goToRegister}>Register</button>
+            <br/>
+            <label>
+                Email:
+            <input type="text" name="identifier" onChange={e => handleChange(e)} />
+            </label>
+            <br/>
+            <label>
+                Password:
+            <input type="password" name="password" onChange={e => handleChange(e)} />
+            </label>
+        </form>
     </div>
   )
 }

@@ -1,0 +1,47 @@
+.content{
+  color: black;
+  width: 50%;
+  margin-left: 20%;
+  line-height: 30px;
+}
+
+.content h2 h3 h4 h5 {
+  text-align: left;
+  line-height: 2em;
+  text-indent:2em;
+}
+.content h1{
+  text-align: center;
+  line-height: 2em;
+  color: #012C56;
+  font-size: 24px;
+}
+.content h2{
+  text-align: center;
+  line-height: 2em;
+  color: #222222;
+  font-size: 20px;
+}
+.content h3{
+  color: #666666;
+  font-size: 18px;
+}
+.content h4{
+  color: #666666;
+  font-size: 16px;
+}
+
+.content h5{
+  color: #999999;
+  font-size: 14px;
+}
+
+.content h6{
+  color: #999999;
+  font-size: 12px;
+}
+
+.content p img{
+  width:760px;
+  height:450px;
+}

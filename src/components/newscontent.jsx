@@ -1,8 +1,10 @@
-import {useState} from 'react';
 import {List,  Row,Col} from 'antd';
-import Image from "next/image";
 import newsContentStyles from "../styles/newsContent.module.css";
 import Link from "next/link";
+import React, {useEffect, useState} from "react";
+import config from "../../next.config";
+import axios from "axios";
+import newsCardStyles from "../styles/newsCard.module.css";
 
 const imageDivStyle ={
     borderTop:'1px',
@@ -12,48 +14,38 @@ const imageDivStyle ={
     width: '1700px',
 };
 
-const NewsH1Style = {
-
-    height: '200px',
-    width: '1700px',
-};
-
-
-const data = [
-    {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证1',
-        content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/u215.png',
-        date : '2023-06-01'
-    },
-    {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证2',
-        content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/news/news01.png',
-        date : '2023-06-02'
-    },
-    {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证3',
-        content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/news/news01.png',
-        date : '2023-06-03'
-    },
-    {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证4',
-        content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/news/news01.png',
-        date : '2023-06-04'
-    },
-    {   title :'恒丰银行荣获数据管理能力成熟度量化管理级认证5',
-        content :'中国电子信息行业联合会公布2023年新一批获得数据管理能力成熟度（DCMM）等级证书的企业名单，恒丰银行获评DCMM四级（量化管理级），标志数据管理能力已通过国家标准认证。',
-        img : '/news/news01.png',
-        date : '2023-06-05'
-    }
-    ];
 const position={bottom:'bottom'};
 const align={center:'center'};
 
+const data = [];
+const urlImg = '/u215.png';
+
 const newsContent = (props) => {
     {
-/*        const [position, setPosition] = useState('bottom');
-        const [align, setAlign] = useState('center');
-        const [newsData, setNewsData] = useState(data);*/
+        const [newsData, setNewsData] = useState(data);
+
+        useEffect(() => {
+            getNewsDetail().then();
+
+        }, []);
+
+        const getNewsDetail = async () => {
+
+            let detailUrl = config.baseUrl.Url + 'api/newcontent?pagination[page]=1&pagination[pageSize]=100';
+            const result = await axios(
+                detailUrl
+            );
+            const data = result.data.data.map((item, index) => {
+                let date = item.attributes.publishedAt;
+                let dateArr = date.split('T');
+                item.attributes.publishedAt = dateArr[0];
+                item.attributes.id = item.id;
+                item.attributes.linkUrl = '/newsdetail?newsContentId=' + item.id;
+                return item.attributes;
+            })
+            setNewsData(data);
+
+        };
 
         return (
             <>
@@ -62,31 +54,31 @@ const newsContent = (props) => {
                 </div>
                 <div style={{marginTop:'20px'}}>
 
-                    <List pagination={{ position, align,defaultPageSize:2 } }
+                    <List pagination={{ position, align,defaultPageSize:3 } }
                           grid={{ gutter: 10, column: 1, }}
-                          dataSource={data}
+                          dataSource={newsData}
                           renderItem={(item) => (
                               <List.Item >
                                   <div className={newsContentStyles.list}>
                                       <Row>
                                           <Col>
                                               <div className={newsContentStyles.left}>
-                                                  <Image src={item.img} alt="" width={400} height={250} />
+                                                  <img src={item.picUrl} className={newsCardStyles.img} alt=""/>
                                               </div>
                                           </Col>
                                           <Col style={{width:4}}></Col>
-                                          <Link href="/newsdetail">
+                                          <Link href={item.linkUrl}>
                                               <Col>
                                                   <div className={newsContentStyles.right}>
                                                       <Row >
                                                           <Row className={newsContentStyles.row1}>
-                                                              <h3> {item.title}</h3>
+                                                              <h3> {item.newTitle}</h3>
                                                           </Row>
                                                           <Row className={newsContentStyles.row2}>
-                                                              <span> {item.content}</span>
+                                                              <span> {item.synopsis}</span>
                                                           </Row>
                                                           <Row className={newsContentStyles.row3}>
-                                                              <span>{item.date}</span>
+                                                              <span>{item.publishedAt}</span>
                                                           </Row>
                                                       </Row>
                                                   </div>
