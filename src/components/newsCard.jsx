@@ -1,7 +1,7 @@
-
-import React, {useEffect, useState} from 'react';
+import React from "react";
+import { useState, useEffect } from 'react';
 import newsCardStyles from '../styles/newsCard.module.css';
-import {List, Row,Col} from "antd";
+import {List, Row } from "antd";
 import Link from "next/link";
 import config from "../../next.config";
 import axios from "axios";
@@ -10,7 +10,7 @@ const data = [];
 const urlImg = '/u215.png';
 const newsData = [{ newTitle :'', synopsis:'', picUrl:''}];
 
-const Mainlogo = (props) =>
+const MainLogo = () =>
 {
     const [position, setPosition] = useState('bottom');
     const [align, setAlign] = useState('center');
@@ -29,7 +29,7 @@ const Mainlogo = (props) =>
         const result = await axios(
             detailUrl
         );
-        const data = result.data.data.map((item, index) => {
+        const data = result.data.data.map((item) => {
             let date = item.attributes.publishedAt;
             let dateArr = date.split('T');
             item.attributes.publishedAt = dateArr[0];
@@ -82,4 +82,4 @@ const Mainlogo = (props) =>
     )
 };
 
-export default Mainlogo;
+export default MainLogo;

@@ -1,7 +1,8 @@
 import {List,  Row,Col} from 'antd';
 import newsContentStyles from "../styles/newsContent.module.css";
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React from "react";
+import { useState, useEffect } from 'react';
 import config from "../../next.config";
 import axios from "axios";
 import newsCardStyles from "../styles/newsCard.module.css";
@@ -18,34 +19,33 @@ const position={bottom:'bottom'};
 const align={center:'center'};
 
 const data = [];
-const urlImg = '/u215.png';
 
-const newsContent = (props) => {
+
+const NewsContent = () => {
     {
-        const [newsData, setNewsData] = useState(data);
+        const [NewsData, setNewsData] = useState(data);
 
         useEffect(() => {
             getNewsDetail().then();
 
         }, []);
 
-        const getNewsDetail = async () => {
 
-            let detailUrl = config.baseUrl.Url + 'api/newcontent?pagination[page]=1&pagination[pageSize]=100';
-            const result = await axios(
+        const getNewsDetail = async () => {
+            let detailUrl =config.baseUrl.Url + 'api/newcontent?pagination[page]=1&pagination[pageSize]=100';
+            let result = await axios(
                 detailUrl
             );
-            const data = result.data.data.map((item, index) => {
-                let date = item.attributes.publishedAt;
-                let dateArr = date.split('T');
+            let data = result.data.data.map((item) => {
+                let dateArr = item.attributes.publishedAt.split('T');
                 item.attributes.publishedAt = dateArr[0];
                 item.attributes.id = item.id;
                 item.attributes.linkUrl = '/newsdetail?newsContentId=' + item.id;
                 return item.attributes;
-            })
+            });
             setNewsData(data);
-
         };
+
 
         return (
             <>
@@ -56,7 +56,7 @@ const newsContent = (props) => {
 
                     <List pagination={{ position, align,defaultPageSize:3 } }
                           grid={{ gutter: 10, column: 1, }}
-                          dataSource={newsData}
+                          dataSource={NewsData}
                           renderItem={(item) => (
                               <List.Item >
                                   <div className={newsContentStyles.list}>
@@ -66,7 +66,6 @@ const newsContent = (props) => {
                                                   <img src={item.picUrl} className={newsCardStyles.img} alt=""/>
                                               </div>
                                           </Col>
-                                          <Col style={{width:4}}></Col>
                                           <Link href={item.linkUrl}>
                                               <Col>
                                                   <div className={newsContentStyles.right}>
@@ -95,4 +94,4 @@ const newsContent = (props) => {
         )
     }
 }
-export default newsContent;
+export default NewsContent;

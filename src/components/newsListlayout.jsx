@@ -2,7 +2,7 @@ import React from 'react';
 import TopContent from '../components/topcontent';
 import FootContent from '../components/footcontent';
 import { Layout, Space } from 'antd';
-import NewsContent from "./newscontent";
+import NewsContent from "./newsContent";
 import comp from "./comp";
 const { Header, Footer, Content } = Layout;
 
