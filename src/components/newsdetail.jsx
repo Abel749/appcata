@@ -17,7 +17,6 @@ const NewsDetail= (props) => {
     const getNewsDetail = async () => {
         let detailUrl = config.baseUrl.Url
         let url = window.location.href.toString();
-        debugger;
         if(url.indexOf('newsContentId') > 0) {
             let arr = url.split('=');
             detailUrl = detailUrl+ 'api/newcontent/'+ arr[1];
@@ -27,7 +26,6 @@ const NewsDetail= (props) => {
         const result = await axios(
             detailUrl
         );
-        debugger;
         const data = result.data.data.attributes;
         setNewsData(data);
     };

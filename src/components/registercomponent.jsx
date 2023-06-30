@@ -17,9 +17,14 @@ const RegisterComponent = () => {
     try {
         const baseUrl = config.baseUrl.Url + 'api/auth/local/register';
         const response = await axios.post( baseUrl , userData);
-        console(`response`,response);
-        router.replace('/profile');
+        console.log(`response`,response);
+        if( 200 == response.status){
+            alert("注册成功");
+            router.push('/login');
+        }
+
     } catch (err) {
+        alert("注册失败,校验不通过");
     }
   }
     const goToLogin = () => {
@@ -32,26 +37,24 @@ const RegisterComponent = () => {
 
   return (
       <div className={loginStyle.contentStyle} >
-          <form onSubmit={handleSubmit} className={loginStyle.baseBox}>
-              <button>Register</button>
-              <button onClick={goToLogin} >Login</button>
-              <br/>
-              <label>
-                  Username:
-                  <input type="text" name="username" onChange={e => handleChange(e)} />
-              </label>
-              <br/>
-              <label>
-                  Email:
-                  <input type="text" name="email" onChange={e => handleChange(e)} />
-              </label>
-              <br/>
-              <label>
-                  Password:
-                  <input type="password" name="password" onChange={e => handleChange(e)} />
-              </label>
-              <br/>
-        </form>
+          <div className={loginStyle.baseBox}>
+              <div>
+                  <h3>用户名:</h3>
+                  <input type="text" name="username" placeholder="请输入用户名" onChange={e => handleChange(e)} />
+              </div>
+              <div>
+                  <h3>邮箱:</h3>
+                  <input type="text" name="email" placeholder="请输入邮箱" onChange={e => handleChange(e)} />
+              </div>
+              <div>
+                  <h3>密码:</h3>
+                  <input type="password" name="password"   placeholder="请输入密码" onChange={e => handleChange(e)} />
+              </div>
+              <div className={loginStyle.BoTon}>
+                  <button onClick={handleSubmit}>注&nbsp;册</button>
+                  <button onClick={goToLogin}>登&nbsp;录</button>
+              </div>
+        </div>
       </div>
   )
 }
