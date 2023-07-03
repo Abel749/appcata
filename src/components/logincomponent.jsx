@@ -19,7 +19,14 @@ const LoginComponent = () => {
       console.log(`haha`,{ ...userData });
       try {
         const baseUrl = config.baseUrl.Url + 'api/auth/local';
-        const response = await axios.post( baseUrl ,{ ...userData });
+        const response = await axios
+            .post( baseUrl ,{ ...userData })
+            .then(response => {
+            // Handle success.
+            console.log('Well done!');
+            console.log('User profile', response.data.user);
+            console.log('User token', response.data.jwt);
+        });
         console.log(`response`,response);
         router.push('/profile');
       } catch (err) {
@@ -40,13 +47,17 @@ const LoginComponent = () => {
         <div  className={loginStyle.baseBox}>
             <div>
                 <h3>用户名:</h3>
-                <input type="text" name="identifier" placeholder="邮箱" onChange={e => handleChange(e)} />
+                <input type="text" name="identifier" placeholder="邮箱" onChange={e => handleChange(e)} className={loginStyle.baseBoxInput} />
             </div>
             <div>
                 <h3>密码:</h3>
-                <input type="password" name="password"   placeholder="请输入密码" onChange={e => handleChange(e)} />
+                <input type="password" name="password"   placeholder="请输入密码" onChange={e => handleChange(e)} className={loginStyle.baseBoxInput} />
             </div>
-            <div className={loginStyle.BoTon}>
+            <div className={loginStyle.BuTon2}>
+                <input type="checkbox" className={loginStyle.checkbox} /> <span>&nbsp;记住密码</span>
+                <a href="#" className={loginStyle.aa}>找回密码</a>
+            </div>
+            <div className={loginStyle.BuTon}>
                 <button onClick={handleSubmit} >登&nbsp;录</button>
                 <button onClick={goToRegister} >注&nbsp;册</button>
             </div>

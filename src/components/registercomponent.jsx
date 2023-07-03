@@ -40,17 +40,17 @@ const RegisterComponent = () => {
           <div className={loginStyle.baseBox}>
               <div>
                   <h3>用户名:</h3>
-                  <input type="text" name="username" placeholder="请输入用户名" onChange={e => handleChange(e)} />
+                  <input type="text" name="username" placeholder="请输入用户名" onChange={e => handleChange(e)} className={loginStyle.baseBoxInput} />
               </div>
               <div>
                   <h3>邮箱:</h3>
-                  <input type="text" name="email" placeholder="请输入邮箱" onChange={e => handleChange(e)} />
+                  <input type="text" name="email" placeholder="请输入邮箱" onChange={e => handleChange(e)} className={loginStyle.baseBoxInput} />
               </div>
               <div>
                   <h3>密码:</h3>
-                  <input type="password" name="password"   placeholder="请输入密码" onChange={e => handleChange(e)} />
+                  <input type="password" name="password"   placeholder="请输入密码" onChange={e => handleChange(e)} className={loginStyle.baseBoxInput} />
               </div>
-              <div className={loginStyle.BoTon}>
+              <div className={loginStyle.BuTon}>
                   <button onClick={handleSubmit}>注&nbsp;册</button>
                   <button onClick={goToLogin}>登&nbsp;录</button>
               </div>
