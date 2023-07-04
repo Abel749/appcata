@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import config from "../../next.config";
 import loginStyle from '../styles/login.module.css';
 
 
@@ -16,33 +15,25 @@ const LoginComponent = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(`haha`,{ ...userData });
+      console.log(`haha`, {...userData});
       try {
-        const baseUrl = config.baseUrl.Url + 'api/auth/local';
-        const response = await axios
-            .post( baseUrl ,{ ...userData })
-            .then(response => {
-            // Handle success.
-            console.log('Well done!');
-            console.log('User profile', response.data.user);
-            console.log('User token', response.data.jwt);
-        });
-        console.log(`response`,response);
-        router.push('/profile');
+          const response = await axios.post('api/login', {...userData});
+          console.log(`response`, response);
+          router.push('/profile');
       } catch (err) {
           alert("登录失败，用户名或密码错误");
-        console.log(err);
+          console.log(err);
       }
-    }
+    };
     const goToRegister = () => {
       router.push('/register');
     }
     const handleChange = (e) => {
       const { name, value } = e.target;
       setUserData({...userData, [name]: value })
-    }
+    };
 
-  return (
+    return (
       <div className={loginStyle.contentStyle} >
         <div  className={loginStyle.baseBox}>
             <div>
@@ -63,7 +54,7 @@ const LoginComponent = () => {
             </div>
         </div>
     </div>
-  )
+    )
 }
 
 export default LoginComponent;

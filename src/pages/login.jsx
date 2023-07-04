@@ -1,7 +1,10 @@
-
+import axios from 'axios';
+import nookies from 'nookies';
 import LoginComponent from '../components/LoginComponent';
+
 import { Layout } from 'antd';
-const {  Content } = Layout;
+const { Content } = Layout;
+
 const Login = () => {
   return (
   <div>
@@ -9,4 +12,41 @@ const Login = () => {
   </div>
   )
 }
+
+export const getServerSideProps = async (ctx) => {
+  const cookies = nookies.get(ctx)
+  let user = null;
+
+  if (cookies?.jwt) {
+    try {
+
+	  console.log(`cookiesofindex`,cookies);
+      const { data } = await axios.get('http://127.0.0.1:1337/api/users/me', {
+        headers: {
+          Authorization:
+            `Bearer ${cookies.jwt}`,
+          },
+      });
+
+
+      user = data;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  if (user) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/profile'
+      }
+    }
+  }
+
+  return {
+    props: {}
+  }
+}
+
 export default Login;

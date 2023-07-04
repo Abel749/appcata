@@ -3,13 +3,14 @@ import axios from 'axios';
 import nookies from 'nookies';
 
 const Profile = (props) => {
+  console.log(`before`, props);
   const router = useRouter();
   const { user: { email, username } } = props;
-
+  console.log(`after`, email);
   const logout = async () => {
     try {
       await axios.get('/api/logout');
-      router.push('/');
+      router.push('/').then();
     } catch (e) {
       console.log(e);
     }
