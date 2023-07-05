@@ -21,28 +21,31 @@ const items = [
 
 const menuStyle={
     backgroundColor: '#036ED6',
-    color:'#fff'
+    color:'white',
+	textDecoration:'none',
 }
 
-const TopContent = (props) => (
-  <>
-    <Row >
-      <Col span={8}>
-          <Image src="/u110.png" alt="" width={100} height={60}  priority  />
-      </Col>
-	  <Col span={8}>
-	    <Menu style={menuStyle}
-          mode="horizontal"
-          defaultSelectedKeys={props.frompage}
-          items = {items}    
-        />	  
-	  </Col>
-	  <Col span={4} ></Col>
-	  <Col span={4} ><AvatarLogin /></Col>
-    </Row>
-    
-  </>
-  );
+const TopContent = (props) => {
+	return(
+	  <>
+		<Row >
+		  <Col span={8}>
+			  <Image src="/u110.png" alt="" width={100} height={60}  priority  />
+		  </Col>
+		  <Col span={8}>
+			<Menu style={menuStyle}
+			  mode="horizontal"
+			  defaultSelectedKeys={props.frompage}
+			  items = {items}
+			/>
+		  </Col>
+		  <Col span={4} ></Col>
+		  <Col span={4} ><AvatarLogin propName={props.propName} /></Col>
+		</Row>
+	  </>
+	  );
+}
+
 
 
 export default TopContent;

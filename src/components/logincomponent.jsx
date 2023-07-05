@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import loginStyle from '../styles/login.module.css';
 
-
 const LoginComponent = () => {
 
     const router = useRouter();
@@ -15,11 +14,10 @@ const LoginComponent = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(`haha`, {...userData});
+      console.log(`userData`, {...userData});
       try {
           const response = await axios.post('api/login', {...userData});
-          console.log(`response`, response);
-          router.push('/profile');
+          router.push('/');
       } catch (err) {
           alert("登录失败，用户名或密码错误");
           console.log(err);
@@ -44,10 +42,10 @@ const LoginComponent = () => {
                 <h3>密码:</h3>
                 <input type="password" name="password"   placeholder="请输入密码" onChange={e => handleChange(e)} className={loginStyle.baseBoxInput} />
             </div>
-            <div className={loginStyle.BuTon2}>
+{/*            <div className={loginStyle.BuTon2}>
                 <input type="checkbox" className={loginStyle.checkbox} /> <span>&nbsp;记住密码</span>
                 <a href="#" className={loginStyle.aa}>找回密码</a>
-            </div>
+            </div>*/}
             <div className={loginStyle.BuTon}>
                 <button onClick={handleSubmit} >登&nbsp;录</button>
                 <button onClick={goToRegister} >注&nbsp;册</button>

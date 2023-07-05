@@ -92,10 +92,10 @@ const footerStyle = {
   backgroundColor: '#555555',
 };
 
-const DataCenterLayout = () => (
+const DataCenterLayout = (props) => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
     <Layout style={{ backgroundColor: '#ffffff' }}>
-      <Header style={headerStyle}><TopContent frompage="home" /></Header>
+      <Header style={headerStyle}><TopContent frompage="home" propName={props.propName}/></Header>
       <div style={ExtDataBackgroundStyle}><ExtDataBackground /></div>
       <Header style={ExtDataStatStyle}><ExtDataStat /></Header>
 	  <Header style={ExtDataCategoryStyle}><ExtDataCategory /></Header>
@@ -103,7 +103,7 @@ const DataCenterLayout = () => (
       <Header style={ExtDataCoverageStyle}><ExtDataCoverage/></Header>
       <Header style={ExtDataWhereStyle}><ExtDataWhere/></Header>
       <Header style={ExtDataRequestMessageStyle}><ExtDataRequestMessage/></Header>
-	  <div style={footerStyle}><FootContent /></div>
+	  <Footer style={footerStyle}><FootContent /></Footer>
     </Layout>
   </Space>
   );

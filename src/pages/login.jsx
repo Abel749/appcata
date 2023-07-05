@@ -3,6 +3,7 @@ import nookies from 'nookies';
 import LoginComponent from '../components/LoginComponent';
 
 import { Layout } from 'antd';
+import config from "../../next.config";
 const { Content } = Layout;
 
 const Login = () => {
@@ -16,19 +17,14 @@ const Login = () => {
 export const getServerSideProps = async (ctx) => {
   const cookies = nookies.get(ctx)
   let user = null;
-
   if (cookies?.jwt) {
     try {
-
-	  console.log(`cookiesofindex`,cookies);
-      const { data } = await axios.get('http://127.0.0.1:1337/api/users/me', {
+      let url = config.baseUrl.Url + 'api/users/me';
+      const { data } = await axios.get( url, {
         headers: {
-          Authorization:
-            `Bearer ${cookies.jwt}`,
-          },
+          Authorization: `Bearer ${cookies.jwt}`,
+        },
       });
-
-
       user = data;
     } catch (e) {
       console.log(e);
@@ -39,13 +35,13 @@ export const getServerSideProps = async (ctx) => {
     return {
       redirect: {
         permanent: false,
-        destination: '/profile'
+        destination: '/'
       }
     }
   }
 
   return {
-    props: {}
+    props: {user}
   }
 }
 

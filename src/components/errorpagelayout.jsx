@@ -26,12 +26,12 @@ const footerStyle = {
     backgroundColor: '#555555',
 };
 
-const ErrorPageLayout = () => (
+const ErrorPageLayout = (props) => (
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout>
-            <Header style={headerStyle}><TopContent frompage="errorPage" /></Header>
-            <Header style={contentStyle}><ErrorPage /></Header>
-            <div style={footerStyle}><FootContent /></div>
+            <Header style={headerStyle}><TopContent frompage="errorPage" propName={props.propName}/></Header>
+            <Content style={contentStyle}><ErrorPage /></Content>
+            <Footer style={footerStyle}><FootContent /></Footer>
         </Layout>
     </Space>
 );

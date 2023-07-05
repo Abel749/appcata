@@ -1,11 +1,13 @@
 import axios from 'axios';
 import { setCookie } from 'nookies'
+import config from "../../../next.config";
 
 export default async (req, res) => {
   const { username, password, email } = req.body;
 
   try {
-    const response = await axios.post('http://127.0.0.1:1337/api/auth/local/register', {
+    let url = config.baseUrl.Url + 'api/auth/local/register';
+    const response = await axios.post(url, {
       username,
       email,
       password,

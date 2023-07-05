@@ -15,11 +15,9 @@ const headerStyle = {
 };
 
 const contentStyle = {
-    //textAlign: 'center',
     height: '100%',
     color: '#fff',
     padding:0,
-    //backgroundColor: '#108ee9',
     backgroundColor: '#ffffff',
 };
 
@@ -28,12 +26,12 @@ const footerStyle = {
     backgroundColor: '#555555',
 };
 
-const DataDetailLayout = () => (
+const DataDetailLayout = (props) => (
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout>
-            <Header style={headerStyle}><TopContent frompage="datadetail" /></Header>
-            <Header style={contentStyle}><DetailContent /></Header>
-            <div style={footerStyle}><FootContent /></div>
+            <Header style={headerStyle}><TopContent frompage="datadetail" propName={props.propName}/></Header>
+            <Content style={contentStyle}><DetailContent /></Content>
+            <Footer style={footerStyle}><FootContent /></Footer>
         </Layout>
     </Space>
 );

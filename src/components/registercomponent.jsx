@@ -14,17 +14,19 @@ const RegisterComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(userData.username.length <3){
+      alert("用户名至少需要3个字符");
+      return;
+    }
     try {
         const baseUrl = config.baseUrl.Url + 'api/auth/local/register';
         const response = await axios.post( baseUrl , userData);
-        console.log(`response`,response);
         if( 200 == response.status){
             alert("注册成功");
             router.push('/login');
         }
-
     } catch (err) {
-        alert("注册失败,校验不通过");
+        alert("注册失败,校验不通过,请检查注册信息");
     }
   }
     const goToLogin = () => {

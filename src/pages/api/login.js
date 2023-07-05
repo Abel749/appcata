@@ -23,11 +23,8 @@ export default async (req, res) => {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
     });
-
-    //console.log(`czg10`,postRes);
     res.status(200).end();
   } catch (e) {
-	console.log(`czg11`,req.body);
     res.status(400).send(e.data);
   }
 }

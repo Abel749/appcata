@@ -1,7 +1,6 @@
 import React from 'react';
 import TopContent from '../components/topcontent';
 import Content1 from '../components/content1';
-import Content2 from '../components/content2';
 import FootContent from '../components/footcontent';
 import { Layout, Space } from 'antd';
 import DataCenterBackground from "./datacenterbackground";
@@ -44,18 +43,19 @@ const BackGroundCorolStyle = {
   backgroundColor: '#036ED6',
 }
 
-const DataCenterLayout = () => (
-    <comp>
-  <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-    <Layout>
-      <Header style={headerStyle}><TopContent frompage="datacenter" /></Header>
-      <div style={BackGroundCorolStyle}>
-        <div style={DataCenterBackgroundStyle}><DataCenterBackground /></div>
-      </div>
-      <Header style={contentStyle}><Content1 /></Header>
-	  <Footer style={footerStyle}><FootContent /></Footer>
-    </Layout>
-  </Space></comp>
+const DataCenterLayout = (props) => (
+  <comp>
+    <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+      <Layout>
+        <Header style={headerStyle}><TopContent frompage="datacenter" propName={props.propName} /></Header>
+        <div style={BackGroundCorolStyle}>
+          <div style={DataCenterBackgroundStyle}><DataCenterBackground /></div>
+        </div>
+        <Header style={contentStyle}><Content1 /></Header>
+        <Footer style={footerStyle}><FootContent /></Footer>
+      </Layout>
+    </Space>
+  </comp>
   );
 
 

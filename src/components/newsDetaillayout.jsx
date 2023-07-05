@@ -26,12 +26,12 @@ const footerStyle = {
     backgroundColor: '#555555',
 };
 
-const NewsDetailLayout = () => (
+const NewsDetailLayout = (props) => (
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout>
-            <Header style={headerStyle}><TopContent frompage="newsDetail" /></Header>
-            <Header style={contentStyle}><NewsDetail /></Header>
-            <div style={footerStyle}><FootContent /></div>
+            <Header style={headerStyle}><TopContent frompage="newsDetail" propName={props.propName}/></Header>
+            <Content style={contentStyle}><NewsDetail /></Content>
+            <Footer style={footerStyle}><FootContent /></Footer>
         </Layout>
     </Space>
 );

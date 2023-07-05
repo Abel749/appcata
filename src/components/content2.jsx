@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import {Col, Row} from "antd";
 import Link from "next/link";
 import content2Styles from '../styles/content2.module.css';
@@ -27,6 +26,10 @@ const row3Style={
 
 
 };
+
+const linkToBlood = async () => {
+    window.open("https://www.baidu.com/");
+}
 
 const Content2 = () => (
 
@@ -65,7 +68,6 @@ const Content2 = () => (
                                 </div>
                             </Link>
                         </div>
-
                     </div>
                 </div>
             </Col>
@@ -76,7 +78,6 @@ const Content2 = () => (
                             <h3 style={{fontSize:"24px"} }>数据应用</h3>
                         </div>
                     </div>
-
                     <div className={content2Styles.two2}>
                         <div className={content2Styles.twoDiv}>
                             <Link href="/errorpage">
@@ -84,7 +85,8 @@ const Content2 = () => (
                                     <h3 style={{fontSize:"24px"} }>数据应用</h3>
                                     <p className={content2Styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
                                      <button style={{width:"100px", height:"40px"}}>了解更多</button>
-                                </div></Link>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -96,17 +98,16 @@ const Content2 = () => (
                             <h3 style={{fontSize:"24px"} }>数据治理</h3>
                         </div>
                     </div>
-
-                        <div className={content2Styles.two3}>
-                            <div className={content2Styles.twoDiv}>
-                            <Link href="/errorpage">
-                                <div className={content2Styles.link}>
-                                    <h3 style={{fontSize:"24px"} }>数据治理</h3>
-                                    <p className={content2Styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
-                                    <button style={{width:"100px", height:"40px"}}>了解更多</button>
-                                </div></Link>
-                            </div>
+                    <div className={content2Styles.two3}>
+                        <div className={content2Styles.twoDiv}>
+                        <Link href="#" onClick={linkToBlood}>
+                            <div className={content2Styles.link}>
+                                <h3 style={{fontSize:"24px"} }>数据治理</h3>
+                                <p className={content2Styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
+                                <button style={{width:"100px", height:"40px"}}>了解更多</button>
+                            </div></Link>
                         </div>
+                    </div>
                 </div>
             </Col>
             <Col>
@@ -116,21 +117,19 @@ const Content2 = () => (
                             <h3 style={{fontSize:"24px"} }>数据安全</h3>
                         </div>
                     </div>
-
-                        <div className={content2Styles.two4}>
-                            <div className={content2Styles.twoDiv}>
-                            <Link href="/errorpage">
-                                <div className={content2Styles.link}>
-                                    <h3 style={{fontSize:"24px"} }>数据安全</h3>
-                                    <p className={content2Styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
-                                    <button style={{width:"100px", height:"40px"}}>了解更多</button>
-                                </div></Link>
-                            </div>
+                    <div className={content2Styles.two4}>
+                        <div className={content2Styles.twoDiv}>
+                        <Link href="/errorpage">
+                            <div className={content2Styles.link}>
+                                <h3 style={{fontSize:"24px"} }>数据安全</h3>
+                                <p className={content2Styles.content}>全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
+                                <button style={{width:"100px", height:"40px"}}>了解更多</button>
+                            </div></Link>
                         </div>
+                    </div>
                 </div>
             </Col>
         </Row>
-
     </div>
 );
 

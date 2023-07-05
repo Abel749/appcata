@@ -4,12 +4,11 @@ import ThisMonthStat from '../components/thismonthstat';
 import Content2 from '../components/content2';
 import FootContent from '../components/footcontent';
 import IndexBackground from '../components/indexbackground'
-import AppCard from '../components/appcard';
 import { Layout, Space } from 'antd';
 import HotList from "../components/hotlist";
 import NewsCard from "./newsCard";
 import {StyleProvider} from '@ant-design/cssinjs';
-const { Header, Footer, Content } = Layout;
+const { Header, Footer } = Layout;
 
 const headerStyle = {
   textAlign: 'center',
@@ -56,23 +55,23 @@ const footerStyle = {
   backgroundColor: '#555555',
 };
 
-const IndexLayout = () => (
-
-
-  <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-    <Layout style={{ backgroundColor: '#ffffff' }}>
-      <StyleProvider>
-        <Header style={headerStyle}><TopContent frompage="home" /></Header>
-        <div style={indexBackgroundStyle}><IndexBackground /></div>
-        <Header style={monthStatStyle}><ThisMonthStat /></Header>
-        <Header style={contentStyle}><Content2 /></Header>
-        <div style={hostListStyle}><HotList /></div>
-        <div style={newsCardStyle}><NewsCard /></div>
-        <div style={footerStyle}><FootContent /></div>
-      </StyleProvider>
-    </Layout>
-  </Space>
+const IndexLayout = (props) => {
+  return (
+      <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+        <Layout style={{ backgroundColor: '#ffffff' }}>
+          <StyleProvider>
+            <Header style={headerStyle}><TopContent frompage="home" propName={props.propName} /></Header>
+            <div style={indexBackgroundStyle}><IndexBackground /></div>
+            <Header style={monthStatStyle}><ThisMonthStat /></Header>
+            <Header style={contentStyle}><Content2 /></Header>
+            <div style={hostListStyle}><HotList /></div>
+            <div style={newsCardStyle}><NewsCard /></div>
+            <Footer style={footerStyle}><FootContent /></Footer>
+          </StyleProvider>
+        </Layout>
+      </Space>
   );
+}
 
 
 
