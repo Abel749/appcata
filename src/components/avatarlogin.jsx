@@ -6,15 +6,29 @@ import axios from "axios";
 
 const AvatarLogin = (props) => {
 
-  const [userName, setUserName] = useState();
   const [msg, setMsg] = useState();
+
+  const [state, setState] = useState({
+    userName: "",//用户名
+    email: "",//邮箱
+
+  })
+  function changeUserCode(event) {
+    setState({
+      userName:event.target.value,
+      email:event.target.value
+    });
+  }
 
   useEffect(() => {
     //换一个欢迎短语
     const user = props.propName;
     if( null != user){
-      setUserName(user.username);
       setMsg('欢迎'+user.username + '~');
+      setState({
+        userName:user.username,
+        email:user.email
+      });
       document.getElementById('login').style.display = "none";
     }else {
       setMsg('登录后可发表评论~');
@@ -40,6 +54,10 @@ const AvatarLogin = (props) => {
   <Space direction="vertical">
     <Space wrap>
       <span>{msg}</span>
+      <input style={{display:"none"}} id ="username" value={state.userName}
+             onChange={changeUserCode} />
+      <input style={{display:"none"}} id ="email" value={state.email}
+             onChange={changeUserCode} />
       <div id="login">
         <Tooltip title="登录">
           <Button type="primary" shape="circle"  onClick={login} icon={<UserOutlined />} />

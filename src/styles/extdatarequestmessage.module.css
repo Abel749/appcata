@@ -1,0 +1,57 @@
+
+.pss{
+  margin-left: 300px;
+  width:1100px;
+  height:400px;
+}
+.top{
+  width:1100px;
+  height:40px;
+  color:#036ED6;
+  font-size:40px;
+}
+.left{
+  width:600px;
+  height:400px;
+  float:left;
+  clear: left;
+  background-image: url("/extData/externalData_20.png");
+}
+.right{
+  width:500px;
+  height:400px;
+  float:left;
+  text-align: left;
+}
+.col1{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+}
+.col2{
+  width: 320px;
+  height: 40px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: normal;
+}
+.col3{
+  width: 80px;
+  height: 40px;
+}
+.textarea{
+  margin-left: 20px;
+  width: 480px;
+  height: 60px;
+  border-radius: 5px;
+}
+.button{
+  width: 80px;
+  height: 50px;
+  background-color: #1677ff;
+  margin-left: 420px;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
