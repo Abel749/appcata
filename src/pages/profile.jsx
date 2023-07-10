@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import nookies from 'nookies';
-import config from "../../next.config";
 
 const Profile = (props) => {
-  console.log(`before`, props);
   const router = useRouter();
   
   const { user: { email, username } } = props;
-  console.log(`after`, email);
+
   const logout = async () => {
     try {
       await axios.get('/api/logout');
@@ -41,11 +39,11 @@ export const getServerSideProps = async (ctx) => {
   let user = null;
   if (cookies?.jwt) {
     try {
-      let url = config.baseUrl.Url + 'api/users/me';
-      const { data } = await axios.get( url, {
+      const { data } = await axios.get('http://127.0.0.1:1337/api/users/me', {
         headers: {
-          Authorization: `Bearer ${cookies.jwt}`,
-        },
+          Authorization:
+            `Bearer ${cookies.jwt}`,
+          },
       });
       user = data;
     } catch (e) {

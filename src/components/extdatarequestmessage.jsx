@@ -47,7 +47,6 @@ const ExtDataRequestMessage = () => {
             alert("请登录后再评论");
             return;
         }
-        debugger;
         if(comments.length <=0 || tempStr == comments){
             alert("请修改评论信息，切勿重复评论");
             return;

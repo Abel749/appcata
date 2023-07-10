@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { parseCookies, setCookie } from 'nookies'
 import axios from 'axios';
 import loginStyle from '../styles/login.module.css';
-import config from "../../next.config";
 
 const LoginComponent = () => {
 
@@ -15,11 +15,8 @@ const LoginComponent = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(`userData`, {...userData});
       try {
-          debugger;
-          const url = config.baseUrl.Url + 'api/auth/local';
-          const response = await axios.post(url, {...userData});
+          const response = await axios.post('api/login', {...userData});
           if(200 == response.status){
               router.push('/');
           }
