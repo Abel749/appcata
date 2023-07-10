@@ -4,7 +4,11 @@ import nookies from 'nookies';
 import config from "../../next.config";
 
 const Profile = (props) => {
+  console.log(`before`, props);
   const router = useRouter();
+  
+  const { user: { email, username } } = props;
+  console.log(`after`, email);
   const logout = async () => {
     try {
       await axios.get('/api/logout');

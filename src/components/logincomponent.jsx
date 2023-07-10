@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import loginStyle from '../styles/login.module.css';
+import config from "../../next.config";
 
 const LoginComponent = () => {
 
@@ -16,8 +17,12 @@ const LoginComponent = () => {
       e.preventDefault();
       console.log(`userData`, {...userData});
       try {
-          const response = await axios.post('api/login', {...userData});
-          router.push('/');
+          debugger;
+          const url = config.baseUrl.Url + 'api/auth/local';
+          const response = await axios.post(url, {...userData});
+          if(200 == response.status){
+              router.push('/');
+          }
       } catch (err) {
           alert("登录失败，用户名或密码错误");
           console.log(err);

@@ -28,7 +28,7 @@ const row3Style={
 };
 
 const linkToBlood = async () => {
-    window.open("https://www.baidu.com/");
+    window.open("http://10.84.188.105:3000/");
 }
 
 const Content2 = () => (
