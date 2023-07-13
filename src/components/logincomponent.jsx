@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { parseCookies, setCookie } from 'nookies'
 import axios from 'axios';
@@ -35,6 +35,7 @@ const LoginComponent = () => {
 
     return (
       <div className={loginStyle.contentStyle} >
+        <img src='/index/loginHome.png' className={loginStyle.contentStyle} alt=""/>
         <div  className={loginStyle.baseBox}>
             <div>
                 <h3>用户名:</h3>

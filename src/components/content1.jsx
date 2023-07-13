@@ -1,11 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import {List, Radio, Form, Row, Col} from 'antd';
+import {List, Radio, Row, Col} from 'antd';
 import { useState, useEffect } from 'react';
-import formStyles1 from '../styles/Form.module.css';
+import dataCenterStyle from '../styles/dataCenter.module.css';
 import Image from "next/image";
 import Link from "next/link";
-
 import config from "next.config";
 
 const firstLevelMap_temp = [{ code: '', name: '',code1 :'',ItemName :'',ApplicationScenario:'' ,DataSources:'',Src1:'',DDSSrc:''}];
@@ -185,21 +184,21 @@ const Content1 = (props) => {
 
   return (
 	<>
-		<Form  className={formStyles1.form} >
-			<Row className={formStyles1.row}  >
-				<Col className={formStyles1.label}> 一级数据类型 </Col>
-				<Col className={formStyles1.list}>
-					<Radio.Group  className={formStyles1.radioButton} value={firstLevel}  onChange={ handlefirstLevel }>
+		<div  className={dataCenterStyle.form} >
+			<Row className={dataCenterStyle.row}  >
+				<Col className={dataCenterStyle.label}> 一级数据类型 </Col>
+				<Col className={dataCenterStyle.list2}>
+					<Radio.Group  className={dataCenterStyle.radioButton} value={firstLevel}  onChange={ handlefirstLevel }>
 						{firstLevelMap.map((item)=>
 						<Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
 					)}
 					</Radio.Group>
 				</Col>
 			</Row>
-			<Row className={formStyles1.row}   >
-				<Col className={formStyles1.label}> 二级数据类型  </Col>
-				<Col className={formStyles1.list}>
-					<Radio.Group className={formStyles1.radioButton} value={secondLevel} onChange={handlesecondLevel}>
+			<Row className={dataCenterStyle.row}   >
+				<Col className={dataCenterStyle.label}> 二级数据类型  </Col>
+				<Col className={dataCenterStyle.list1}>
+					<Radio.Group className={dataCenterStyle.radioButton} value={secondLevel} onChange={handlesecondLevel}>
 					{secondLevelMap.map((item)=>
 						<Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
 					)}
@@ -207,20 +206,20 @@ const Content1 = (props) => {
 				</Col>
 			</Row>
 
-			<Row className={formStyles1.row}   >
-				<Col className={formStyles1.label}> 排序规则 </Col>
-				<Col className={formStyles1.list}>
-				<Radio.Group className={formStyles1.radioButton} value={sortOrder} onChange={handleSortChange}>
+			<Row className={dataCenterStyle.row}   >
+				<Col className={dataCenterStyle.label}> 排序规则 </Col>
+				<Col className={dataCenterStyle.list1}>
+				<Radio.Group className={dataCenterStyle.radioButton} value={sortOrder} onChange={handleSortChange}>
 					<Radio.Button value="hot">最热</Radio.Button>
 					<Radio.Button value="reCom">推荐</Radio.Button>
 					<Radio.Button value="new">最新</Radio.Button>
 				</Radio.Group>
 				</Col>
 			</Row>
-			<Row className={formStyles1.row}   >
-				<Col className={formStyles1.label}> 关键词  </Col>
-				<Col className={formStyles1.list}>
-					<Radio.Group className={formStyles1.radioButton} value={keywords} onChange={handleKeyChange}>
+			<Row className={dataCenterStyle.row}   >
+				<Col className={dataCenterStyle.label}> 关键词  </Col>
+				<Col className={dataCenterStyle.list2}>
+					<Radio.Group className={dataCenterStyle.radioButton} value={keywords} onChange={handleKeyChange}>
 						<Radio.Button value="identify">身份识别</Radio.Button>
 						<Radio.Button value="finance">金融信贷</Radio.Button>
 						<Radio.Button value="riskCon">风控核验</Radio.Button>
@@ -236,55 +235,33 @@ const Content1 = (props) => {
 					</Radio.Group>
 				</Col>
 			</Row>
-		</Form>
-
-		<List pagination={{ position, align,defaultPageSize:6 } }
-			grid={{ gutter: 10, column: 3, }}
-			dataSource={dataItem}
-			renderItem={(item) => (
-				<List.Item >
-					<Link href = {item.url} >
-						<div className={formStyles1.pss} >
-							<Row>
-								<div className={formStyles1.top}>
-									<Image src={item.DDSSrc} alt="" width={200} height={54} priority />
+		</div>
+		<div className={dataCenterStyle.form} >
+			<List pagination={{ position, align,defaultPageSize:6 } }
+				grid={{ gutter: 10, column: 3, }}
+				dataSource={dataItem}
+				renderItem={(item) => (
+					<List.Item >
+						<Link href = {item.url} >
+							<div className={dataCenterStyle.pss} >
+								<div className={dataCenterStyle.top}>
+									<img src={item.DDSSrc} alt="" className={dataCenterStyle.topImg} />
 								</div>
-							</Row>
-							<Row style ={{height:20}}></Row>
-							<Row>
-								<Col>
-								<div className={formStyles1.left}>
-									<Row>
-									<Image src={item.Src1} alt="" width={150} height={185} priority />
-									</Row>
+								<div className={dataCenterStyle.left}>
+									<img src={item.Src1} alt="" className={dataCenterStyle.leftImg} />
 								</div>
-								</Col>
-								<Col style={{width:4}}></Col>
-								<Col>
-									<div className={formStyles1.right}>
-										<Row>
-											<h3>{item.ItemName}</h3>
-										</Row>
-										<Row className={formStyles1.height6}></Row>
-										<Row>
-											&nbsp;<span><button>{item.type1}</button> &nbsp;&nbsp;<button>{item.type2}</button></span>
-										</Row>
-										<Row className={formStyles1.height24}></Row>
-										<Row>
-											<textarea className={formStyles1.dataSource}>{item.ApplicationScenario}</textarea>
-										</Row>
-										<Row className={formStyles1.height36}></Row>
-										<Row>
-											<h4>{item.DataSources}</h4>
-										</Row>
-									</div>
-								</Col>
-							</Row>
-						</div>
-					</Link>
-				</List.Item>
-			)}
-		/>
+								<div className={dataCenterStyle.right}>
+									<h3>{item.ItemName}</h3>
+									<button>{item.type1}</button> &nbsp;&nbsp;<button>{item.type2}</button>
+									<textarea>{item.ApplicationScenario}</textarea>
+									<h3>{item.DataSources}</h3>
+								</div>
+							</div>
+						</Link>
+					</List.Item>
+				)}
+			/>
+		</div>
 	</>
 );
 

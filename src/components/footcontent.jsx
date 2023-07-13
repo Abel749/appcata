@@ -1,14 +1,12 @@
 import React from 'react';
-import { Col, Row } from 'antd';
-import AppCard from '../components/appcard';
-import Image from "next/image";
+import commonStyle from "../styles/common.module.css";
 
 const FootContent = () => {
 
   return (
   <> 
-    <div >
-      <Image src="/foot.png" alt=""  width={1100} height={170}  priority/>
+    <div className={commonStyle.footerStyle}>
+      <img src="/foot.png" alt="" />
     </div>
   </>
   )

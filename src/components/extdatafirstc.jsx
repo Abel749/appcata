@@ -1,9 +1,7 @@
-
-import {Row, Col,  Image, List} from 'antd';
-
+import { Col, List} from 'antd';
 import axios from "axios";
 import React, { useState,useEffect } from 'react';
-import extadaStyles from "../styles/extada.module.css";
+import exTaDaStyle from "../styles/extada.module.css";
 import Link from "next/link";
 import config from "../../next.config";
 const data = [];
@@ -11,7 +9,7 @@ const data = [];
 const ExtDataFirstC = () => {
 	const [dataItem, setDataItem] = useState(data);
 	useEffect(() => {
-		getType1();
+		getType1().then();
 	}, []);
 
 	//一级数据类型初始化
@@ -20,7 +18,7 @@ const ExtDataFirstC = () => {
 		const result = await axios(
 			detailUrl
 		);
-		const dataTypes = result.data.data.map((item, index) => {
+		const dataTypes = result.data.data.map((item) => {
 			return item.attributes;
 		})
 		let dataType1 = [];
@@ -41,7 +39,6 @@ const ExtDataFirstC = () => {
 					//添加一级数据类型
 				dataType1.push(dataTypeTemp);
 			}
-
 		}
 		setDataItem(dataType1);
 
@@ -49,32 +46,31 @@ const ExtDataFirstC = () => {
 
 	return (
 		<>
-			<Row gutter={{
-				xs: 8,
-				sm: 16,
-				md: 24,
-				lg: 32,
-			}}>
-				<Col span={8} className={extadaStyles.col}>
-					<h1 className={extadaStyles.backgroundH1}>一级数据分类</h1>
-					<div className={extadaStyles.firstBackground}></div>
-				</Col>
-
-				<Col span={10}>
-					<List
-						grid={{
-							column: 2,
-						}}
+			<div className={exTaDaStyle.firstData}>
+				<div className={exTaDaStyle.leftClass}>
+					<h1 className={exTaDaStyle.backgroundH1}>一级数据分类</h1>
+					<div className={exTaDaStyle.firstBackground}></div>
+				</div>
+				<div className={exTaDaStyle.rightClass}>
+					<List grid={{ column: 3 }}
 						dataSource={dataItem}
 						renderItem={(item) => (
-							<List.Item className={extadaStyles.button1} >
-								<Image src={item.logo} alt=""  width={40} height={36}  priority  />
-								<Link href={item.url} style={{color:'#fff'}}>{item.name}</Link>
+							<List.Item className={exTaDaStyle.button1} >
+								<Link href={item.url}>
+									<Col aria-colspan={8} className={exTaDaStyle.linkItem}>
+										<div className={exTaDaStyle.linkImg}>
+											<img src={item.logo} alt="" className={exTaDaStyle.img1} />
+										</div>
+										<div className={exTaDaStyle.linkBun}>
+											<h3>{item.name}</h3>
+										</div>
+									</Col>
+								</Link>
 							</List.Item>
 						)}
 					/>
-				</Col>
-			</Row>
+				</div>
+			</div>
 		</>
 	)
 }

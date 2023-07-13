@@ -1,33 +1,16 @@
-
 import React from 'react';
-import Image from "next/image";
 import {Col, Row} from "antd";
-
-const titleH1Style={
-    color:'#036ED6',
-    fontSize:'40px',
-};
-
-
-const row3Style={
-    marginLeft:'210px',
-    marginTop: '50px',
-
-};
-
+import indexStyle from '../styles/index.module.css';
 
 const HotList = () => (
-
-    <div >
+    <div className={indexStyle.hotList}>
         <Row >
-            <Col span='24'><h1 style={titleH1Style}>热力排行榜</h1></Col>
+            <Col span='24'><h1>热力排行榜</h1></Col>
         </Row>
-
-        <Row style={row3Style}>
-            <Image src="/hostlist.png" alt=""  width={1200} height={460} priority/>
+        <Row>
+            <div className={indexStyle.hotListImg}> </div>
         </Row>
     </div>
-
 );
 
 export default HotList;

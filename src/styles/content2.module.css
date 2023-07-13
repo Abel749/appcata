@@ -9,7 +9,7 @@
   cursor: pointer;
   position: absolute;
   width: 270px;
-  background-image: url("/u112_state0.png");
+  background-image: url("/public/index/u112_state0.png");
 }
 
 
@@ -60,7 +60,7 @@
   cursor: pointer;
   position: absolute;
   width: 270px;
-  background-image: url("/u119_state0.png");
+  background-image: url("/public/index/u119_state0.png");
 }
 .two2{
   cursor: pointer;
@@ -81,7 +81,7 @@
   cursor: pointer;
   position: absolute;
   width: 270px;
-  background-image: url("/u126_state0.png");
+  background-image: url("/public/index/u126_state0.png");
 }
 
 .two3{
@@ -103,7 +103,7 @@
   cursor: pointer;
   position: absolute;
   width: 270px;
-  background-image: url("/u133_state0.png");
+  background-image: url("/public/index/u133_state0.png");
 }
 .two4{
   cursor: pointer;

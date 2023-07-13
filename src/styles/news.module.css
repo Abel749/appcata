@@ -1,0 +1,198 @@
+
+.contentStyle {
+  width: 100%;
+}
+
+.imageDivStyle {
+  width: 100%;
+  height: 300px;
+  border-top-width:1px;
+  border-top-style:solid;
+  border-top-color:aliceblue;
+  background-image: url('/news/news-back.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.title{
+  margin-top: 8%;
+  margin-left:10%;
+  font-size:35px;
+  text-align: center;
+  color: white;
+}
+
+.div{
+  margin: 2rem 11% 0 11%;
+  width: 100%;
+}
+
+.list{
+  height: 300px;
+  width: 88%;
+  border-bottom:solid 1px wheat;
+}
+
+.left{
+  height:300px;
+  width: 40%;
+  float: left;
+}
+
+.right{
+  height:300px;
+  width: 56%;
+  float: left;
+}
+
+.row1{
+  margin-left: 4%;
+  line-height: 80px;
+  font-size: 18px;
+  height: 80px;
+  width: 100%;
+}
+
+.row2{
+  margin-left: 4%;
+  height: 160px;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  text-indent: 2em;
+}
+
+.row3{
+  height: 50px;
+  width: 100%;
+  font-size: 12px;
+  margin-left: 86%;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.content{
+  color: black;
+  width: 60%;
+  margin-left: 18%;
+  line-height: 30px;
+  min-height: 400px;
+}
+
+.content h2 h3 h4 h5 {
+  text-align: left;
+  line-height: 2em;
+  text-indent:2em;
+}
+.content h1{
+  text-align: center;
+  line-height: 2em;
+  color: #012C56;
+  font-size: 24px;
+}
+.content h2{
+  text-align: center;
+  line-height: 2em;
+  color: #222222;
+  font-size: 20px;
+}
+.content h3{
+  color: #666666;
+  font-size: 18px;
+}
+.content h4{
+  color: #666666;
+  font-size: 16px;
+}
+
+.content h5{
+  color: #999999;
+  font-size: 14px;
+}
+
+.content h6{
+  color: #999999;
+  font-size: 12px;
+}
+
+.content p img{
+  width:100%;
+  height:450px;
+}
+
+.dev0{
+  margin: 80px 7% 0 7%;
+  text-align: center;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.hh1 {
+  color: #036ED6;
+  font-size: 40px;
+}
+
+.leftDiv{
+  height:400px;
+  width: 50%;
+  float: left;
+}
+.newsImg{
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+}
+
+.rightDiv{
+  height:400px;
+  width: 50%;
+  float: left;
+}
+.rightList{
+  height:100px;
+  width: 100%;
+  margin-left:2%;
+}
+
+.rightRow1{
+  height: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.rightRow2{
+  height: 40px;
+  width: 100%;
+  text-indent: 2em;
+  text-align: left;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  color: black;
+}
+.rightRow3{
+  height: 10px;
+  width: 100%;
+  margin-left: 86%;
+  color: black;
+}
+
+.button{
+  width: 120px;
+  text-align: center;
+  border:1px solid #1677ff;
+  border-radius:12px;
+  margin-left: 300px;
+  padding: 10px;
+  color: #fff;
+  background-color: #036ED6;
+  margin-left: 45%;
+}
+
+

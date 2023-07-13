@@ -1,0 +1,323 @@
+
+.baseDiv{
+    width: 100%;
+    height: 300px;
+    border-top-width:1px;
+    border-top-style:solid;
+    border-top-color:aliceblue;
+    position:relative;
+}
+.banner{
+    width: 100%;
+    height: 300px;
+    position:absolute;
+    background-image: url("/dataDetail/detail-baner.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.bannerBox{
+    width: 32%;
+    height: 60px;
+    margin :200px 36%;
+    position:absolute;
+}
+.titleT3{
+    color: white;
+    font-size: 24px;
+    margin-left: 40%;
+}
+
+
+
+.row {
+    line-height: 25px;
+    padding: 5px;
+}
+
+.form {
+    color: #000;
+    overflow-x: auto;
+    width: 86%;
+    margin: 0 7% 0 7%;
+}
+
+.select {
+    margin: 0 12px;
+    min-width: 130px;
+}
+
+.select option { 
+    overflow-x: auto;
+}
+
+.switch {
+    margin: 0 12px;
+}
+
+.button {
+    background: #1677ff;
+    color: white;
+    padding: 5px;
+}
+
+.label {
+    color: black;
+    width: 100px;
+    text-align: left;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.list1{
+    color: black;
+    margin-left: 6px;
+    text-align: left;
+    width: 90%;
+    height: 2rem;
+}
+
+.list2{
+    color: black;
+    margin-left: 6px;
+    text-align: left;
+    width: 90%;
+    height: 4rem;
+}
+
+.radioButton{
+    border-radius: 6px;
+    border:none;
+    font-size: 12px;
+    background-color: ghostwhite;
+    position: relative;
+    gap: 4px;
+}
+
+.pss{
+    width: 370px;
+    height:280px;
+}
+.top{
+    width: 200px;
+    height:54px;
+    float:left;
+}
+.topImg{
+    background-position: center;
+    background-size: 80% 80%;
+}
+.left{
+    width: 140px;
+    height:185px;
+    margin-top: 36px;
+    float:left;
+    clear: left;
+}
+.leftImg{
+    background-position: left;
+    background-size: 60% 60%;
+}
+.right{
+    margin-top: 25px;
+    width: 230px;
+    height:220px;
+    float:left;
+    text-align: left;
+}
+.right h3{
+    line-height: 20px;
+    font-size: 18px;
+    text-align: left;
+    margin: 10px 0 10px 10px;
+}
+.right button{
+    line-height: 20px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 2px;
+    border: none;
+    width: 40%;
+    background-color: white;
+    margin-left: 10px;
+}
+.right textarea{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: normal;
+    height:56px;
+    width: 230px;
+    border: none;
+    resize: none;
+    text-align: left;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    background-color: whitesmoke;
+    margin-left: 10px;
+}
+
+
+/*itemdetail-css*/
+
+.itemDetailBase{
+    width: 86%;
+    margin: 0 7% 0 7%;
+}
+.itemDetail{
+    width: 60%;
+    height: 340px;
+    margin-left: 20%;
+}
+.leftBase{
+    width: 36%;
+    height: 340px;
+    float:left;
+    position:relative;
+}
+.leftPic{
+    width: 100%;
+    height: 340px;
+    position:absolute;
+    background-image: url("/dataDetail/product.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: -40px;
+}
+
+.itemName{
+    width: 100%;
+    height: 60px;
+    margin:180px 12%;
+    position:absolute;
+}
+
+.contract{
+    width: 100%;
+    height: 60px;
+    margin:240px 1%;
+    position:absolute;
+}
+
+.contract h4{
+    color: black;
+    font-size: 12px;
+}
+
+.itemName h3{
+    color: black;
+    font-size: 12px;
+}
+
+.rightInfo{
+    width:64%;
+    height:340px;
+    float:left;
+}
+.rightInfo h3{
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 50px;
+}
+.rightInfo h4{
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.dbSSrc{
+    width: 240px;
+    height: 70px;
+    margin-left: 40px;
+}
+.type1Style{
+    border-radius: 12px;
+    border:none;
+    height: 30px;
+    width: 120px;
+    margin-left: 2%;
+    background-color: darkgray;
+}
+.rightInfRow{
+    font-size: 24px;
+    line-height: 56px;
+}
+
+.h1Style {
+    color:black;
+    margin-left:45%;
+    font-size:30px;
+}
+
+.productInfo{
+    width: 60%;
+    height: 200px;
+    margin-left: 16%;
+}
+
+.productInfo div {
+    width: 104%;
+    height: 30px;
+    background-color: #4F9AE2;
+    border-radius:6px;
+}
+
+.productInfo div h2{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.productInfo h3{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.product{
+    width: 100%;
+    height: 100%;
+}
+
+.dataDemo{
+    width: 60%;
+    height: 80px;
+    margin-left: 16%;
+}
+
+.dataDemo div {
+    width: 104%;
+    height: 30px;
+    background-color: #4F9AE2;
+    border-radius:6px;
+}
+
+.dataDemo dataDemo h2{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.dataDemo h3{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.descItem{
+    width: 60%;
+    height: 100px;
+    margin-left: 16%;
+    font-size: 14px;
+}
+
+.descItem div {
+    width: 104%;
+    height: 30px;
+    background-color: #4F9AE2;
+    border-radius:6px;
+}
+
+.descItem div h2{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.descItem h3{
+    font-size: 12px;
+    line-height: 20px;
+}
+

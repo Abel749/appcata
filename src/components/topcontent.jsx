@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Menu, Col, Row } from 'antd';
+import { Menu } from 'antd';
 import AvatarLogin from '../components/avatarlogin';
 import Image from "next/image";
+import commonStyle from '../styles/common.module.css';
 
 const items = [
 	{
@@ -19,33 +20,27 @@ const items = [
 	},
 ]
 
-const menuStyle={
-    backgroundColor: '#036ED6',
-    color:'white',
-	textDecoration:'none',
-}
 
 const TopContent = (props) => {
 	return(
 	  <>
-		<Row >
-		  <Col span={8}>
-			  <Image src="/u110.png" alt="" width={100} height={60}  priority  />
-		  </Col>
-		  <Col span={8}>
-			<Menu style={menuStyle}
-			  mode="horizontal"
-			  defaultSelectedKeys={props.frompage}
-			  items = {items}
-			/>
-		  </Col>
-		  <Col span={4} ></Col>
-		  <Col span={4} ><AvatarLogin propName={props.propName} /></Col>
-		</Row>
+		<div className={commonStyle.headerStyle}>
+			<div className={commonStyle.headerLeft}>
+				<Image src="/u110.png" alt="" width={100} height={60}  priority  />
+			</div>
+			<div className={commonStyle.headerCenter}>
+				<Menu className={commonStyle.menuStyle}
+					  mode="horizontal"
+					  defaultSelectedKeys={props.frompage}
+					  items = {items}
+				/>
+			</div>
+			<div className={commonStyle.headerRight}>
+				<AvatarLogin propName={props.propName} />
+			</div>
+		</div>
 	  </>
 	  );
 }
-
-
 
 export default TopContent;

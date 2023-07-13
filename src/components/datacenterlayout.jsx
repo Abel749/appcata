@@ -5,54 +5,19 @@ import FootContent from '../components/footcontent';
 import { Layout, Space } from 'antd';
 import DataCenterBackground from "./datacenterbackground";
 import comp from "./comp";
-const { Header, Footer, Content } = Layout;
+import {StyleProvider} from "@ant-design/cssinjs";
 
-const headerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  height: 80,
-  paddingInline: 50,
-  lineHeight: '80px',
-  backgroundColor: '#036ED6',
-};
-
-const contentStyle = {
-  textAlign: 'center',
-  minHeight: 820,
-  lineHeight: '220px',
-  color: '#fff',
-  //backgroundColor: '#108ee9',
-  backgroundColor: '#ffffff',
-};
-
-const footerStyle = {
-  textAlign: 'center',
-  //color: '#fff',
-  backgroundColor: '#555555',
-};
-
-const DataCenterBackgroundStyle = {
-  background:'url(/dataDetail/detail-baner.png) no-repeat ',
-  height: '300px',
-  width: '1700px',
-};
-const BackGroundCorolStyle = {
-  borderTopWidth:'1px',
-  borderTopStyle:'solid',
-  borderTopColor:'aliceblue',
-  backgroundColor: '#036ED6',
-}
 
 const DataCenterLayout = (props) => (
   <comp>
-    <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+    <Space>
       <Layout>
-        <Header style={headerStyle}><TopContent frompage="datacenter" propName={props.propName} /></Header>
-        <div style={BackGroundCorolStyle}>
-          <div style={DataCenterBackgroundStyle}><DataCenterBackground /></div>
-        </div>
-        <Header style={contentStyle}><Content1 /></Header>
-        <Footer style={footerStyle}><FootContent /></Footer>
+        <StyleProvider>
+          <TopContent frompage="home" propName={props.propName} />
+          <DataCenterBackground />
+          <Content1 />
+          <FootContent />
+        </StyleProvider>
       </Layout>
     </Space>
   </comp>

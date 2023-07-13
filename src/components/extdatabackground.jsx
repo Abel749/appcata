@@ -1,11 +1,9 @@
 import React from 'react';
-import Image from "next/image";
+import exTaDaStyle from "../styles/extada.module.css";
 
 const ExtDataBackground = () => (
 
-    <div >
-        <Image src="/u312.png" alt=""  width={1700} height={600} priority/>
-    </div>
+    <div className={exTaDaStyle.topCard}></div>
 );
 
 export default ExtDataBackground;

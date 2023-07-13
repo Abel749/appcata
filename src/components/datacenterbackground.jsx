@@ -1,31 +1,17 @@
 import React from 'react';
-import { Input, Space } from 'antd';
-
+import { Input } from 'antd';
+import dataCenterStyle from '../styles/dataCenter.module.css';
 const { Search } = Input;
-
 const onSearch = (value) => console.log(value);
-const searchStyle={
-    width:'450px',
-
-}
-
-const h0Style={
-    fontSize:'22px',
-    fontWeight:'600',
-    color:'#fff'
-}
-
-const searchDivStyle={
-    paddingTop:'140px',
-    marginLeft:'750px',
-}
 
 const DataCenterBackground = () => (
-    <div style={searchDivStyle}>
-        <h6 style={h0Style}>恒必应</h6>
-        <Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton style={searchStyle} />
+    <div className={dataCenterStyle.baseDiv}>
+        <div className={dataCenterStyle.banner}></div>
+        <div className={dataCenterStyle.bannerBox}>
+            <h3 className={dataCenterStyle.titleT3}> 恒必应</h3>
+            <Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton className={dataCenterStyle.searchBun} />
+        </div>
     </div>
-
 );
 
 export default DataCenterBackground;

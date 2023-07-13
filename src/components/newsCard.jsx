@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import newsCardStyles from '../styles/newsCard.module.css';
+import newsStyle from '../styles/news.module.css';
 import {List, Row } from "antd";
 import Link from "next/link";
 import config from "../../next.config";
@@ -12,9 +12,6 @@ const newsData = [{ newTitle :'', synopsis:'', picUrl:''}];
 
 const MainLogo = () =>
 {
-    const [position, setPosition] = useState('bottom');
-    const [align, setAlign] = useState('center');
-
     const [newsData, setNewsData] = useState(data);
     const [imgUrl, setImgUrl] = useState(urlImg);
 
@@ -25,7 +22,7 @@ const MainLogo = () =>
 
     const getNewsDetail = async () => {
 
-        let detailUrl = config.baseUrl.Url + 'api/newcontent?pagination[page]=1&pagination[pageSize]=3';
+        let detailUrl = config.baseUrl.Url + 'api/newcontent?pagination[page]=1&pagination[pageSize]=3&sort[id]=desc';
         const result = await axios(
             detailUrl
         );
@@ -43,38 +40,36 @@ const MainLogo = () =>
         }
     };
 
-
     return (
 
-    <div className={newsCardStyles.dev0}>
-        <h1 className={newsCardStyles.hh1}> 新闻咨询</h1>
+    <div className={newsStyle.dev0}>
+        <h1 className={newsStyle.hh1}> 新闻咨询</h1>
         <div>
-            <div className={newsCardStyles.left}>
-                <img src={imgUrl} className={newsCardStyles.img} alt=""/>
+            <div className={newsStyle.leftDiv}>
+                <img src={imgUrl} className={newsStyle.newsImg} alt=""/>
             </div>
-          <div className={newsCardStyles.right}>
-              <List
-                    dataSource={newsData}
+          <div className={newsStyle.rightDiv}>
+              <List dataSource={newsData}
                     renderItem={(item) => (
-                        <List.Item className={newsCardStyles.list} >
+                        <List.Item className={newsStyle.rightList} >
                             <Link href={item.linkUrl}>
                                 <Row >
-                                    <Row className={newsCardStyles.row1} >
-                                        <h3> {item.newTitle}</h3>
-                                    </Row>
-                                    <Row className={newsCardStyles.row2} >
-                                        <span> {item.synopsis}</span>
-                                    </Row>
-                                    <Row className={newsCardStyles.row3} >
-                                        <span>{item.publishedAt}</span>
-                                    </Row>
+                                    <p className={newsStyle.rightRow1} >
+                                        {item.newTitle}
+                                    </p>
+                                    <p className={newsStyle.rightRow2} >
+                                        {item.synopsis}
+                                    </p>
+                                    <p className={newsStyle.rightRow3} >
+                                       {item.publishedAt}
+                                    </p>
                                 </Row>
                             </Link>
                         </List.Item>
                     )}
               />
               <Link href="/newslist">
-                  <div className={newsCardStyles.button} >查看更多</div>
+                  <div className={newsStyle.button} >查看更多</div>
               </Link>
             </div>
         </div>

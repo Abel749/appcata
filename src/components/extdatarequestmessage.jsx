@@ -2,9 +2,7 @@ import {Col, List, Row} from "antd";
 import config from "../../next.config";
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import exStyle from '../styles/extdatarequestmessage.module.css';
-import formStyles1 from "../styles/Form.module.css";
-import Image from "next/image";
+import exTaDaStyle from "../styles/extada.module.css";
 
 const ExtDataRequestMessage = () => {
 
@@ -20,7 +18,7 @@ const ExtDataRequestMessage = () => {
         const result = await axios(
             baseUrl
         );
-        const commons = result.data.data.map((item, index) => {
+        const commons = result.data.data.map((item) => {
             item.attributes.publishedAt = getDate(item.attributes.publishedAt);
             return item.attributes;
         })
@@ -69,40 +67,36 @@ const ExtDataRequestMessage = () => {
 
     }
     return(
-        <div >
-            <div className={exStyle.pss} >
-                <Row>
-                    <Col className={exStyle.top}>
-                        <h3>需求留言板</h3>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className={exStyle.left}>
-                    </Col>
-                    <Col className={exStyle.right}>
-                        <List dataSource={dataItem}
-                              renderItem={(item) => (
-                                  <List.Item >
-                                      <Row >
-                                          <Col className={exStyle.col1}>
-                                              {item.UserName}
-                                          </Col>
-                                          <Col className={exStyle.col2}>
-                                              {item.description}
-                                          </Col>
-                                          <Col className={exStyle.col3}>
-                                              {item.publishedAt}
-                                          </Col>
-                                      </Row>
-                                  </List.Item>
-                              )}
-                        />
-                        <textarea id="comments" placeholder="请输入留言" className={exStyle.textarea}/>
+        <div className={exTaDaStyle.content2} >
+            <h1 className={exTaDaStyle.titleH1}>需求留言板</h1>
+                <div className={exTaDaStyle.msgLeft}>
+                    <img src='/extData/externalData_20.png' className={exTaDaStyle.msgImg} alt=""/>
+                </div>
+                <div className={exTaDaStyle.msgRight}>
+                    <List dataSource={dataItem}
+                          renderItem={(item) => (
+                              <List.Item >
+                                  <Row className={exTaDaStyle.msgRow}>
+                                      <Col className={exTaDaStyle.msgCol1}>
+                                          {item.UserName}
+                                      </Col>
+                                      <Col className={exTaDaStyle.msgCol2}>
+                                          {item.description}
+                                      </Col>
+                                      <Col className={exTaDaStyle.msgCol3}>
+                                          {item.publishedAt}
+                                      </Col>
+                                  </Row>
+                              </List.Item>
+                          )}
+                    />
+                    <Row className={exTaDaStyle.msgRow}>
+                        <textarea id="comments" placeholder="请输入留言" className={exTaDaStyle.msgTextarea}/>
                         <text id="tempStr" style={{display:"none"}} value= {tempStr}/>
-                        <button type="primary"  onClick={commitMsg} className={exStyle.button}>提交</button>
-                    </Col>
-                </Row>
-            </div>
+                        <button type="primary"  onClick={commitMsg} className={exTaDaStyle.msgButton}>提交</button>
+                    </Row>
+
+                </div>
         </div>
     );
 }

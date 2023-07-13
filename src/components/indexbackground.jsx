@@ -1,10 +1,9 @@
 import React from 'react';
-import Image from "next/image";
+import indexStyle from '../styles/index.module.css';
 
 const IndexBackground = () => (
 
-    <div >
-        <Image src="/u37.png" alt="" width={1700} height={600} priority/>
+    <div className={indexStyle.indexBackground}>
     </div>
 );
 

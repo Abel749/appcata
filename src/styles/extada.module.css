@@ -1,16 +1,140 @@
-.col{
+
+.topCard{
+    height: 600px;
+    border-top-width:1px;
+    border-top-style:solid;
+    border-top-color:aliceblue;
+    background-image: url("/extData/u312.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.topItem{
+    height: 120px;
+    margin:-60px 20% 0 16%;
+    width: 68%;
+    background-color: whitesmoke;
+    border-radius:12px;
+}
+.topItemRow{
+    width:25%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.extDataLeft{
+    font-size: 12px;
+    margin: 30px 30px 30px;
+}
+.extDataLeft h1{
+    color:#1677ff;
+    font-size: 24px;
+}
+.extDataLeft h3{
+    font-size: 14px;
+}
+.extDataRight{
+    margin-top:50px;
+    margin-left: -1.5rem;
+    font-size: 14px;
+}
+.extData01{
+    width: 120px;
+    height: 120px;
+    background-image: url("/extData/extData01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+}
+.extData02{
+    width: 120px;
+    height: 120px;
+    background-image: url("/extData/extData02.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.extData03{
+    width: 120px;
+    height: 120px;
+    background-image: url("/extData/extData03.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.extData04{
+    width: 120px;
+    height: 120px;
+    background-image: url("/extData/extData04.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.category{
+    width: 86%;
+    margin: 2rem 7% 2rem 7%;
+}
+.categoryTab{
+    height: 600px;
+    color: #000;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.button1{
+    width:240px;
+    height:100px;
+    text-align: center;
+    background-color: #4F9AE2;
+    font-size: 14px;
+    margin: 10px 20px 10px 0;
+    border-radius:12px;
+}
+.linkItem{
+    width: 220px;
+    border-radius:12px;
+    display: flex;
+    flex-direction: row;
+}
+.linkImg{
+    width: 80px;
+    height: 80px;
+    margin: 10px 0 10px;
+}
+.linkBun{
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    width: 160px;
+    margin: 2rem 0.5rem 2rem;
+}
+.img1{
+    width: 80px;
+    height: 80px;
+}
+
+
+.firstData{
+    width: 100%;
+    position: relative;
+}
+.leftClass{
     background-color: #036ED6 ;
+    width: 40%;
+    float: left;
+}
+.rightClass{
+    width: 58%;
+    margin-left: 1%;
+    float: left;
+    color: white;
 }
 .firstBackground{
     background-image: url("/firstc.png");
     background-repeat:no-repeat;
     background-size:contain;
-    width: 1250px;
-    height: 350px;
-    margin-left: 30px;
-    margin-top: 30px;
+    height: 400px;
+    margin: 10px 10px 10px ;
 }
-
 .backgroundH1{
     margin-top: 50px;
     color: #fff;
@@ -18,27 +142,18 @@
 
 }
 
+
+.secondData{
+    width: 100%;
+    position: relative;
+}
 .secondBackground{
     background-image: url("/extData/secondc.png");
     background-repeat:no-repeat;
     background-size:contain;
-    width: 1250px;
-    height: 350px;
-    margin-left: 60px;
-    margin-top: 30px;
+    height: 400px;
+    margin: 10px 10px 10px ;
 }
-
-
-.button1{
-    width:240px;
-    height:80px;
-    line-height : 80px;
-    text-align: center;
-    color: whitesmoke;
-    background-color: #4F9AE2;
-    font-size: 20px;
-}
-
 .button2{
     width:120px;
     height:40px;
@@ -47,6 +162,142 @@
     background-color: #4F9AE2;
     border-radius:10px;
 }
-.list{
-    margin-bottom: 10px;
+
+
+.content2{
+    width: 86%;
+    height: 600px;
+    margin: 40px 7% 60px 7%;
+}
+.titleH1{
+    color:#036ED6;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.titleH2{
+    color:#222222;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1rem;
+}
+.titleH3{
+    color:#222222;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.content3{
+    width: 86%;
+    height: 320px;
+    margin: 40px 7% 60px 7%;
+}
+
+.extData05{
+    width: 100%;
+    height: 660px;
+}
+.extData05Img{
+    width: 100%;
+    height: 660px;
+}
+
+.content4{
+    width: 86%;
+    height: 800px;
+    margin: 40px 7% 60px 7%;
+}
+.externalData03{
+    width: 100%;
+    height: 440px;
+}
+.externalData03Img{
+    width: 100%;
+    height: 440px;
+}
+.row3{
+    width: 100%;
+    height: 120px;
+    margin-left: 7%;
+}
+.col3{
+    width: 24%;
+    margin:3% 4% 3% ;
+}
+.img3{
+    width:200px;
+    height: 100px;
+}
+
+
+
+.msgPss{
+    width:1100px;
+    height:400px;
+}
+.msgTop{
+    width:1100px;
+    height:40px;
+    color:#036ED6;
+    font-size:40px;
+}
+.msgLeft{
+    width:44%;
+    height:416px;
+    float:left;
+    clear: left;
+}
+.msgImg{
+    width: 100%;
+    height: 416px;
+    background-size: cover;
+}
+.msgRight{
+    width:56%;
+    height:400px;
+    float:left;
+    text-align: left;
+}
+.msgRow{
+    width: 100%;
+    height: 48px;
+    margin:-0.6rem 1px 2px 1px;
+}
+.msgCol1{
+    width: 14%;
+    height: 100%;
+    text-align: center;
+}
+.msgCol2{
+    width: 70%;
+    font-size: 14px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+}
+.msgCol3{
+    margin-left: 2%;
+    width: 14%;
+}
+.msgTextarea{
+    margin-left: 1rem;
+    width: 92%;
+    height: 48px;
+    border-radius: 5px;
+}
+.msgButton{
+    width: 120px;
+    height: 46px;
+    background-color: #1677ff;
+    margin: 0.5rem 44%;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
 }

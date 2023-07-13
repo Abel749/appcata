@@ -1,48 +1,31 @@
 import React from 'react';
-import Image from "next/image";
 import {Col, Row} from "antd";
-
-const titleH1Style={
-    color:'#036ED6',
-    fontSize:'40px',
-};
-
-const titleH2Style={
-    fontSize:'25px',
-    marginTop:'35px',
-    color: '#222222',
-};
-
-const row3Style={
-    marginLeft:'270px',
-    marginTop: '50px',
-
-};
+import exTaDaStyle from "../styles/extada.module.css";
 
 const ExtDataWhere = () => (
-    <div >
-        <Row >
-            <Col span='24'><h1 style={titleH1Style}>用在哪</h1></Col>
+    <div className={exTaDaStyle.content3}>
+        <h1 className={exTaDaStyle.titleH1}>用在哪</h1>
+        <Row className={exTaDaStyle.row3}>
+            <Col className={exTaDaStyle.col3}>
+                <img src="/extData/externalData_06.png" alt="" className={exTaDaStyle.img3} />
+            </Col>
+            <Col className={exTaDaStyle.col3}>
+                <img src="/extData/externalData_08.jpg" alt="" className={exTaDaStyle.img3} />
+            </Col>
+            <Col className={exTaDaStyle.col3}>
+                <img src="/extData/externalData_10.jpg" alt="" className={exTaDaStyle.img3}/>
+            </Col>
         </Row>
-        <Row style={row3Style} gutter={{
-            xs: 16,
-            sm: 32,
-            md: 48,
-            lg: 64,
-        }}>
-            <Col> <Image src="/extData/externalData_06.png" alt="" width={300} height={100} priority/></Col>
-            <Col> <Image src="/extData/externalData_08.jpg" alt="" width={300} height={100} priority/></Col>
-            <Col> <Image src="/extData/externalData_10.jpg" alt="" width={300} height={100} priority/></Col>
-        </Row>
-        <Row style={row3Style} gutter={{
-            xs: 16,
-            sm: 32,
-            md: 48,
-            lg: 64,
-        }}>
-            <Col> <Image src="/extData/externalData_14.jpg" alt="" width={300} height={100} priority/></Col>
-            <Col> <Image src="/extData/externalData_16.jpg" alt="" width={300} height={100} priority/></Col>
-            <Col> <Image src="/extData/externalData_17.jpg" alt="" width={300} height={100} priority/></Col>
+        <Row className={exTaDaStyle.row3}>
+            <Col className={exTaDaStyle.col3}>
+                <img src="/extData/externalData_14.jpg" alt="" className={exTaDaStyle.img3}/>
+            </Col>
+            <Col className={exTaDaStyle.col3}>
+                <img src="/extData/externalData_16.jpg" alt="" className={exTaDaStyle.img3} />
+            </Col>
+            <Col className={exTaDaStyle.col3}>
+                <img src="/extData/externalData_17.jpg" alt="" className={exTaDaStyle.img3} />
+            </Col>
         </Row>
     </div>
 );

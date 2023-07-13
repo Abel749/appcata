@@ -2,7 +2,6 @@ import ExtDataLayout from '../components/extdatalayout';
 import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 import nookies from "nookies";
 import axios from "axios";
-import NewsListLayout from "../components/newsListlayout";
 import config from "../../next.config";
 const ExtData = (props) => {
   

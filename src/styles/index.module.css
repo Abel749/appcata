@@ -1,0 +1,250 @@
+.indexBackground{
+  height: 600px;
+  border-top-width:1px;
+  border-top-style:solid;
+  border-top-color:aliceblue;
+  background-image: url('/index/u37.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.baseDiv{
+  height: 160px;
+  margin:-20px 20% 0 16%;
+  width: 68%;
+  background-color: #efefef;
+  border-radius:12px;
+}
+
+.totalTitle{
+  font-size: 24px;
+  color:#036ED6;
+  margin-left: 49%;
+}
+
+.divStyle {
+  width:1200px;
+  marginTop:-48px;
+  marginLeft: 170px;
+}
+
+.div2Style {
+  margin-top: 17px;
+}
+
+.publicRowStyle {
+  margin-top: 12px;
+  width: 25%;
+}
+
+.montCardP1Style {
+  font-size:10px;
+  color:#939393;
+}
+
+.montCardP2Style {
+  font-size:26px;
+  font-weight:600;
+  color:#222222;
+}
+
+.hotList{
+  width: 86%;
+  height: 460px;
+  margin: 40px 7% 0 7%;
+}
+
+.hotList h1{
+  text-align: center;
+  color:#036ED6;
+  font-size:40px;
+  margin-bottom: 2rem;
+
+}
+
+.hotListImg{
+  width: 100%;
+  height: 400px;
+  background-image: url('/index/hotList.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.content2{
+  width: 86%;
+  height: 500px;
+  margin: 2rem 7% 2rem 7%;
+}
+
+.titleH1{
+  color:#036ED6;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.titleH2{
+  color:#222222;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.titleH3{
+  color:#222222;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.container1{
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+}
+
+.outBaseDivHidden1{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  height: 400px;
+  background-image: url("/index/u112_state0.png");
+}
+
+.outBaseDivShow1{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  display: none;
+}
+
+.container1:hover .outBaseDivShow1{
+  display: block;
+}
+
+.outDivShow{
+  background-color:#358BDE
+}
+
+.outDivHidden{
+  margin-top: 60%;
+}
+
+.link{
+  margin-top: 160px;
+  height:240px;
+  width: 270px;
+  border-top: 1px solid;
+}
+
+.outContent{
+  font-size: 14px;
+  line-height: 16px;
+  text-indent: 2em;
+  text-align: left;
+  margin :0 1em 1em 1em;
+}
+
+.outH3Hidden{
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 300px;
+}
+.outH3{
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.outButton{
+  font-size: 24px;
+  text-align: center;
+  margin-left: 30%;
+  border: none;
+  border-radius:12px;
+  padding: 0.5rem;
+}
+
+
+
+.container2{
+  width: 22%;
+  height: 100%;
+  position: relative;
+  margin-left: 26%;
+}
+
+.outBaseDivHidden2{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  height: 400px;
+  background-image: url("/index/u119_state0.png");
+}
+
+.outBaseDivShow2{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  display: none;
+}
+
+.container2:hover .outBaseDivShow2{
+  display: block;
+}
+
+.container3{
+  width: 22%;
+  height: 100%;
+  position: relative;
+  margin-left: 52%;
+}
+
+.outBaseDivHidden3{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  height: 400px;
+  background-image: url("/index/u126_state0.png");
+}
+
+.outBaseDivShow3{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  display: none;
+}
+
+.container3:hover .outBaseDivShow3{
+  display: block;
+}
+
+
+.container4{
+  width: 22%;
+  height: 100%;
+  position: relative;
+  margin-left: 78%;
+}
+
+.outBaseDivHidden4{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  height: 400px;
+  background-image: url("/index/u133_state0.png");
+}
+
+.outBaseDivShow4{
+  cursor: pointer;
+  position: absolute;
+  width: 270px;
+  display: none;
+}
+
+.container4:hover .outBaseDivShow4{
+  display: block;
+}

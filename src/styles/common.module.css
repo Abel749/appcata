@@ -1,0 +1,55 @@
+
+.headerStyle {
+  text-align:  center ;
+  color: #fff ;
+  height: 80px;
+  line-height: 80px ;
+  background-color:  #036ED6 ;
+}
+
+.headerLeft {
+  width: 15%;
+  margin-left: 10%;
+  float: left;
+}
+
+.headerCenter {
+  width: 40%;
+  margin-left: 10%;
+  background-color: blue ;
+  float: left;
+}
+
+.headerRight {
+  width: 20%;
+  float: left;
+}
+
+.footerStyle {
+  text-align:  center ;
+  width: 100%;
+  height: 253px;
+  background-color:  #555555 ;
+}
+
+.menuStyle {
+  background-color: #036ED6;
+  color:white;
+  text-decoration:none;
+}
+.errorPageImg1{
+  height: 600px;
+  width: 86%;
+  background-image: url('/index/u656.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-left: 7%;
+}
+.errorPageImg2{
+  height: 750px;
+  width: 86%;
+  background-image: url('/index/u673.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-left: 7%;
+}

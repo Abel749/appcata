@@ -1,19 +1,18 @@
-import {Row, Col, List, Image} from 'antd';
+import {List} from 'antd';
 import React from 'react';
 import axios from "axios";
-
 import { useState,useEffect } from 'react';
-import extadaStyles2 from "../styles/extada.module.css";
 import Link from "next/link";
 import config from "../../next.config";
-import extadaStyles from "../styles/extada.module.css";
+import exTaDaStyle from "../styles/extada.module.css";
+
 const data =[];
 
 const ExtDataSecondC = () => {
 const [dataItem, setDataItem] = useState(data);
 
 useEffect(() => {
-    getType2();
+    getType2().then();
 
 }, []);
 
@@ -43,39 +42,28 @@ const getType2 = async () => {
             //添加二级数据类型
             dataType2.push(dataTypeTemp);
         }
-
     }
     setDataItem(dataType2);
-
 };
 
 return (
     <>
-        <Row gutter={{
-            xs: 8,
-            sm: 16,
-            md: 24,
-            lg: 32,
-        }}>
-            <Col span={8} className={extadaStyles.col}>
-                <h1 className={extadaStyles.backgroundH1}>二级数据分类</h1>
-                <div className={extadaStyles.secondBackground}></div>
-            </Col>
-            <Col span={10}>
-                <List
-                    grid={{
-                        column: 4,
-                    }}
-                    dataSource={dataItem}
-                    renderItem={(item) => (
-                        <List.Item className={extadaStyles2.button2} >
-
-                            <Link href={item.url} style={{color:'#fff'}}>{item.name}</Link>
-                        </List.Item>
-                    )}
+        <div className={exTaDaStyle.secondData}>
+            <div className={exTaDaStyle.leftClass}>
+                <h1 className={exTaDaStyle.backgroundH1}>二级数据分类</h1>
+                <div className={exTaDaStyle.secondBackground}></div>
+            </div>
+            <div className={exTaDaStyle.rightClass}>
+                <List grid={{ column: 4 }}
+                      dataSource={dataItem}
+                      renderItem={(item) => (
+                          <List.Item className={exTaDaStyle.button2} >
+                              <Link href={item.url} style={{color:'#fff'}}>{item.name}</Link>
+                          </List.Item>
+                      )}
                 />
-            </Col>
-        </Row>
+            </div>
+        </div>
     </>
 )
 }

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import config from "../../next.config";
 import axios from "axios";
-import richTextStyle from "../styles/richtext.module.css";
+import newsStyle from "../styles/news.module.css";
 import ReactMarkdown from "react-markdown";
 
 const data = [];
@@ -31,7 +31,7 @@ const NewsDetail= (props) => {
     };
 
     return(
-        <div className={richTextStyle.content}>
+        <div className={newsStyle.content}>
             <ReactMarkdown>{ newsData.RichText }</ReactMarkdown>
         </div>
 
