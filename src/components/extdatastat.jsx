@@ -33,7 +33,7 @@ const ExtDataStat = () => (
             </Col>
 
             <Col aria-colspan={8} className={exTaDaStyle.topItemRow}>
-                <div className={exTaDaStyle.extData02}></div>
+                <div className={exTaDaStyle.extData04}></div>
                 <div className={exTaDaStyle.extDataLeft}>
                     <h1>0</h1>
                     <h3>本日上新</h3>

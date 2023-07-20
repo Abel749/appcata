@@ -16,6 +16,7 @@
     background-color: whitesmoke;
     border-radius:12px;
 }
+
 .topItemRow{
     width:25%;
     height: 60px;
@@ -32,6 +33,7 @@
 }
 .extDataLeft h3{
     font-size: 14px;
+    margin-left: 10px;
 }
 .extDataRight{
     margin-top:50px;
@@ -39,40 +41,48 @@
     font-size: 14px;
 }
 .extData01{
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
     background-image: url("/extData/extData01.svg");
     background-repeat: no-repeat;
     background-position: center;
     float: left;
 }
 .extData02{
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
     background-image: url("/extData/extData02.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 .extData03{
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
     background-image: url("/extData/extData03.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 .extData04{
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
     background-image: url("/extData/extData04.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-
-.category{
+.baseCard{
     width: 86%;
-    margin: 2rem 7% 2rem 7%;
+    margin: 6px 7% 6px 7%;
 }
+
 .categoryTab{
     height: 600px;
     color: #000;
@@ -112,7 +122,6 @@
     height: 80px;
 }
 
-
 .firstData{
     width: 100%;
     position: relative;
@@ -142,7 +151,6 @@
 
 }
 
-
 .secondData{
     width: 100%;
     position: relative;
@@ -163,12 +171,6 @@
     border-radius:10px;
 }
 
-
-.content2{
-    width: 86%;
-    height: 600px;
-    margin: 40px 7% 60px 7%;
-}
 .titleH1{
     color:#036ED6;
     font-size: 40px;
@@ -189,12 +191,6 @@
     margin-top: 1rem;
 }
 
-.content3{
-    width: 86%;
-    height: 320px;
-    margin: 40px 7% 60px 7%;
-}
-
 .extData05{
     width: 100%;
     height: 660px;
@@ -204,11 +200,6 @@
     height: 660px;
 }
 
-.content4{
-    width: 86%;
-    height: 800px;
-    margin: 40px 7% 60px 7%;
-}
 .externalData03{
     width: 100%;
     height: 440px;

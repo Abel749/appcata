@@ -7,7 +7,7 @@ import NewsDetail from "./NewsDetail";
 const NewsDetailLayout = (props) => (
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout>
-            <TopContent frompage="newsDetail" propName={props.propName} />
+            <TopContent frompage="newsList" propName={props.propName} />
             <NewsDetail />
             <FootContent />
         </Layout>

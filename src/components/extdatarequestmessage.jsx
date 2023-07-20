@@ -67,7 +67,7 @@ const ExtDataRequestMessage = () => {
 
     }
     return(
-        <div className={exTaDaStyle.content2} >
+        <div className={exTaDaStyle.baseCard} >
             <h1 className={exTaDaStyle.titleH1}>需求留言板</h1>
                 <div className={exTaDaStyle.msgLeft}>
                     <img src='/extData/externalData_20.png' className={exTaDaStyle.msgImg} alt=""/>

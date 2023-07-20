@@ -1,32 +1,20 @@
-import React from 'react';
 import Link from 'next/link';
-import { Menu } from 'antd';
+import {Row,Col} from 'antd';
 import AvatarLogin from '../components/avatarlogin';
 import Image from "next/image";
 import commonStyle from '../styles/common.module.css';
-
-const items = [
-	{
-		label: ( <Link href = "/" > 首页 < /Link>),
-		key: 'home',
-	},
-	{
-		label: ( <Link href = "/datacenter" > 资产中心 < /Link>),
-		key: 'datacenter',
-	},
-	{
-		label: ( <Link href = "/newslist" > 咨讯 < /Link>),
-		key: 'newsList',
-	},
-	{
-		label: ( <Link href = "/searchpage" > 恒必应 < /Link>),
-		key: 'searchPage',
-	},
-]
-
-
+import {useEffect} from "react";
 
 const TopContent = (props) => {
+
+
+	useEffect(() => {
+		const zzz = props.frompage;
+		console.log(props.frompage)
+		document.getElementById(zzz).style.backgroundColor="#00008B";
+	}, []);// eslint-disable-line
+
+
 	return(
 	  <>
 		<div className={commonStyle.headerStyle}>
@@ -34,12 +22,29 @@ const TopContent = (props) => {
 				<Image src="/u110.png" alt="" width={100} height={60}  priority  />
 			</div>
 			<div className={commonStyle.headerCenter}>
-				<Menu className={commonStyle.menuStyle}
-					  mode="horizontal"
-					  style={{backgroundColor:"#036ED6"}}
-					  defaultSelectedKeys={props.frompage}
-					  items = {items}
-				/>
+				<Row>
+					<Col>
+						<Link href="/">
+							<h3 id="home" className={commonStyle.menu} >首页</h3>
+						</Link>
+					</Col>
+					<Col>
+						<Link href="/datacenter">
+							<h3 id="datacenter" className={commonStyle.menu} >资产中心</h3>
+						</Link>
+					</Col>
+					<Col>
+						<Link href="/newslist">
+							<h3 id="newsList" className={commonStyle.menu} >咨讯</h3>
+						</Link>
+					</Col>
+					<Col>
+						<Link href="/searchpage">
+							<h3 id="searchPage" className={commonStyle.menu}>恒必应</h3>
+						</Link>
+					</Col>
+				</Row>
+
 			</div>
 			<div className={commonStyle.headerRight}>
 				<AvatarLogin propName={props.propName} />

@@ -9,6 +9,7 @@ const linkToBlood = async () => {
 const Content2 = () => (
 
     <div className={indexStyle.content2}>
+        <div>
         <h1 className={indexStyle.titleH1}>产品中心</h1>
         <h3 className={indexStyle.titleH2}>24个总行部门（覆盖率80%）和15家分行（覆盖率75%，主要使用万得终端、企查查、DM终端）</h3>
         <h3 className={indexStyle.titleH3}>已经在使用外部数据</h3>
@@ -85,6 +86,7 @@ const Content2 = () => (
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 );

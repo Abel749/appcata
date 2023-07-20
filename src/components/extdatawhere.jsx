@@ -3,7 +3,7 @@ import {Col, Row} from "antd";
 import exTaDaStyle from "../styles/extada.module.css";
 
 const ExtDataWhere = () => (
-    <div className={exTaDaStyle.content3}>
+    <div className={exTaDaStyle.baseCard}>
         <h1 className={exTaDaStyle.titleH1}>数据服务场景</h1>
         <Row className={exTaDaStyle.row3}>
             <Col className={exTaDaStyle.col3Div1} >

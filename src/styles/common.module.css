@@ -20,6 +20,15 @@
   float: left;
 }
 
+.menu{
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
 .headerRight {
   width: 20%;
   float: left;

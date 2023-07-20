@@ -45,7 +45,7 @@ const DataShare = () => {
 
 
    return (
-        <div className={indexStyle.content2}>
+        <div className={indexStyle.baseCard}>
             <h1 className={indexStyle.titleH1}>数据资产共享与服务</h1>
             <h3 className={indexStyle.titleH2}>数据门户以用户看数、用数场景为核心，基于数据资产内容，面向用户提供找数据、看数据、用数据的统一服务入口</h3>
             <Row>

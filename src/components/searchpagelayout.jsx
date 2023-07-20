@@ -12,7 +12,7 @@ const SearchPageLayout = (props) => {
             <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
                 <Layout style={{ backgroundColor: '#ffffff' }}>
                     <StyleProvider>
-                        <TopContent frompage="home" propName={props.propName} />
+                        <TopContent frompage="searchPage" propName={props.propName} />
                         <SearchData />
                         <FootContent />
                     </StyleProvider>

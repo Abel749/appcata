@@ -13,7 +13,7 @@ const DataCenterLayout = (props) => (
       <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout style={{ backgroundColor: '#ffffff' }}>
           <StyleProvider>
-            <TopContent frompage="home" propName={props.propName} />
+            <TopContent frompage="datacenter" propName={props.propName} />
 {/*            <DataCenterBackground />*/}
             <Content1 />
             <FootContent />

@@ -7,7 +7,7 @@ import ErrorPage from "./errorpage";
 const ErrorPageLayout = (props) => (
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout>
-            <TopContent frompage="errorPage" propName={props.propName}/>
+            <TopContent frompage="home" propName={props.propName}/>
             <ErrorPage />
             <FootContent />
         </Layout>
