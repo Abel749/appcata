@@ -29,10 +29,10 @@ const ExtDataRequestMessage = () => {
         let YY = date.getFullYear() + '-';
         let DD = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + "-";
         let dd = date.getDate() + ' ';
-        let hh = date.getHours() + ':';
+        /* let hh = date.getHours() + ':';
         let mm = date.getMinutes() + ':';
         let ss = date.getSeconds();
-       /* return YY + DD + dd + hh + mm + ss;*/
+        return YY + DD + dd + hh + mm + ss;*/
         return YY + DD + dd;
     }
 

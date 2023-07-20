@@ -36,7 +36,7 @@ const ExtDataStat = () => (
                 <div className={exTaDaStyle.extData02}></div>
                 <div className={exTaDaStyle.extDataLeft}>
                     <h1>0</h1>
-                    <h3>数据上新</h3>
+                    <h3>本日上新</h3>
                 </div>
                 <div className={exTaDaStyle.extDataRight}>个</div>
             </Col>

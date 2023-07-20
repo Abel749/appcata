@@ -1,0 +1,46 @@
+.baseDiv {
+    color: #000;
+    overflow-x: auto;
+    width: 100%;
+    height: 300px;
+}
+.searchData{
+    width: 86%;
+    margin: 0 7% 0 7%;
+}
+
+
+.linkDiv{
+    width: 300px;
+    height: 180px;
+    margin: 1% 1% 1% 1%;
+}
+
+.linkDiv h3{
+    font-size: 16px;
+}
+
+.linkDiv h4{
+    font-size: 14px;
+    color: black;
+}
+
+.list{
+    min-height: 100px;
+}
+.row{
+    text-align: center
+}
+
+.col{
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    color: black;
+    border: 1px solid rgba(var(--callout-border-rgb), 0.25);
+}

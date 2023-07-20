@@ -1,11 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import {List, Radio, Row, Col} from 'antd';
+import {List, Radio, Row, Col, Input} from 'antd';
 import { useState, useEffect } from 'react';
 import dataCenterStyle from '../styles/dataCenter.module.css';
-import Image from "next/image";
 import Link from "next/link";
 import config from "next.config";
+import searchDataStyle from "../styles/searchdata.module.css";
+const { Search } = Input;
+
 
 const firstLevelMap_temp = [{ code: '', name: '',code1 :'',ItemName :'',ApplicationScenario:'' ,DataSources:'',Src1:'',DDSSrc:''}];
 const secondLevelMap_temp = [{ code: '', name: '' ,code2 :''}];
@@ -182,8 +184,23 @@ const Content1 = (props) => {
 		console.log(e.target.value);
 	};
 
+	const onSearch = async (value) => {
+		console.log(value);
+		let baseUrl = config.baseUrl.Url2 + 'searchpage?searchCode='+ value;
+		window.location.href= baseUrl;
+	};
+
   return (
 	<>
+		<div className={searchDataStyle.baseDiv}>
+			<div id = "banner" className={dataCenterStyle.banner}></div>
+			<div className={dataCenterStyle.bannerBox}>
+				<h3 className={dataCenterStyle.titleT3}>恒必应</h3>
+				<Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton  />
+				<p> 关键字推荐:</p>
+				<p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>
+			</div>
+		</div>
 		<div  className={dataCenterStyle.form} >
 			<Row className={dataCenterStyle.row}  >
 				<Col className={dataCenterStyle.label}> 一级数据类型 </Col>
@@ -237,7 +254,7 @@ const Content1 = (props) => {
 			</Row>
 		</div>
 		<div className={dataCenterStyle.form} >
-			<List pagination={{ position, align,defaultPageSize:6 } }
+			<List pagination={{ position, align,defaultPageSize:12 } }
 				grid={{ gutter: 10, column: 3, }}
 				dataSource={dataItem}
 				renderItem={(item) => (

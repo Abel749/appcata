@@ -15,10 +15,15 @@ const items = [
 		key: 'datacenter',
 	},
 	{
-		label: ( <Link href = "/newslist" > 新闻咨讯 < /Link>),
+		label: ( <Link href = "/newslist" > 咨讯 < /Link>),
 		key: 'newsList',
 	},
+	{
+		label: ( <Link href = "/searchpage" > 恒必应 < /Link>),
+		key: 'searchPage',
+	},
 ]
+
 
 
 const TopContent = (props) => {
@@ -31,6 +36,7 @@ const TopContent = (props) => {
 			<div className={commonStyle.headerCenter}>
 				<Menu className={commonStyle.menuStyle}
 					  mode="horizontal"
+					  style={{backgroundColor:"#036ED6"}}
 					  defaultSelectedKeys={props.frompage}
 					  items = {items}
 				/>

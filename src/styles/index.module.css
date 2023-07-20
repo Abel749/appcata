@@ -70,6 +70,14 @@
   background-repeat: no-repeat;
 }
 
+.HzCsListImg{
+  width: 100%;
+  height: 476px;
+  background-image: url('/index/hzcs.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 .content2{
   width: 86%;
   height: 500px;
@@ -96,6 +104,80 @@
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+
+.baseBox1{
+  width: 10%;
+  height: 100px;
+  margin-left: 14%;
+  text-align: center;
+  position: absolute;
+}
+
+.baseBox2{
+  width: 10%;
+  height: 100px;
+  margin-left: 34%;
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+}
+
+.baseBox3{
+  width: 10%;
+  height: 100px;
+  margin-left: 54%;
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+}
+
+.baseBox1 h3 {
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  display:inline;
+}
+
+.baseBox2 h3 {
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  display:inline;
+}
+
+.baseBox3 h3 {
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  display:inline;
+}
+
+.dataImg{
+  width: 40px;
+  height: 40px;
+  margin:80px 30px -10px 0px;
+  position: center;
+}
+
+
+.dataShareBase{
+  width: 100%;
+  height: 220px;
+  margin-top: 180px;
+}
+
+.dataShare{
+  width: 56%;
+  height: 220px;
+  margin-left: 22%;
+  background-size: 100% 100%;
+}
+.changeDataShare{
+  width: 100%;
+  height: 220px;
+  background-size: 100% 100%;
 }
 
 

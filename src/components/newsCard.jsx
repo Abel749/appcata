@@ -43,7 +43,7 @@ const MainLogo = () =>
     return (
 
     <div className={newsStyle.dev0}>
-        <h1 className={newsStyle.hh1}> 新闻咨询</h1>
+        <h1 className={newsStyle.hh1}> 新闻资讯</h1>
         <div>
             <div className={newsStyle.leftDiv}>
                 <img src={imgUrl} className={newsStyle.newsImg} alt=""/>

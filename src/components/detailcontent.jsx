@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useState,useEffect } from 'react';
 import config from "../../next.config";
 import dataCenterStyle from '../styles/dataCenter.module.css';
+import searchDataStyle from "../styles/searchdata.module.css";
+import {Input} from "antd";
+const { Search } = Input;
 
 const data =[];
 const type =[];
@@ -30,9 +33,24 @@ const DetailContent = (props) =>
             setDataType(itemType);
         };
 
+        const onSearch = async (value) => {
+            console.log(value);
+            let baseUrl = config.baseUrl.Url2 + 'searchpage?searchCode='+ value;
+            window.location.href= baseUrl;
+        };
+
 
 return (
         <>
+            <div className={searchDataStyle.baseDiv}>
+                <div id = "banner" className={dataCenterStyle.banner}></div>
+                <div className={dataCenterStyle.bannerBox}>
+                    <h3 className={dataCenterStyle.titleT3}>恒必应</h3>
+                    <Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton  />
+                    <p> 关键字推荐:</p>
+                    <p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>
+                </div>
+            </div>
             <div className={dataCenterStyle.itemDetailBase}>
                 <h1 className={dataCenterStyle.h1Style}>产品说明</h1>
                 <div className={dataCenterStyle.itemDetail}>
@@ -51,33 +69,32 @@ return (
                         <h3>
                             <button className={dataCenterStyle.type1Style}>{dataType.type1}</button>
                         </h3>
-                        <h4>{dataItem.ApplicationScenario}</h4>
+                        <p>{dataItem.ApplicationScenario}</p>
                         <h3>{dataItem.ContractNum}</h3>
                         <h3>{dataItem.DataSources}</h3>
                     </div>
                 </div>
                 <div className={dataCenterStyle.productInfo}>
                     <div><h2>基本信息</h2></div>
-                    <h3>产品名称: {dataItem.ItemName}</h3>
-                    <h3>数据来源: {dataItem.DataSources}</h3>
-                    <h3> 一级数据类型: {dataType.type1}</h3>
-                    <h3>二级数据类型: {dataType.type2}</h3>
-                    <h3>协议编码: {dataItem.AgreementNum}</h3>
-                    <h3>合同编号: {dataItem.ContractNum}</h3>
-                    <h3> 产品描述: {dataItem.Description}</h3>
-                    <h3>关键词: {dataItem.KeyWords}</h3>
+                    <p><span>产品名称:</span> {dataItem.ItemName}</p>
+                    <p><span>数据来源: </span>{dataItem.DataSources}</p>
+                    <p><span> 一级数据类型:</span> {dataType.type1}</p>
+                    <p><span>二级数据类型: </span>{dataType.type2}</p>
+                    <p><span>协议编码: </span>{dataItem.AgreementNum}</p>
+                    <p><span>合同编号:</span> {dataItem.ContractNum}</p>
+                    <p><span> 产品描述: </span>{dataItem.Description}</p>
+                    <p><span>关键词:</span> {dataItem.KeyWords}</p>
                 </div>
                 <div className={dataCenterStyle.dataDemo}>
                     <div><h2>使用案例</h2></div>
-                    <h3> 1、网络应收贷、网络预付贷、电子保函等业务今昔大数据风险检验<br/>
-                        2、对工产品放款环节进行校验。
-                    </h3>
+                    <p> 1、网络应收贷、网络预付贷、电子保函等业务今昔大数据风险检验</p>
+                    <p> 2、对工产品放款环节进行校验。</p>
                 </div>
                 <div className={dataCenterStyle.descItem}>
                     <div><h2>物理信息</h2></div>
-                    <h3>接入方式:{dataItem.AccessMode}</h3>
-                    <h3>下游系统:{dataItem.FollowSys}</h3>
-                    <h3>下游业务:{dataItem.FollowBuss}</h3>
+                    <p><span>接入方式:</span>{dataItem.AccessMode}</p>
+                    <p><span>下游系统:</span>{dataItem.FollowSys}</p>
+                    <p><span>下游业务:</span>{dataItem.FollowBuss}</p>
                 </div>
             </div>
         </>

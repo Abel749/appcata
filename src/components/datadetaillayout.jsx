@@ -11,7 +11,7 @@ const DataDetailLayout = (props) => (
         <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
             <Layout>
                 <TopContent frompage="datadetail" propName={props.propName}/>
-                <DataCenterBackground />
+                {/*<DataCenterBackground />*/}
                 <DetailContent />
                 <FootContent />
             </Layout>
