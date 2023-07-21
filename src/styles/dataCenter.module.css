@@ -174,89 +174,90 @@
 .itemDetail{
     width: 60%;
     height: 340px;
-    margin-left: 20%;
     position:relative;
-
+    margin-left: 20%;
+    position: relative;
 }
 .leftBase{
-    width: 33%;
-    max-width: 270px;
-    height: 340px;
-    float:left;
-    position:relative;
-}
-.leftPic{
     width: 270px;
+    max-width: 40%;
     height: 340px;
-    position:absolute;
-    background-image: url("/dataDetail/product.png");
+    margin:0 4% 0 6%;
+    float:left;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin-left: 4%;
+    background-position: right;
+    background-image: url("/dataDetail/product.png");
+    position:relative;
 }
-
 .itemName{
-    width: 100%;
+    width: 80%;
     height: 60px;
-    margin:180px 10%;
-    position:absolute;
-}
-
-.itemName h4{
+    margin-top:180px;
     font-size: 14px;
-    width: 200px;
     margin-left: 10%;
     text-align: center;
     word-wrap:break-word;
     word-break:break-all;
-}
-
-.contract{
-    width: 50%;
-    height: 60px;
-    margin:240px 14%;
     position:absolute;
 }
 
-.contract h4{
+.contract{
+    width: 80%;
+    height: 60px;
+    margin-top:240px;
+    margin-left: 10%;
     font-size: 14px;
-    width: 200px;
-    margin-left: 8%;
     text-align: center;
     word-wrap:break-word;
     word-break:break-all;
+    position:absolute;
 }
 
-.rightInfo{
-    width: 43%;
-    height:340px;
 
+.rightInfo{
+    width: 70%;
+    height:340px;
+    margin-top: -340px;
+    margin-left: 42%;
     float:left;
+    clear:both;
 }
 .rightInfo h3{
     font-size: 16px;
     font-weight: bolder;
     line-height: 50px;
-    margin-left: 12%;
+    margin-left: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .rightInfo p a{
     width: 100px;
     font-size: 12px;
     line-height: 32px;
-    margin: 0 20px 0 0;
+    margin-right: 20px;
     color: #036ED6;
 }
 
 .rightInfo p {
+    width: 98%;
     font-size: 14px;
     line-height: 20px;
+    margin-left: 20px;
     text-align: left;
-    margin-left: 12%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+/*    -webkit-line-clamp: 3;*/
+    word-break: break-all;
 }
 .dbSSrc{
     width: 240px;
     height: 70px;
-    margin-left: 12%;
+    margin-left: 20px;
 }
 .type1Style{
     border-radius: 4px;
@@ -317,7 +318,6 @@
 .dataDemo{
     margin-top: 80px;
     width: 60%;
-    height: 80px;
     margin-left: 16%;
     text-indent: 2rem;
 }

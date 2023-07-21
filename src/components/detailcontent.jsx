@@ -59,13 +59,8 @@ return (
                 <h1 className={dataCenterStyle.h1Style}>产品说明</h1>
                 <div className={dataCenterStyle.itemDetail}>
                     <div className={dataCenterStyle.leftBase}>
-                        <div className={dataCenterStyle.leftPic}></div>
-                        <div className={dataCenterStyle.itemName}>
-                            <h4> {dataItem.ItemName}</h4>
-                        </div>
-                        <div className={dataCenterStyle.contract}>
-                            <h4> 合同编号：{dataItem.ContractNum}</h4>
-                        </div>
+                        <h4  className={dataCenterStyle.itemName}> {dataItem.ItemName}</h4>
+                        <h4 className={dataCenterStyle.contract}> 合同编号：{dataItem.ContractNum}</h4>
                     </div>
                     <div className={dataCenterStyle.rightInfo}>
                         <img alt=""  src={dataItem.DDSSrc} className={dataCenterStyle.dbSSrc} />
