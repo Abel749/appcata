@@ -11,7 +11,7 @@ const TopContent = (props) => {
 	useEffect(() => {
 		const zzz = props.frompage;
 		console.log(props.frompage)
-		document.getElementById(zzz).style.backgroundColor="#00008B";
+		document.getElementById(zzz).style.backgroundColor="#0258AB";
 	}, []);// eslint-disable-line
 
 
@@ -35,7 +35,7 @@ const TopContent = (props) => {
 					</Col>
 					<Col>
 						<Link href="/newslist">
-							<h3 id="newsList" className={commonStyle.menu} >咨讯</h3>
+							<h3 id="newsList" className={commonStyle.menu} >新闻资讯</h3>
 						</Link>
 					</Col>
 					<Col>

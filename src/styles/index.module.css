@@ -1,5 +1,5 @@
 .indexBackground{
-  height: 600px;
+  height: 520px;
   border-top-width:1px;
   border-top-style:solid;
   border-top-color:aliceblue;
@@ -48,21 +48,6 @@
   color:#222222;
 }
 
-.hotList{
-  width: 86%;
-  height: 460px;
-  margin: 60px 7% 0 7%;
-}
-
-.hotList h1{
-  text-align: center;
-  color:#036ED6;
-  font-size:40px;
-  line-height: 80px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-}
 
 .hotListImg{
   width: 100%;
@@ -74,7 +59,7 @@
 
 .HzCsListImg{
   width: 100%;
-  height: 476px;
+  height: 780px;
   background-image: url('/index/hzcs.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -84,35 +69,50 @@
   width: 86%;
   margin: 6px 7% 6px 7%;
 }
-.content2{
-  width: 86%;
-  height: 610px;
-  margin: 6px 7% 6px 7%;
-}
-
-.titleH1{
+.baseCard h1{
   color:#036ED6;
   font-size: 40px;
   text-align: center;
   margin: 40px 0 40px
 }
-
-.titleH2{
+.baseCard h2{
   color:#222222;
   font-size: 25px;
   text-align: center;
   margin-top: 0.5rem;
 }
-
-.titleH3{
+.baseCard h3{
   color:#222222;
   font-size: 18px;
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.content2{
+  width: 86%;
+  height: 610px;
+  margin: 40px 7% 40px 7%;
+}
 
-
+.content2 h1{
+  color:#036ED6;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px 0 40px
+}
+.content2 h2{
+  color:#222222;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.content2 h3{
+  color:#222222;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 40px;
+}
 .baseBox1{
   width: 10%;
   height: 100px;
@@ -255,8 +255,6 @@
   border-radius:12px;
   padding: 0.5rem;
 }
-
-
 
 .container2{
   width: 22%;

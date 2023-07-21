@@ -26,8 +26,9 @@ const SearchData = (props) => {
     };
      useEffect(  () => {
          document.getElementById("banner").style.height ='500px';
-         document.getElementById("searchData").style.marginTop ='180px';
-         document.getElementById("searchData").style.height ='220px';
+         document.getElementById("searchData").style.marginTop ='200px';
+         document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner2.png)";
+         document.getElementById("searchData").style.height ='0px';
          linkToSearch().then();
     }, []);// eslint-disable-line
 
@@ -84,12 +85,18 @@ const SearchData = (props) => {
 
         if(dataCommon.length>0){
             document.getElementById("banner").style.height ='300px';
-            document.getElementById("searchData").style.marginTop ='0px';
+            document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner1.png)";
+            document.getElementById("searchData").style.marginTop ='40px';
             document.getElementById("searchData").style.height ='100%';
-        }else{
-            document.getElementById("banner").style.height ='400px';
-            document.getElementById("searchData").style.marginTop ='80px';
-            document.getElementById("searchData").style.height ='220px';
+            /*document.getElementById("searchDataMsg").style.display= "none";*/
+        } else{
+            debugger;
+            document.getElementById("banner").style.height ='500px';
+            document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner2.png)";
+            document.getElementById("searchData").style.marginTop ='-20px';
+            document.getElementById("searchData").style.height ='200px';
+            /*document.getElementById("searchDataMsg").style.display= "flex";*/
+
         }
         setDataItem(dataCommon);
     }
@@ -103,6 +110,7 @@ const SearchData = (props) => {
                     <Search placeholder="按品牌名称或关键词搜索" id ="searchInput" onSearch={onSearch} enterButton  />
                     <p> 关键字推荐:</p>
                     <p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>
+                   {/* <span id ="searchDataMsg" className={dataCenterStyle.searchDataMsg}><h3>无搜索结果</h3></span>*/}
                 </div>
             </div>
             <div id = "searchData" className={searchDataStyle.searchData}>
@@ -127,5 +135,5 @@ const SearchData = (props) => {
             </div>
         </>
     )
-}
+};
 export default SearchData;

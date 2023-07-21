@@ -39,7 +39,7 @@ const MainLogo = () =>
     return (
 
         <div className={indexStyle.baseCard}>
-            <h1 className={indexStyle.titleH1}> 新闻资讯</h1>
+            <h1> 新闻资讯</h1>
             <List dataSource={newsData}
                  grid={{ column: 3 }}
                 renderItem={(item) => (

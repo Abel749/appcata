@@ -29,6 +29,10 @@ const DetailContent = (props) =>
             );
             const dataDetail = result.data.data.attributes;
             const itemType = result.data.data.attributes.type.data.attributes;
+            const  linkUrl1 = "/datacenter?firstType=" + itemType.code1;
+            itemType.linkUrl1 = linkUrl1;
+            const  linkUrl2 = "/datacenter?secondType=" + itemType.code2;
+            itemType.linkUrl2 = linkUrl2;
             setDataItem(dataDetail);
             setDataType(itemType);
         };
@@ -66,9 +70,10 @@ return (
                     <div className={dataCenterStyle.rightInfo}>
                         <img alt=""  src={dataItem.DDSSrc} className={dataCenterStyle.dbSSrc} />
                         <h3>{dataItem.ItemName} </h3>
-                        <h3>
-                            <button className={dataCenterStyle.type1Style}>{dataType.type1}</button>
-                        </h3>
+                        <p>
+                           <a href={dataType.linkUrl1}>{dataType.type1}</a>
+                           <a href={dataType.linkUrl2}>{dataType.type2}</a>
+                        </p>
                         <p>{dataItem.ApplicationScenario}</p>
                         <h3>{dataItem.ContractNum}</h3>
                         <h3>{dataItem.DataSources}</h3>

@@ -6,7 +6,7 @@ const HotList = () => (
     <div className={indexStyle.baseCard}>
         <Row >
             <Col span='24'>
-                <h1 className={indexStyle.titleH1}>热力排行榜</h1>
+                <h1>热力排行榜</h1>
             </Col>
         </Row>
         <Row>

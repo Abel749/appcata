@@ -34,14 +34,14 @@
 }
 
 .left{
-  height:300px;
-  width: 40%;
+  height:240px;
+  width: 30%;
   float: left;
 }
 
 .right{
-  height:300px;
-  width: 56%;
+  height:240px;
+  width: 66%;
   float: left;
 }
 
@@ -68,7 +68,7 @@
   height: 50px;
   width: 100%;
   font-size: 14px;
-  margin-left: 86%;
+  margin-left: 90%;
   color: #999999;
 }
 
@@ -155,6 +155,7 @@
 }
 .newsBottom{
   width: 96%;
+  margin-top: 20px;
 }
 
 .newsRow1{
@@ -195,6 +196,7 @@
   color: #fff;
   background-color: #036ED6;
   height: 40px;
+  margin-top: 40px;
   margin-left: 45%;
 }
 

@@ -37,10 +37,10 @@ const NewsContent = (props) => {
             <>
                 <div className={newsStyle.contentStyle}>
                     <div className={newsStyle.imageDivStyle}>
-                        <h1 className={newsStyle.title}>资讯</h1>
+                        <h1 className={newsStyle.title}>新闻资讯</h1>
                     </div>
                     <div  className={newsStyle.div}>
-                          <List pagination={{ position, align,defaultPageSize:3 } }
+                          <List pagination={{ position, align,defaultPageSize:5 } }
                                 grid={{ gutter: 10, column: 1, }}
                                 dataSource={NewsData}
                                 renderItem={(item) => (
