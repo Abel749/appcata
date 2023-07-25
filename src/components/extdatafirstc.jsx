@@ -34,7 +34,7 @@ const ExtDataFirstC = () => {
 						code2: item.code2,
 						name: item.type1,
 						url: "/datacenter?firstType=" + item.code1,
-					    logo:item.LogoSrc,
+					    logo:item.LogoSrc2,
 					}
 					//添加一级数据类型
 				dataType1.push(dataTypeTemp);

@@ -11,8 +11,7 @@ const Content2 = () => (
     <div className={indexStyle.content2}>
         <div>
             <h1>产品中心</h1>
-            <h2>24个总行部门（覆盖率80%）和15家分行（覆盖率75%，主要使用万得终端、企查查、DM终端）</h2>
-            <h3>已经在使用外部数据</h3>
+            <h2>24个总行部门（覆盖率80%）和15家分行（覆盖率75%，主要使用万得终端、企查查、DM终端）已经在使用外部数据</h2>
             <div className={indexStyle.container1}>
                 <div className={indexStyle.outBaseDivHidden1}>
                     <div className={indexStyle.outDivHidden}>
