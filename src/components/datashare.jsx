@@ -17,7 +17,7 @@ const DataShare = () => {
 
     }
     const changePic2 = () =>{
-        document.getElementById("changeDataShare").src ='/index/group42.png';
+        document.getElementById("changeDataShare").src ='/index/group43.png';
         document.getElementById("dataShare1").style.borderBottom="none";
         document.getElementById("dataShare2").style.borderBottom="2px solid#358BDE";
         document.getElementById("dataShare3").style.borderBottom="none";
@@ -27,7 +27,7 @@ const DataShare = () => {
         document.getElementById("dataShareH3").style.color="black";
     }
     const changePic3 = () =>{
-        document.getElementById("changeDataShare").src ='/index/group43.png';
+        document.getElementById("changeDataShare").src ='/index/group42.png';
         document.getElementById("dataShare1").style.borderBottom="none";
         document.getElementById("dataShare2").style.borderBottom="none";
         document.getElementById("dataShare3").style.borderBottom="2px solid#358BDE";
@@ -56,14 +56,14 @@ const DataShare = () => {
                     </div>
                 </div>
                 <div className={indexStyle.baseBox2} onClick={changePic2}>
-                    <div id="dataShare2" className={indexStyle.dataShare2}>
-                        <img src="/index/useData.png" className={indexStyle.dataImg} />
+                    <div id="dataShare2">
+                        <img src="/index/watchData.png" className={indexStyle.dataImg} />
                         <h3 id="dataShareH2">看数</h3>
                     </div>
                 </div>
                 <div className={indexStyle.baseBox3} onClick={changePic3}>
                     <div id="dataShare3">
-                        <img src="/index/watchData.png" className={indexStyle.dataImg} />
+                        <img src="/index/useData.png" className={indexStyle.dataImg} />
                         <h3 id="dataShareH3">用数</h3>
                     </div>
                 </div>

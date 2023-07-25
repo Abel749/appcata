@@ -48,17 +48,17 @@
 }
 .errorPageImg1{
   height: 600px;
-  width: 86%;
+  width: 76%;
   background-image: url('/index/u656.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin-left: 7%;
+  margin-left: 12%;
 }
 .errorPageImg2{
   height: 750px;
-  width: 86%;
+  width: 76%;
   background-image: url('/index/u673.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin-left: 7%;
+  margin-left: 12%;
 }

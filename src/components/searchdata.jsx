@@ -26,9 +26,9 @@ const SearchData = (props) => {
     };
      useEffect(  () => {
          document.getElementById("banner").style.height ='500px';
-         document.getElementById("searchData").style.marginTop ='200px';
          document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner2.png)";
-         document.getElementById("searchData").style.height ='0px';
+         document.getElementById("searchData").style.marginTop ='-20px';
+         document.getElementById("searchData").style.height ='200px';
          linkToSearch().then();
     }, []);// eslint-disable-line
 
@@ -90,7 +90,6 @@ const SearchData = (props) => {
             document.getElementById("searchData").style.height ='100%';
             /*document.getElementById("searchDataMsg").style.display= "none";*/
         } else{
-            debugger;
             document.getElementById("banner").style.height ='500px';
             document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner2.png)";
             document.getElementById("searchData").style.marginTop ='-20px';
