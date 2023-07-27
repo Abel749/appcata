@@ -71,7 +71,7 @@ const DataShare = () => {
             <Row>
                 <div className={indexStyle.dataShareBase}>
                         <div className={indexStyle.dataShare}>
-                            <img  id="changeDataShare" src="/index/组 41.png" className={indexStyle.changeDataShare} />
+                            <img  id="changeDataShare" src="/index/group41.png" className={indexStyle.changeDataShare} />
                         </div>
                 </div>
             </Row>

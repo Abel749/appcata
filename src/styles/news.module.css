@@ -1,62 +1,108 @@
 
-.contentStyle {
-  width: 100%;
+@media screen and (max-device-width:1800px) {
+  .contentStyle {
+    width: 84%;
+    margin-left: 8%;
+  }
+  .div{
+    margin: 2rem 0 0 0;
+    width: 100%;
+  }
+  .imageDivStyle {
+    width: 100%;
+    height: 300px;
+    border-top-width:1px;
+    border-top-style:solid;
+    border-top-color:aliceblue;
+    background-image: url('/news/news-back.png');
+    background-size: 84% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #036ED6;
+  }
+  .content{
+    color: black;
+    width: 78%;
+    margin-left: 12%;
+    line-height: 30px;
+    min-height: 400px;
+  }
+  .title{
+    color:#036ED6;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 8%;
+    margin-top: 40px;
+  }
 }
 
-.imageDivStyle {
-  width: 100%;
-  height: 300px;
-  border-top-width:1px;
-  border-top-style:solid;
-  border-top-color:aliceblue;
-  background-image: url('/news/news-back.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.title{
-  margin-top: 8%;
-  margin-left:10%;
-  font-size:35px;
-  text-align: center;
-  color: white;
-}
-
-.div{
-  margin: 2rem 12% 0 12%;
-  width: 100%;
+@media screen and (min-device-width: 1800px ) {
+  .contentStyle {
+    width: 60%;
+    margin-left: 18%;
+  }
+  .div{
+    margin: 2rem 0 0 0;
+    width: 100%;
+  }
+  .imageDivStyle {
+    width: 100%;
+    height: 300px;
+    border-top-width:1px;
+    border-top-style:solid;
+    border-top-color:aliceblue;
+    background-image: url('/news/news-back.png');
+    background-size: 64% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #036ED6;
+  }
+  .content{
+    color: black;
+    width: 64%;
+    margin-left: 20%;
+    line-height: 30px;
+    min-height: 400px;
+  }
+  .title{
+    color:#036ED6;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 18%;
+    margin-top: 40px;
+  }
 }
 
 .list{
-  height: 300px;
-  width: 76%;
+  height: 200px;
+  width: 100%;
   border-bottom:solid 1px wheat;
 }
 
 .left{
-  height:240px;
+  height:180px;
   width: 30%;
   float: left;
 }
 
 .right{
-  height:240px;
+  height:200px;
   width: 66%;
   float: left;
 }
 
 .row1{
   margin-left: 4%;
-  line-height: 80px;
+  line-height: 60px;
   font-size: 18px;
-  height: 80px;
+  height: 60px;
   width: 100%;
   color: #222222;
 }
 
 .row2{
   margin-left: 4%;
-  height: 160px;
+  height: 100px;
   width: 100%;
   font-size: 16px;
   text-align: left;
@@ -65,7 +111,7 @@
 }
 
 .row3{
-  height: 50px;
+  height: 40px;
   width: 100%;
   font-size: 14px;
   margin-left: 90%;
@@ -78,13 +124,6 @@
   object-fit: fill;
 }
 
-.content{
-  color: black;
-  width: 60%;
-  margin-left: 18%;
-  line-height: 30px;
-  min-height: 400px;
-}
 
 .content h2 h3 h4 h5 {
   text-align: left;

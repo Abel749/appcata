@@ -197,10 +197,11 @@ const Content1 = (props) => {
 			<div className={dataCenterStyle.bannerBox}>
 				<h3 className={dataCenterStyle.titleT3}>恒必应</h3>
 				<Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton  />
-				<p> 关键字推荐:</p>
-				<p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>
+{/*				<p> 关键字推荐:</p>
+				<p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>*/}
 			</div>
 		</div>
+		<h1 className={dataCenterStyle.titleH1}>资产中心</h1>
 		<div  className={dataCenterStyle.form} >
 			<Row className={dataCenterStyle.row}  >
 				<Col className={dataCenterStyle.label}> 一级数据类型 </Col>

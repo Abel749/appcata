@@ -10,16 +10,33 @@
   position: relative;
   width:32%;
   height :36%;
-  background-color : ghostwhite;
+  background-color : #9AC5EF;
   margin-left:56%;
   margin-top: 25%;
   border-radius: 5px;
 }
 
-.baseBox div{
-  width: 76%;
-  font-size: 24px;
+@media screen and (max-device-width:1366px) {
+  .baseBox div{
+    width:88%;
+    font-size: 24px;
+  }
 }
+
+@media screen and (max-device-width:1440px) {
+  .baseBox div{
+    width:84%;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-device-width:1920px) {
+  .baseBox div{
+    width:62%;
+    font-size: 24px;
+  }
+}
+
 
 .baseBoxInput{
   width: 100%;

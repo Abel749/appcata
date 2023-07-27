@@ -25,10 +25,18 @@ const SearchData = (props) => {
         getData(value).then();
     };
      useEffect(  () => {
-         document.getElementById("banner").style.height ='500px';
-         document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner2.png)";
-         document.getElementById("searchData").style.marginTop ='-20px';
-         document.getElementById("searchData").style.height ='200px';
+         if(document.documentElement.clientHeight <=900){
+             document.getElementById("banner").style.height ='340px';
+             document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner300.png)";
+             document.getElementById("searchData").style.marginTop ='-120px';
+             document.getElementById("searchData").style.height ='160px';
+         }else{
+             document.getElementById("banner").style.height ='680px';
+             document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner700.png)";
+             document.getElementById("searchData").style.marginTop ='-40px';
+             document.getElementById("searchData").style.height ='400px';
+         }
+
          linkToSearch().then();
     }, []);// eslint-disable-line
 
@@ -85,15 +93,22 @@ const SearchData = (props) => {
 
         if(dataCommon.length>0){
             document.getElementById("banner").style.height ='300px';
-            document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner1.png)";
+            document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner300.png)";
             document.getElementById("searchData").style.marginTop ='40px';
             document.getElementById("searchData").style.height ='100%';
             /*document.getElementById("searchDataMsg").style.display= "none";*/
         } else{
-            document.getElementById("banner").style.height ='500px';
-            document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner2.png)";
-            document.getElementById("searchData").style.marginTop ='-20px';
-            document.getElementById("searchData").style.height ='200px';
+            if(document.documentElement.clientHeight <=900){
+                document.getElementById("banner").style.height ='340px';
+                document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner300.png)";
+                document.getElementById("searchData").style.marginTop ='-120px';
+                document.getElementById("searchData").style.height ='160px';
+            }else{
+                document.getElementById("banner").style.height ='680px';
+                document.getElementById("banner").style.backgroundImage = "url(/dataDetail/detail-baner700.png)";
+                document.getElementById("searchData").style.marginTop ='-40px';
+                document.getElementById("searchData").style.height ='400px';
+            }
             /*document.getElementById("searchDataMsg").style.display= "flex";*/
 
         }
@@ -107,8 +122,8 @@ const SearchData = (props) => {
                 <div className={dataCenterStyle.bannerBox}>
                     <h3 className={dataCenterStyle.titleT3}>恒必应</h3>
                     <Search placeholder="按品牌名称或关键词搜索" id ="searchInput" onSearch={onSearch} enterButton  />
-                    <p> 关键字推荐:</p>
-                    <p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>
+{/*                    <p> 关键字推荐:</p>
+                    <p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>*/}
                    {/* <span id ="searchDataMsg" className={dataCenterStyle.searchDataMsg}><h3>无搜索结果</h3></span>*/}
                 </div>
             </div>

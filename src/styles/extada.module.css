@@ -1,14 +1,40 @@
 
-.topCard{
-    height: 520px;
-    border-top-width:1px;
-    border-top-style:solid;
-    border-top-color:aliceblue;
-    background-image: url("/extData/u312.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
+@media screen and (max-device-width:1800px) {
+    .baseCard{
+        width:84%;
+        margin: 6px 8% 6px 8%;
+    }
+    .topCard{
+        height: 520px;
+        border-top-width:1px;
+        border-top-style:solid;
+        border-top-color:aliceblue;
+        background-image: url("/extData/u312.png");
+        background-size: 88% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #036ED6;
+    }
 }
+
+@media screen and (min-device-width:1800px) {
+    .baseCard{
+        width:62%;
+        margin: 6px 19% 6px 19%;
+    }
+    .topCard{
+        height: 520px;
+        border-top-width:1px;
+        border-top-style:solid;
+        border-top-color:aliceblue;
+        background-image: url("/extData/u312.png");
+        background-size: 62% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #036ED6;
+    }
+}
+
 .topItem{
     height: 120px;
     margin:-60px 20% 0 16%;
@@ -16,7 +42,6 @@
     background-color: whitesmoke;
     border-radius:12px;
 }
-
 .topItemRow{
     width:25%;
     height: 60px;
@@ -77,12 +102,6 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.baseCard{
-    width: 76%;
-    margin: 6px 12% 6px 12%;
-}
-
 .categoryTab{
     height: 600px;
     color: #000;
@@ -177,14 +196,13 @@
     color:#036ED6;
     font-size: 40px;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 40px 0 20px 0;
 }
 .titleH2{
     color:#222222;
-    font-size: 25px;
+    font-size: 14px;
     text-align: center;
-    margin-top: 1rem;
+    margin: 40px 0 20px 0;
 }
 .titleH3{
     color:#222222;
@@ -204,11 +222,11 @@
 
 .externalData03{
     width: 100%;
-    height: 440px;
+    height: 400px;
 }
 .externalData03Img{
     width: 100%;
-    height: 440px;
+    height: 400px;
 }
 .row3{
     width: 100%;

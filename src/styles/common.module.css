@@ -1,4 +1,44 @@
 
+@media screen and (max-device-width:1800px) {
+  .errorPageImg1 {
+    height: 600px;
+    width:84%;
+    background-image: url('/index/u656.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 8%;
+  }
+
+  .errorPageImg2 {
+    height: 750px;
+    width:84%;
+    background-image: url('/index/u673.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 8%;
+  }
+}
+
+
+@media screen and (min-device-width: 1800px ) {
+  .errorPageImg1 {
+    height: 600px;
+    width:64%;
+    background-image: url('/index/u656.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 18%;
+  }
+
+  .errorPageImg2 {
+    height: 750px;
+    width: 64%;
+    background-image: url('/index/u673.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 18%;
+  }
+}
 .headerStyle {
   text-align:  center ;
   color: #fff ;
@@ -45,20 +85,4 @@
   background-color: #036ED6;
   color:white;
   text-decoration:none;
-}
-.errorPageImg1{
-  height: 600px;
-  width: 76%;
-  background-image: url('/index/u656.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  margin-left: 12%;
-}
-.errorPageImg2{
-  height: 750px;
-  width: 76%;
-  background-image: url('/index/u673.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  margin-left: 12%;
 }

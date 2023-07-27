@@ -35,15 +35,16 @@ const NewsContent = (props) => {
 
         return (
             <>
+                <div className={newsStyle.imageDivStyle}>
+
+                </div>
+                <h1 className={newsStyle.title}>新闻资讯</h1>
                 <div className={newsStyle.contentStyle}>
-                    <div className={newsStyle.imageDivStyle}>
-                        <h1 className={newsStyle.title}>新闻资讯</h1>
-                    </div>
                     <div  className={newsStyle.div}>
                           <List pagination={{ position, align,defaultPageSize:5 } }
                                 grid={{ gutter: 10, column: 1, }}
                                 dataSource={NewsData}
-                                renderItem={(item) => (
+                                数据资产共享与服务         renderItem={(item) => (
                                   <List.Item >
                                       <Link href={item.linkUrl}>
                                           <div className={newsStyle.list}>

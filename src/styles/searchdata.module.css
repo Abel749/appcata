@@ -1,12 +1,29 @@
-.baseDiv {
-    color: #000;
-    overflow-x: auto;
-    width: 100%;
-    height: 300px;
+
+
+@media screen and (max-device-width:1800px) {
+    .searchData{
+        width:84%;
+        margin: 40px 8% 0px 8%;
+    }
+    .baseDiv {
+        color: #000;
+        overflow-x: auto;
+        width: 100%;
+        height: 300px;
+    }
 }
-.searchData{
-    width: 76%;
-    margin: 40px 12% 0 12%;
+
+@media screen and (min-device-width: 1800px ) {
+    .searchData{
+        width:62%;
+        margin: 40px 19% 0px 19%;
+    }
+    .baseDiv {
+        color: #000;
+        overflow-x: auto;
+        width: 100%;
+        height: 300px;
+    }
 }
 
 

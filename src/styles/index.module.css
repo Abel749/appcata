@@ -1,11 +1,178 @@
-.indexBackground{
-  height: 520px;
-  border-top-width:1px;
-  border-top-style:solid;
-  border-top-color:aliceblue;
-  background-image: url('/index/u37.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+
+
+@media screen and (max-device-width:1800px) {
+  .indexBackground {
+    height: 480px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: aliceblue;
+    background-image: url('/index/u37.png');
+    background-size: 88% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #036ED6;
+  }
+  .baseCard {
+    width: 84%;
+    margin: 6px 8% 6px 8%;
+  }
+  .content2{
+    width: 84%;
+    height: 540px;
+    margin: 40px 8% 40px 8%;
+  }
+  .baseBox1{
+    width: 10%;
+    height: 100px;
+    margin-left: 14%;
+    text-align: center;
+    position: absolute;
+  }
+
+  .baseBox2{
+    width: 10%;
+    height: 100px;
+    margin-left: 34%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+  }
+
+  .baseBox3{
+    width: 10%;
+    height: 100px;
+    margin-left: 54%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+  }
+  .outBaseDivHidden1{
+    cursor: pointer;
+    position: absolute;
+    width: 21%;
+    height: 386px;
+    background-image: url("/index/u112_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .outBaseDivHidden2{
+    cursor: pointer;
+    position: absolute;
+    width: 21%;
+    margin-left: 4.6%;
+    height: 386px;
+    background-image: url("/index/u119_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .outBaseDivHidden3{
+    cursor: pointer;
+    position: absolute;
+    width: 21%;
+    margin-left: 4.6%;
+    height: 386px;
+    background-image: url("/index/u126_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .outBaseDivHidden4{
+    cursor: pointer;
+    position: absolute;
+    width: 21%;
+    margin-left: 4.6%;
+    height: 386px;
+    background-image: url("/index/u133_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media screen and (min-device-width: 1800px ) {
+  .indexBackground {
+    height: 520px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: aliceblue;
+    background-image: url('/index/u37.png');
+    background-size: 64% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #036ED6;
+  }
+  .baseCard {
+    width: 64%;
+    margin: 6px 18% 6px 18%;
+  }
+  .content2{
+    width: 64%;
+    height: 540px;
+    margin: 40px 18% 40px 18%;
+  }
+  .baseBox1{
+    width: 10%;
+    height: 100px;
+    margin-left: 6%;
+    text-align: center;
+    position: absolute;
+  }
+
+  .baseBox2{
+    width: 10%;
+    height: 100px;
+    margin-left: 26%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+  }
+
+  .baseBox3{
+    width: 10%;
+    height: 100px;
+    margin-left: 46%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+  }
+  .outBaseDivHidden1{
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    height: 386px;
+    background-image: url("/index/u112_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .outBaseDivHidden2{
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    margin-left: 2.6%;
+    height: 386px;
+    background-image: url("/index/u119_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .outBaseDivHidden3{
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    margin-left: 2.6%;
+    height: 386px;
+    background-image: url("/index/u126_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .outBaseDivHidden4{
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    margin-left: 2.6%;
+    height: 386px;
+    background-image: url("/index/u133_state0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 .baseDiv{
@@ -48,7 +215,6 @@
   color:#222222;
 }
 
-
 .hotListImg{
   width: 100%;
   height: 400px;
@@ -65,21 +231,17 @@
   background-repeat: no-repeat;
 }
 
-.baseCard{
-  width: 76%;
-  margin: 6px 12% 6px 12%;
-}
 .baseCard h1{
   color:#036ED6;
   font-size: 40px;
   text-align: center;
-  margin: 40px 0 40px
+  margin: 40px 0 20px 0;
 }
 .baseCard h2{
   color:#222222;
-  font-size: 25px;
+  font-size: 14px;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 8px;
 }
 .baseCard h3{
   color:#222222;
@@ -87,11 +249,6 @@
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-.content2{
-  width: 76%;
-  margin: 40px 12% 40px 12%;
-  height: 610px;
 }
 
 .content2 h1{
@@ -102,9 +259,9 @@
 }
 .content2 h2{
   color:#222222;
-  font-size: 25px;
+  font-size: 14px;
   text-align: center;
-  margin-top: 0.5rem;
+  margin: 40px 0 20px 0 ;
 }
 .content2 h3{
   color:#222222;
@@ -113,31 +270,7 @@
   margin-top: 0.5rem;
   margin-bottom: 40px;
 }
-.baseBox1{
-  width: 10%;
-  height: 100px;
-  margin-left: 14%;
-  text-align: center;
-  position: absolute;
-}
 
-.baseBox2{
-  width: 10%;
-  height: 100px;
-  margin-left: 34%;
-  font-size: 40px;
-  text-align: center;
-  position: absolute;
-}
-
-.baseBox3{
-  width: 10%;
-  height: 100px;
-  margin-left: 54%;
-  font-size: 40px;
-  text-align: center;
-  position: absolute;
-}
 
 .baseBox1 h3 {
   font-size: 24px;
@@ -175,9 +308,9 @@
 }
 
 .dataShare{
-  width: 56%;
+  width: 70%;
   height: 220px;
-  margin-left: 22%;
+  margin-left: 18%;
   background-size: 100% 100%;
 }
 .changeDataShare{
@@ -185,45 +318,31 @@
   height: 220px;
   background-size: 100% 100%;
 }
-
-
 .container1{
-  width: 100%;
-  height: 100%;
-  background-color: #efefef;
+  position: relative;
 }
-
-.outBaseDivHidden1{
-  cursor: pointer;
-  position: absolute;
-  width: 270px;
-  height: 400px;
-  background-image: url("/index/u112_state0.png");
-}
-
 .outBaseDivShow1{
   cursor: pointer;
   position: absolute;
-  width: 270px;
   display: none;
 }
 
 .container1:hover .outBaseDivShow1{
   display: block;
+  margin-top: -100px;
 }
 
 .outDivShow{
-  background-color:#358BDE
+  background-color:#358BDE;
 }
 
 .outDivHidden{
-  margin-top: 60%;
+  text-align: center;
+  margin-top: 260px;
 }
 
 .link{
-  margin-top: 160px;
-  height:240px;
-  width: 270px;
+  width: 100%;
   border-top: 1px solid;
 }
 
@@ -239,7 +358,6 @@
   font-size: 24px;
   color: white;
   text-align: center;
-  margin-top: 300px;
 }
 .outH3{
   font-size: 24px;
@@ -257,80 +375,48 @@
 }
 
 .container2{
-  width: 22%;
-  height: 100%;
   position: relative;
-  margin-left: 26%;
-}
-
-.outBaseDivHidden2{
-  cursor: pointer;
-  position: absolute;
-  width: 270px;
-  height: 400px;
-  background-image: url("/index/u119_state0.png");
 }
 
 .outBaseDivShow2{
   cursor: pointer;
   position: absolute;
-  width: 270px;
   display: none;
 }
 
 .container2:hover .outBaseDivShow2{
   display: block;
+  margin-top: -100px;
 }
 
 .container3{
-  width: 22%;
-  height: 100%;
   position: relative;
-  margin-left: 52%;
-}
-
-.outBaseDivHidden3{
-  cursor: pointer;
-  position: absolute;
-  width: 270px;
-  height: 400px;
-  background-image: url("/index/u126_state0.png");
 }
 
 .outBaseDivShow3{
   cursor: pointer;
   position: absolute;
-  width: 270px;
   display: none;
 }
 
 .container3:hover .outBaseDivShow3{
   display: block;
+  margin-top: -100px;
 }
 
 
 .container4{
-  width: 22%;
-  height: 100%;
   position: relative;
-  margin-left: 78%;
-}
-
-.outBaseDivHidden4{
-  cursor: pointer;
-  position: absolute;
-  width: 270px;
-  height: 400px;
-  background-image: url("/index/u133_state0.png");
+  height: 325px;
 }
 
 .outBaseDivShow4{
   cursor: pointer;
   position: absolute;
-  width: 270px;
   display: none;
 }
 
 .container4:hover .outBaseDivShow4{
   display: block;
+  margin-top: -100px;
 }
