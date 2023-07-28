@@ -332,9 +332,9 @@
     border-radius:6px;
 }
 
-.productInfo div h2{
+.productInfo  h2{
     font-size: 16px;
-    line-height: 20px;
+    line-height: 30px;
 }
 
 .productInfo p{
@@ -365,7 +365,7 @@
     border-radius:6px;
 }
 
-.dataDemo dataDemo h2{
+.dataDemo  h2{
     font-size: 16px;
     line-height: 30px;
 }
@@ -391,7 +391,7 @@
     border-radius:6px;
 }
 
-.descItem div h2{
+.descItem  h2{
     font-size: 16px;
     line-height: 30px;
 }

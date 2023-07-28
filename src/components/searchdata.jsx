@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import axios from "axios";
-import {Input,List} from 'antd';
+import {Input,List,Row,Col} from 'antd';
 const { Search } = Input;
 import Link from "next/link";
 import config from "../../next.config";

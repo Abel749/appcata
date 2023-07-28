@@ -7,10 +7,10 @@ const HzCsList = () => (
         <h1>合作厂商</h1>
         <Carousel autoplay={true}  autoplaySpeed={3000} >
             <div>
-                <img src="/index/hzcs1.png"  alt="logo" />
+                <img src="/index/hzcs1.png"  alt="logo" className={indexStyle.HzCsListImg}/>
             </div>
             <div>
-                <img src="/index/hzcs2.png"  alt="logo" />
+                <img src="/index/hzcs2.png"  alt="logo" className={indexStyle.HzCsListImg}/>
             </div>
         </Carousel>
     </div>
