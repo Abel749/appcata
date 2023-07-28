@@ -1,9 +1,8 @@
+import React,{ useState, useEffect } from 'react';
+import axios from "axios";
 import {List,  Row} from 'antd';
 import Link from "next/link";
-import React from "react";
-import { useState, useEffect } from 'react';
 import config from "../../next.config";
-import axios from "axios";
 import newsStyle from "../styles/news.module.css";
 
 const data = [];
@@ -44,7 +43,7 @@ const NewsContent = (props) => {
                           <List pagination={{ position, align,defaultPageSize:5 } }
                                 grid={{ gutter: 10, column: 1, }}
                                 dataSource={NewsData}
-                                数据资产共享与服务         renderItem={(item) => (
+                                renderItem={(item) => (
                                   <List.Item >
                                       <Link href={item.linkUrl}>
                                           <div className={newsStyle.list}>

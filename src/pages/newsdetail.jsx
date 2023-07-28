@@ -1,15 +1,10 @@
 import NewsDetailLayout from "../components/newsDetaillayout";
-import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
 const NewsDetail = (props) => {
   return (
-      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
-            <div>
-              <NewsDetailLayout propName={props.user} />
-            </div>
-      </StyleProvider>
+      <NewsDetailLayout propName={props.user} />
   )
 }
 export const getServerSideProps = async (ctx) => {

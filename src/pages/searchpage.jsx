@@ -1,17 +1,12 @@
 import SearchPageLayout from '../components/searchpagelayout';
-import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
 const SearchPage = (props) => {
-  
-  return (
-      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
-        <div>
-          <SearchPageLayout propName={props.user} />
-        </div>
-      </StyleProvider>
-  )
+
+    return (
+        <SearchPageLayout propName={props.user} />
+    )
 }
 export const getServerSideProps = async (ctx) => {
     const cookies = nookies.get(ctx)

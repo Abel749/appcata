@@ -1,12 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React,{ useState, useEffect } from 'react';
+import axios from "axios";
+import {Input,List} from 'antd';
+const { Search } = Input;
+import Link from "next/link";
+import config from "../../next.config";
 import searchDataStyle from "../styles/searchdata.module.css";
 import dataCenterStyle from "../styles/dataCenter.module.css";
-import {Input, List} from "antd";
-import config from "../../next.config";
-import axios from "axios";
-import Link from "next/link";
-import {Row,Col } from 'antd';
-const { Search } = Input;
 
 const data = [];
 
@@ -116,38 +115,38 @@ const SearchData = (props) => {
     }
 
     return (
-        <>
-            <div className={searchDataStyle.baseDiv}>
-                <div id = "banner" className={dataCenterStyle.banner}> </div>
-                <div className={dataCenterStyle.bannerBox}>
-                    <h3 className={dataCenterStyle.titleT3}>恒必应</h3>
-                    <Search placeholder="按品牌名称或关键词搜索" id ="searchInput" onSearch={onSearch} enterButton  />
-{/*                    <p> 关键字推荐:</p>
-                    <p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>*/}
-                   {/* <span id ="searchDataMsg" className={dataCenterStyle.searchDataMsg}><h3>无搜索结果</h3></span>*/}
+            <div>
+                <div className={searchDataStyle.baseDiv}>
+                    <div id = "banner" className={dataCenterStyle.banner}> </div>
+                    <div className={dataCenterStyle.bannerBox}>
+                        <h3 className={dataCenterStyle.titleT3}>恒必应</h3>
+                        <Search placeholder="按品牌名称或关键词搜索" id ="searchInput" onSearch={onSearch} enterButton  />
+                        <p> 关键字推荐:</p>
+                        <p> 身份识别、金融信贷、风险监控、风控核验、客户营销、精准获客、惠金融信用评估、避险产品、金融产品、保险、风险预警</p>
+                        <span id ="searchDataMsg" className={dataCenterStyle.searchDataMsg}><h3>无搜索结果</h3></span>
+                    </div>
+                </div>
+                <div id = "searchData" className={searchDataStyle.searchData}>
+                    <List pagination={{ position, align,defaultPageSize:16 } }
+                          grid={{ gutter: 10, column: 1, }}
+                          dataSource={dataItem}
+                          className={searchDataStyle.list}
+                          renderItem={(item) => (
+                              <Row className={searchDataStyle.row}>
+                                  <Col span={2} className={searchDataStyle.col}>
+                                      <h3>{item.field2}</h3>
+                                  </Col>
+                                  <Col span={4} className={searchDataStyle.col}>{item.field3}</Col>
+                                  <Col span={12} className={searchDataStyle.col}>{item.field4}</Col>
+                                  <Col span={4} className={searchDataStyle.col}>{item.field5}</Col>
+                                  <Col span={2} className={searchDataStyle.col}>
+                                      <Link href = {item.field1} >查看详情</Link>
+                                  </Col>
+                              </Row>
+                          )}
+                    />
                 </div>
             </div>
-            <div id = "searchData" className={searchDataStyle.searchData}>
-                <List pagination={{ position, align,defaultPageSize:16 } }
-                      grid={{ gutter: 10, column: 1, }}
-                      dataSource={dataItem}
-                      className={searchDataStyle.list}
-                      renderItem={(item) => (
-                          <Row className={searchDataStyle.row}>
-                              <Col span={2} className={searchDataStyle.col}>
-                                  <h3>{item.field2}</h3>
-                              </Col>
-                              <Col span={4} className={searchDataStyle.col}>{item.field3}</Col>
-                              <Col span={12} className={searchDataStyle.col}>{item.field4}</Col>
-                              <Col span={4} className={searchDataStyle.col}>{item.field5}</Col>
-                              <Col span={2} className={searchDataStyle.col}>
-                                  <Link href = {item.field1} >查看详情</Link>
-                              </Col>
-                          </Row>
-                      )}
-                />
-            </div>
-        </>
     )
 };
 export default SearchData;

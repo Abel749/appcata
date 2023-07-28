@@ -2,15 +2,11 @@ import axios from 'axios';
 import nookies from 'nookies';
 import LoginComponent from '../components/LoginComponent';
 
-import { Layout } from 'antd';
 import config from "../../next.config";
-const { Content } = Layout;
 
 const Login = () => {
   return (
-  <div>
-      <Content><LoginComponent /></Content>
-  </div>
+      <LoginComponent />
   )
 }
 

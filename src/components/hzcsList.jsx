@@ -1,16 +1,20 @@
 import React from 'react';
-import {Col, Row} from "antd";
+import {Carousel} from "antd";
 import indexStyle from '../styles/index.module.css';
 
 const HzCsList = () => (
     <div className={indexStyle.baseCard}>
-        <Row >
-            <Col span='24'><h1>合作厂商</h1></Col>
-        </Row>
-        <Row>
-            <div className={indexStyle.HzCsListImg}> </div>
-        </Row>
+        <h1>合作厂商</h1>
+        <Carousel autoplay={true}  autoplaySpeed={3000} >
+            <div>
+                <img src="/index/hzcs1.png"  alt="logo" />
+            </div>
+            <div>
+                <img src="/index/hzcs2.png"  alt="logo" />
+            </div>
+        </Carousel>
     </div>
+
 );
 
 export default HzCsList;

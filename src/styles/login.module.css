@@ -1,3 +1,51 @@
+@media screen and (max-device-width:1800px) {
+  .loginBox{
+    position: relative;
+    width:28%;
+    height :38%;
+    background-color : #9AC5EF;
+    margin-left:56%;
+    margin-top: 20%;
+    border-radius: 5px;
+    clear: both;
+  }
+
+  .registerBox{
+    position: relative;
+    width:28%;
+    height :50%;
+    background-color : #9AC5EF;
+    margin-left:56%;
+    margin-top: 16%;
+    border-radius: 5px;
+    clear: both;
+  }
+}
+
+
+@media screen and (min-device-width: 1800px ) {
+  .loginBox{
+    position: relative;
+    width:22%;
+    height :26%;
+    background-color : #9AC5EF;
+    margin-left:56%;
+    margin-top: 22%;
+    border-radius: 5px;
+    clear: both;
+  }
+
+  .registerBox{
+    position: relative;
+    width:22%;
+    height :35%;
+    background-color : #9AC5EF;
+    margin-left:56%;
+    margin-top: 22%;
+    border-radius: 5px;
+    clear: both;
+  }
+}
 .contentStyle{
   position: absolute;
   padding : 0;
@@ -6,93 +54,50 @@
   background-repeat: no-repeat;
 }
 
-.baseBox{
-  position: relative;
-  width:32%;
-  height :36%;
-  background-color : #9AC5EF;
-  margin-left:56%;
-  margin-top: 25%;
-  border-radius: 5px;
-}
-
-@media screen and (max-device-width:1366px) {
-  .baseBox div{
-    width:88%;
-    font-size: 24px;
-  }
-}
-
-@media screen and (max-device-width:1440px) {
-  .baseBox div{
-    width:84%;
-    font-size: 24px;
-  }
-}
-
-@media screen and (max-device-width:1920px) {
-  .baseBox div{
-    width:62%;
-    font-size: 24px;
-  }
-}
-
-
 .baseBoxInput{
-  width: 100%;
-  height: 2rem;
-  margin: 0 1rem 0 ;
-  padding-left:0.5rem ;
+  width: 82%;
+  height: 30px;
+  line-height: 30px;
   border-radius: 5px;
+  margin:10px 0 10px 10%;
   border:1px solid #cccccc;
 }
-.baseBox div h3{
-  margin: 0 1rem 0 ;
+
+.loginBox h3{
   text-align: left;
-  font-size: 24px;
-  color: #012C56;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10%;
+}
+.registerBox h3{
+  text-align: left;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 10%;
 }
 
 
 .BuTon{
-  margin: 1rem 1rem 1rem 1rem;
+  margin-top: 6px;
+  margin-left: 10%;
 }
 
 .BuTon button{
-  width: 50%;
-  height: 3rem;
+  width: 40%;
+  height: 30px;
   border: none;
   text-align: center;
   background-color: #358BDE;
-  color: black;
-  font-size: 1.8rem;
-  line-height: 3.5rem;
+  color: white;
+  font-size: 14px;
+  line-height: 30px;
   border-radius: 5px;
-}
-.BuTon2{
-  margin: 1rem 1rem 1rem 1rem;
-}
-.BuTon2 button{
-  width: 50%;
-  height: 3rem;
-  border: none;
-  text-align: center;
-  background-color: wheat;
-  color: black;
-  font-size: 1.8rem;
-  line-height: 3.5rem;
-  border-radius: 5px;
-}
-.checkbox{
-  width: 20px;
-  height: 20px;
+  margin-right: 10%;
 }
 
-.aa{
-  width: 20px;
-  height: 20px;
-  margin-left: 42%;
-}
+
+
 
 
 

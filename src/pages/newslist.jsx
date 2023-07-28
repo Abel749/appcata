@@ -1,17 +1,12 @@
 import NewsListLayout from '../components/newsListlayout';
-import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
 const NewsList = (props) => {
   
-  return (
-      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
-        <div>
-          <NewsListLayout propName={props.user} />
-        </div>
-      </StyleProvider>
-  )
+    return (
+        <NewsListLayout propName={props.user} />
+    )
 }
 export const getServerSideProps = async (ctx) => {
     const cookies = nookies.get(ctx)

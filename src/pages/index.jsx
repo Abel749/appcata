@@ -1,16 +1,11 @@
 import IndexLayout from '../components/indexlayout';
-import {StyleProvider,legacyLogicalPropertiesTransformer} from '@ant-design/cssinjs';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
 const Home = (props) => {
   
   return (
-      <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
-        <div>
-          <IndexLayout propName={props.user} />
-        </div>
-    </StyleProvider>
+      <IndexLayout propName={props.user} />
   )
 }
 export const getServerSideProps = async (ctx) => {

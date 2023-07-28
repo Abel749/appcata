@@ -106,7 +106,7 @@ const Content1 = (props) => {
 		const result = await axios(
 			url
 		);
-		const dataItems = result.data.data.map((item, index) => {
+		const dataItems = result.data.data.map((item,) => {
 			item.attributes.id = item.id;
 			return item.attributes;
 		});
@@ -271,7 +271,7 @@ const Content1 = (props) => {
 								<div className={dataCenterStyle.right}>
 									<h3>{item.ItemName}</h3>
 									<button>{item.type1}</button> &nbsp;&nbsp;<button>{item.type2}</button>
-									<textarea>{item.ApplicationScenario}</textarea>
+									<textarea disabled readOnly={true} value={item.ApplicationScenario}></textarea>
 									<h3>{item.DataSources}</h3>
 								</div>
 							</div>

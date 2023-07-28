@@ -2,14 +2,9 @@ import DataCenterLayout from '../components/datacenterlayout';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
-import {legacyLogicalPropertiesTransformer, StyleProvider} from "@ant-design/cssinjs";
 const DataCenter = (props) => {
   return (
-    <StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>
-        <div>
-            <DataCenterLayout propName={props.user} />
-        </div>
-    </StyleProvider>
+    <DataCenterLayout propName={props.user} />
   )
 }
 export const getServerSideProps = async (ctx) => {

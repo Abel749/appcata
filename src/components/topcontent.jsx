@@ -9,11 +9,13 @@ const TopContent = (props) => {
 
 
 	useEffect(() => {
-		const zzz = props.frompage;
-		console.log(props.frompage)
-		document.getElementById(zzz).style.backgroundColor="#0258AB";
+		console.log(props.frompage);
+		document.getElementById(props.frompage).style.backgroundColor="#0258AB";
 	}, []);// eslint-disable-line
 
+	const linkToBlood = async () => {
+		window.open("http://10.84.188.105:3000/");
+	}
 
 	return(
 	  <>
@@ -27,6 +29,17 @@ const TopContent = (props) => {
 						<Link href="/">
 							<h3 id="home" className={commonStyle.menu} >首页</h3>
 						</Link>
+					</Col>
+					<Col>
+						<div className={commonStyle.nav1}>
+							<h3 id="product" className={commonStyle.uList}>产品中心</h3>
+							<div className={commonStyle.nav2}>
+								<Link href="/extdata">外部数据</Link>
+								<Link href="/errorpage" >数据应用</Link>
+								<Link href="/#" onClick={linkToBlood}>数据治理</Link>
+								<Link href="/errorpage" >数据安全</Link>
+							</div>
+						</div>
 					</Col>
 					<Col>
 						<Link href="/datacenter">
@@ -44,7 +57,6 @@ const TopContent = (props) => {
 						</Link>
 					</Col>
 				</Row>
-
 			</div>
 			<div className={commonStyle.headerRight}>
 				<AvatarLogin propName={props.propName} />

@@ -13,7 +13,7 @@ import ExtDataWhere from "../components/extdatawhere";
 const DataCenterLayout = (props) => (
     <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
         <Layout style={{ backgroundColor: '#ffffff' }}>
-            <TopContent frompage="home" propName={props.propName}/>
+            <TopContent frompage="product" propName={props.propName}/>
             <ExtDataBackground/>
             <ExtDataStat/>
             <ExtDataCategory/>
