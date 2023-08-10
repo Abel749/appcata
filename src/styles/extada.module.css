@@ -224,10 +224,18 @@
     width: 100%;
     height: 400px;
 }
-.externalData03Img{
-    width: 100%;
-    height: 400px;
+.dataLeft{
+    width: 70%;
+    height:300px;
+    float:left;
+    clear: left;
 }
+.dataRight{
+    width: 30%;
+    height:300px;
+    float:left;
+}
+
 .row3{
     width: 100%;
     height: 120px;

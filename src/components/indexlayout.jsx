@@ -17,7 +17,7 @@ const IndexLayout = (props) => {
             <Layout style={{ backgroundColor: '#ffffff' }}>
                 <TopContent frompage="home" propName={props.propName} />
                 <IndexBackground />
-                <DataShare />
+{/*                <DataShare />*/}
                 <Content2 />
                 <HotList />
                 <NewsCard />

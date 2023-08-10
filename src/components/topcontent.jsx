@@ -35,7 +35,7 @@ const TopContent = (props) => {
 							<h3 id="product" className={commonStyle.uList}>产品中心</h3>
 							<div className={commonStyle.nav2}>
 								<Link href="/extdata">外部数据</Link>
-								<Link href="/errorpage" >数据应用</Link>
+								<Link href="/errorpage" >研究资讯</Link>
 								<Link href="/#" onClick={linkToBlood}>数据治理</Link>
 								<Link href="/errorpage" >数据安全</Link>
 							</div>
@@ -43,7 +43,7 @@ const TopContent = (props) => {
 					</Col>
 					<Col>
 						<Link href="/datacenter">
-							<h3 id="datacenter" className={commonStyle.menu} >资产中心</h3>
+							<h3 id="datacenter" className={commonStyle.menu} >挂牌中心</h3>
 						</Link>
 					</Col>
 					<Col>

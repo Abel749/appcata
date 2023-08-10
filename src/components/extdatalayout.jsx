@@ -5,7 +5,7 @@ import ExtDataCategory from '../components/extdatacategory';
 import FootContent from '../components/footcontent';
 import ExtDataBackground from '../components/extdatabackground';
 import { Layout, Space } from 'antd';
-import ExtDataReginData from "../components/extdataregiondata";
+import ExtDataReGinData from "../components/extdataregiondata";
 import ExtDataCoverage from "../components/extdatacoverage";
 import ExtDataRequestMessage from "../components/extdatarequestmessage";
 import ExtDataWhere from "../components/extdatawhere";
@@ -17,7 +17,7 @@ const DataCenterLayout = (props) => (
             <ExtDataBackground/>
             <ExtDataStat/>
             <ExtDataCategory/>
-            <ExtDataReginData/>
+            <ExtDataReGinData/>
             <ExtDataCoverage/>
             <ExtDataWhere/>
             <ExtDataRequestMessage/>
