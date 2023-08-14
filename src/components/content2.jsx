@@ -39,7 +39,7 @@ const Content2 = () => (
                         </div>
                     <div className={indexStyle.outBaseDivShow2}>
                         <div className={indexStyle.outDivShow}>
-                            <Link href="/errorpage">
+                            <Link href="/hfzw">
                                 <div className={indexStyle.link}>
                                     <p className={indexStyle.outH3}>研究资讯</p>
                                     <p className={indexStyle.outContent} >全行外部数据共涉及64家供应商、109个数据项（5个终端），为全行各项经营管理、业务产品提供了622个数据产品支撑。全行24个总行部门和15家分行已经在使用外部数据，覆盖80%的部门和75%的分行</p>
