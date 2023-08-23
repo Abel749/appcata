@@ -35,7 +35,7 @@ const ExtDataCoverage = (props) => {
             ],
             yAxis: [
                 {
-                    type: 'value'
+                    type: 'value',
                 }
             ],
             series: [
@@ -43,6 +43,7 @@ const ExtDataCoverage = (props) => {
                     name: '数据使用个数',
                     type: 'bar',
                     barWidth: '60%',
+                    color:'#036ED6',
                     data: [120, 200, 150, 80, 70, 110, 130,55,66,77,88,99],
                 }
             ]
@@ -65,6 +66,7 @@ const ExtDataCoverage = (props) => {
                         type: 'pie',
                         radius: ['70%', '80%'],
                         avoidLabelOverlap: false,
+                        color:'#036ED6',
                         itemStyle: {
                             borderRadius: 10,
                             borderColor: '#fff',

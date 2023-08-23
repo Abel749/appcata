@@ -7,13 +7,13 @@ import comp from "./comp";
 
 const DataCenterLayout = (props) => (
     <comp>
-        <Space>
-            <Layout>
-            <TopContent frompage="datacenter" propName={props.propName} />
-            <Content1 />
-            <FootContent />
-        </Layout>
-      </Space>
+        <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+            <Layout style={{ backgroundColor: '#ffffff' }}>
+                <TopContent frompage="datacenter" propName={props.propName} />
+                <Content1 />
+                <FootContent />
+            </Layout>
+        </Space>
     </comp>
   );
 

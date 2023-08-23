@@ -202,7 +202,7 @@ const Content1 = (props) => {
 			</div>
 		</div>
 		<h1 className={dataCenterStyle.titleH1}>资产中心</h1>
-		<div  className={dataCenterStyle.form} >
+		<div  className={dataCenterStyle.baseCard} >
 			<Row className={dataCenterStyle.row}  >
 				<Col className={dataCenterStyle.label}> 一级数据类型 </Col>
 				<Col className={dataCenterStyle.list2}>
@@ -254,9 +254,9 @@ const Content1 = (props) => {
 				</Col>
 			</Row>
 		</div>
-		<div className={dataCenterStyle.form} >
+		<div className={dataCenterStyle.baseCard} >
 			<List pagination={{ position, align,defaultPageSize:12 } }
-				grid={{ gutter: 10, column: 3, }}
+				grid={{ column: 3 }}
 				dataSource={dataItem}
 				renderItem={(item) => (
 					<List.Item >

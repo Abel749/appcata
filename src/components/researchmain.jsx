@@ -99,19 +99,13 @@ const ResearchMain= () => {
                 </Row>
                 <Row>
                     <div className={researchStyle.baseBox1} onClick={changeType1}>
-                        <div id="reportClass1">
-                            <h3 id="reportClassH1">数字银行研究</h3>
-                        </div>
+                        <h3 id="reportClassH1">数字银行研究</h3>
                     </div>
                     <div className={researchStyle.baseBox2} onClick={changeType2}>
-                        <div id="reportClass2">
-                            <h3 id="reportClassH2">研究资讯</h3>
-                        </div>
+                        <h3 id="reportClassH2">研究资讯</h3>
                     </div>
                     <div className={researchStyle.baseBox3} onClick={changeType3}>
-                        <div id="reportClass3">
-                            <h3 id="reportClassH3">工作报告</h3>
-                        </div>
+                        <h3 id="reportClassH3">工作报告</h3>
                     </div>
                 </Row>
                 <Row>

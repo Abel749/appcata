@@ -184,18 +184,18 @@ const ExtDataReGinData = () => {
                     {
                         lt:60,
                         label: "数据资产差",
-                        color: "darkgray"
+                        color: "#CDE2F7",
                     },
                     {
                         gte: 60,
                         lt:80,
                         label: "数据资产中等",
-                        color: "#66dd00"
+                        color: "#5FBC29",
                     },
                     {
                         gte: 80,
                         label:'数据资产良好',
-                        color: "#ff3333"
+                        color: "#01B3CA",
 
                     }
                 ]
