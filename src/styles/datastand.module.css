@@ -403,6 +403,7 @@
 .item{
     border: 1px solid  #D9D9D9;
     text-indent: 10px;
+    margin: 6px 12px 6px 12px;
 }
 .item h3{
     margin-top: 10px;
@@ -434,7 +435,24 @@
     margin: 6px 0 6px 10px;
 }
 
+.itemDept{
+    width: 96%;
+    text-align: left;
+    font-size: 14px;
+    background-color:white;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+}
+
 .itemLink{
     color: blue;
-    margin-left: 82%;
+    text-align: right;
+    margin-left: 50%;
+    width: 48%;
+    margin-right: 2%;
 }

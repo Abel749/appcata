@@ -20,7 +20,7 @@ const ResearchContent = (props) => {
 
     const getReports = async (type) => {
 
-        let baseUrl = config.baseUrl.Url + 'api/reports?filters[type][$eq]=' + type + '&pagination[page]=1&pagination[pageSize]=3&sort[id]=desc';
+        let baseUrl = config.baseUrl.Url + 'api/reports?filters[type][$eq]=' + type + '&sort[id]=desc';
         const result = await axios(
             baseUrl
         ).then((res) => {

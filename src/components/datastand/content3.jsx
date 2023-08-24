@@ -25,8 +25,8 @@ const Content3 = (props) => {
 	const [dataItem, setDataItem] = useState(data);
 
 	//一级数据类型初始化
-	const getType1 = async(typeCode) => {
-		let baseUrl = config.baseUrl.Url + 'api/themes?[filters][subjectCode1][$eq]='+typeCode+'&pagination[page]=1&pagination[pageSize]=1000';
+	const getType1 = async() => {
+		let baseUrl = config.baseUrl.Url + 'api/themes?pagination[page]=1&pagination[pageSize]=1000';
 		const result = await axios(
 			baseUrl
 		);
@@ -62,6 +62,7 @@ const Content3 = (props) => {
 				dataType2.push(dataTypeTemp);
 			}
 		}
+		debugger;
 		setFirstLevelMap(dataType1);
 		setSecondLevelMap(dataType2);
 	};
@@ -82,7 +83,7 @@ const Content3 = (props) => {
 					code: item.code,
 					code1: item.subjectCode1,
 					code2: item.subjectCode2,
-					name: item.subjectName1,
+					name1: item.subjectName1,
 				}
 				dataTypeName2.push(dataTypeTemp);
 			}
@@ -132,12 +133,11 @@ const Content3 = (props) => {
 	};
 
 	useEffect(() => {
-
+		getType1().then();
 		let url = window.location.href.toString();
 		if(url.indexOf('firstType') > 0) {
 			let arr = url.split('=');
 			let typeCode = arr[1];
-			getType1(typeCode).then();
 			setFirstLevel(typeCode);
 			fetchData(1, null).then();
 		}
@@ -193,22 +193,31 @@ const Content3 = (props) => {
 					<Search placeholder="按品牌名称或关键词搜索" onSearch={onSearch} enterButton  />
 				</div>
 			</div>
+			<h1 className={dataCenterStyle.titleH1}>数据标准</h1>
 			<div  className={dataCenterStyle.baseCard} >
 				<Row className={dataCenterStyle.row}  >
-					<h3 className={dataStandStyle.topic} >{firstLevelMap[0].name}主题</h3>
-				</Row>
-				<Row className={dataCenterStyle.row}   >
-					<Col className={dataCenterStyle.label}>数据类型</Col>
+					<Col className={dataCenterStyle.label}>主题域</Col>
 					<Col className={dataCenterStyle.list1}>
-						<Radio.Group className={dataCenterStyle.radioButton} value={secondLevel} onChange={handlesecondLevel}>
-							{secondLevelMap.map((item)=>
-								<Radio.Button  key = {item.code2} value={item.code2}>{item.name}</Radio.Button>
+						<Radio.Group  className={dataCenterStyle.radioButton} value={firstLevel}  onChange={ handlefirstLevel }>
+							{firstLevelMap.map((item)=>
+								<Radio.Button key = {item.code1} value={item.code1}>{item.name}</Radio.Button>
 							)}
 						</Radio.Group>
 					</Col>
 				</Row>
 
 				<Row className={dataCenterStyle.row}   >
+					<Col className={dataCenterStyle.label}>标准大类</Col>
+					<Col className={dataCenterStyle.list2}>
+						<Radio.Group className={dataCenterStyle.radioButton} value={secondLevel} onChange={handlesecondLevel}>
+							{secondLevelMap.map((item)=>
+								<Radio.Button  key = {item.code2} value={item.code2}>{item.name1}</Radio.Button>
+							)}
+						</Radio.Group>
+					</Col>
+				</Row>
+
+				{/*<Row className={dataCenterStyle.row}   >
 					<Col className={dataCenterStyle.label}> 排序规则 </Col>
 					<Col className={dataCenterStyle.list1}>
 						<Radio.Group className={dataCenterStyle.radioButton} value={sortOrder} onChange={handleSortChange}>
@@ -217,29 +226,10 @@ const Content3 = (props) => {
 							<Radio.Button value="new">最新</Radio.Button>
 						</Radio.Group>
 					</Col>
-				</Row>
-				<Row className={dataCenterStyle.row}   >
-					<Col className={dataCenterStyle.label}> 关键词  </Col>
-					<Col className={dataCenterStyle.list1}>
-						<Radio.Group className={dataCenterStyle.radioButton} value={keywords} onChange={handleKeyChange}>
-							<Radio.Button value="identify">身份识别</Radio.Button>
-							<Radio.Button value="finance">金融信贷</Radio.Button>
-							<Radio.Button value="riskCon">风控核验</Radio.Button>
-							<Radio.Button value="customer">客户营销</Radio.Button>
-							<Radio.Button value="custMarket">精准获客</Radio.Button>
-							<Radio.Button value="inclufin">普惠金融</Radio.Button>
-							<Radio.Button value="credit">信用评估</Radio.Button>
-							<Radio.Button value="risk">风险监控</Radio.Button>
-							<Radio.Button value="hedgepro">避险产品</Radio.Button>
-							<Radio.Button value="finanpro">金融产品</Radio.Button>
-							<Radio.Button value="insure">保险</Radio.Button>
-							<Radio.Button value="riskWarn">风险预警</Radio.Button>
-						</Radio.Group>
-					</Col>
-				</Row>
+				</Row>*/}
 			</div>
 			<div className={dataCenterStyle.baseCard} >
-				<List pagination={{ position, align,defaultPageSize:6 ,pageSize:6} }
+				<List pagination={{ position, align,defaultPageSize:12 ,pageSize:12} }
 					  grid={{ column: 3, }}
 					  dataSource={dataItem}
 					  renderItem={(item) => (
@@ -249,8 +239,8 @@ const Content3 = (props) => {
 								  <p>{item.englishName}</p>
 								  <button style={{backgroundColor:"#036ED6",color:"white"}}>{item.type1}</button> &nbsp;&nbsp;<button>{item.type2}</button>
 								  <textarea disabled readOnly={true} value={item.def}></textarea>
-								  <p>{item.dept}</p>
-								  <Link href = {item.url} className={dataStandStyle.itemLink}>查看详情 &gt;</Link>
+								  <p  className={dataStandStyle.itemDept}>{item.dept}</p>
+								  <Link href = {item.url}><p className={dataStandStyle.itemLink}>查看详情 &gt;</p></Link>
 								  <p><span>&nbsp;</span></p>
 							  </div>
 						  </List.Item>

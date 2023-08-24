@@ -18,7 +18,7 @@ const DataStandStat = () => (
                 <div className={dataStandStyle.extData02}></div>
                 <div className={dataStandStyle.extDataLeft}>
                     <h1>8</h1>
-                    <h3>主体域</h3>
+                    <h3>主题域</h3>
                 </div>
                 <div className={dataStandStyle.extDataRight}>项</div>
             </Col>
@@ -36,7 +36,7 @@ const DataStandStat = () => (
                 <div className={dataStandStyle.extData04}></div>
                 <div className={dataStandStyle.extDataLeft}>
                     <h1>0</h1>
-                    <h3>本日上新</h3>
+                    <h3>本月上新</h3>
                 </div>
                 <div className={dataStandStyle.extDataRight}>个</div>
             </Col>
