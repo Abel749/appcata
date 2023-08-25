@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import { parseCookies, setCookie } from 'nookies'
 import axios from 'axios';
 import loginStyle from '../styles/login.module.css';
 

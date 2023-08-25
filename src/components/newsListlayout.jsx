@@ -8,8 +8,8 @@ import comp from "./comp";
 const NewsListLayout = (props) => {
     return (
         <comp>
-            <Space>
-                <Layout>
+            <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+                <Layout style={{ backgroundColor: '#ffffff' }}>
                     <TopContent frompage="newsList" propName={props.propName} />
                     <NewsContent />
                     <FootContent />

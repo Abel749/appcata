@@ -2,10 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { useState,useEffect } from 'react';
 import config from "../../next.config";
-import dataCenterStyle from '../styles/dataCenter.module.css';
 import researchStyle from '../styles/research.module.css';
 import newsStyle from "../styles/news.module.css";
-import Link from "next/link";
 
 const data =[];
 const ResearcherInfo = (props) =>

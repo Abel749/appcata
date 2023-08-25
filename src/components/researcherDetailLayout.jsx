@@ -5,17 +5,19 @@ import FootContent from '../components/footcontent';
 import { Layout, Space } from 'antd';
 import comp from "./comp";
 
-const ResearcherDetailLayout = (props) => (
-    <comp>
-        <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-            <Layout>
-                <TopContent frompage="product" propName={props.propName}/>
-                <ResearcherInfo />
-                <FootContent />
-            </Layout>
-        </Space>
-    </comp>
-);
+const ResearcherDetailLayout = (props) => {
+    return (
+        <comp>
+            <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+                <Layout style={{ backgroundColor: '#ffffff' }}>
+                    <TopContent frompage="product" propName={props.propName}/>
+                    <ResearcherInfo />
+                    <FootContent />
+                </Layout>
+            </Space>
+        </comp>
+    )
+};
 
 
 export default ResearcherDetailLayout;
