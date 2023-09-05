@@ -1,4 +1,4 @@
-import DataCenterLayout from '../components/datacenterlayout';
+import DataCenterLayout from '../components/datacenter/datacenterlayout';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";

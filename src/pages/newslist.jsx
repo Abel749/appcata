@@ -1,4 +1,4 @@
-import NewsListLayout from '../components/newsListlayout';
+import NewsListLayout from '../components/news/newsListlayout';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";

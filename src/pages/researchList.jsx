@@ -1,4 +1,4 @@
-import ResearchListLayout from '../components/researchList';
+import ResearchListLayout from '../components/hfzw/researchList';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";

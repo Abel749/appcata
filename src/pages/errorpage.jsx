@@ -1,4 +1,4 @@
-import ErrorPageLayout from "../components/errorpagelayout";
+import ErrorPageLayout from "../components/base/errorpagelayout";
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";

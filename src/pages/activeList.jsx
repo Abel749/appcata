@@ -1,4 +1,4 @@
-import ActiveListLayout from '../components/activeList';
+import ActiveListLayout from '../components/hfzw/activeList';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";

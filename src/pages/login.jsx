@@ -1,6 +1,6 @@
 import axios from 'axios';
 import nookies from 'nookies';
-import LoginComponent from '../components/LoginComponent';
+import LoginComponent from '../components/base/logincomponent';
 
 import config from "../../next.config";
 

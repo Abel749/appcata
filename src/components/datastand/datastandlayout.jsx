@@ -1,6 +1,6 @@
 import React from 'react';
-import TopContent from '../topcontent';
-import FootContent from '../footcontent';
+import TopContent from '../base/topcontent';
+import FootContent from '../base/footcontent';
 import { Layout, Space } from 'antd';
 import DataStandBackground from "./datastandbackground";
 import DataStandStat from "./datastandstat";

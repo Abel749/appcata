@@ -1,9 +1,9 @@
 import React from 'react';
-import TopContent from '../../components/topcontent';
-import FootContent from '../../components/footcontent';
+import TopContent from '../base/topcontent';
+import FootContent from '../base/footcontent';
 import DetailStandContent from "./detailstandcontent";
 import { Layout, Space } from 'antd';
-import comp from ".././comp";
+import comp from "../base/comp";
 
 
 const DataStandDetailLayout = (props) => (

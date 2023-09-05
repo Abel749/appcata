@@ -1,4 +1,4 @@
-import RegisterComponent from "../components/registerComponent";
+import RegisterComponent from "../components/base/registercomponent";
 const Register = () => (
   <RegisterComponent />
 )

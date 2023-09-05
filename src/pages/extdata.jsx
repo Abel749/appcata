@@ -1,4 +1,4 @@
-import ExtDataLayout from '../components/extdatalayout';
+import ExtDataLayout from '../components/extada/extdatalayout';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
