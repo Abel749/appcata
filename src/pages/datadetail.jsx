@@ -1,4 +1,4 @@
-import DataDetailLayout from '../components/datadetaillayout';
+import DataDetailLayout from '../components/datacenter/datadetaillayout';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";

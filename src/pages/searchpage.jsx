@@ -1,4 +1,4 @@
-import SearchPageLayout from '../components/searchpagelayout';
+import SearchPageLayout from '../components/search/searchpagelayout';
 import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
