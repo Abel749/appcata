@@ -37,7 +37,7 @@ const TopContent = (props) => {
 								<Link href="/extdata">外部数据</Link>
 								<Link href="/hfzw" >恒丰智网</Link>
 								<Link href="/#" onClick={linkToBlood}>数据治理</Link>
-								<Link href="/errorpage" >数据安全</Link>
+								<Link href="/safe" >数据安全</Link>
 								<Link href="/datastand" >数据标准</Link>
 							</div>
 						</div>

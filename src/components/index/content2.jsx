@@ -36,7 +36,7 @@ const Content2 = (props) => {
                 id:'container4',
                 name:'数据安全',
                 bgUrl:'/index/u133_state0.png',
-                linkUrl:'/errorpage',
+                linkUrl:'/safe',
             },
             {
                 id:'container5',
