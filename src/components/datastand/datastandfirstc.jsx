@@ -25,7 +25,6 @@ const DataStandFirstC = () => {
 		// 去除重复一级数据类型
 		let dataTypeCode1 = [];
 		for(let item of dataTypes) {
-			debugger;
 			let typeCode1 = item.subjectCode1;
 			if(dataTypeCode1.indexOf(typeCode1) == -1) {
 				dataTypeCode1.push(typeCode1);

@@ -62,7 +62,6 @@ const Content3 = (props) => {
 				dataType2.push(dataTypeTemp);
 			}
 		}
-		debugger;
 		setFirstLevelMap(dataType1);
 		setSecondLevelMap(dataType2);
 	};

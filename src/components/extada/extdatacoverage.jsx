@@ -27,6 +27,10 @@ const ExtDataCoverage = (props) => {
             xAxis: [
                 {
                     type: 'category',
+                    axisLabel:{
+                        interval:0,
+                        rotate:30,
+                    },
                     data: ['个人信贷', '授权管理', '资金运营', '内控合规', '普惠金融', '交易银行', '信用审计','审计','风险管理','公司金融','理债业务','同业金融'],
                     axisTick: {
                         alignWithLabel: true

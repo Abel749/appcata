@@ -8,7 +8,7 @@ const DataStandStat = () => (
             <Col aria-colspan={8} className={dataStandStyle.topItemRow}>
                 <div className={dataStandStyle.extData01}></div>
                 <div className={dataStandStyle.extDataLeft}>
-                    <h1>1493</h1>
+                    <h1>1245</h1>
                     <h3>数据总量</h3>
                 </div>
                 <div className={dataStandStyle.extDataRight}>个</div>

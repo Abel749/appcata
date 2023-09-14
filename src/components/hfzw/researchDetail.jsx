@@ -17,7 +17,6 @@ const ResearchDetail= (props) => {
     const getNewsDetail =  () => {
         let detailUrl = config.baseUrl.Url
         let url = window.location.href.toString();
-        debugger;
         if(url.indexOf('researchDetailId') > 0) {
             let arr = url.split('=');
             detailUrl = detailUrl+ 'api/reports?filters[id][$eq]='+ arr[1];
@@ -27,7 +26,6 @@ const ResearchDetail= (props) => {
             detailUrl
         ).then((res)=>{
             if( null != res.data){
-                debugger;
                 const data = res.data.data.map((item) => {
                     item.attributes.id = item.id;
                     return item.attributes;

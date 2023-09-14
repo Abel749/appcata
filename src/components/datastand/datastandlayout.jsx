@@ -16,7 +16,7 @@ const DataStandLayout = (props) => (
             <DataStandStat/>
             <DataStandCategory/>
             <DataStandCoverage/>
-            <DataUpload/>
+            {/*<DataUpload/>*/}
             <FootContent />
         </Layout>
     </Space>

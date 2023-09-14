@@ -14,8 +14,14 @@ const DetailStandContent = (props) =>
     {
         const [dataItem, setDataItem] = useState(data);
         const [dataType, setDataType] = useState(type);
+
         useEffect(() => {
-            getItemDetail();
+            getItemDetail().then((res)=>{
+                document.getElementById("downLoadCodeTable").style.display="none";
+                if(null != res && "代码类"  == res.category){
+                    document.getElementById("downLoadCodeTable").style.display="block";
+                }
+            });
 
         }, []);
 
@@ -32,6 +38,7 @@ const DetailStandContent = (props) =>
             const itemType = result.data.data.attributes.theme.data.attributes;
             setDataItem(dataDetail);
             setDataType(itemType);
+            return dataDetail;
         };
 
         const onSearch = async (value) => {
@@ -39,6 +46,10 @@ const DetailStandContent = (props) =>
             let baseUrl = config.baseUrl.Url2 + 'searchpage?searchCode='+ value;
             window.location.href= baseUrl;
         };
+        const  downLoadCodeTable = async () => {
+            let downUrl = config.baseUrl.Url + 'uploads/2_8a55a9ce0d.xlsx';
+            window.open(downUrl);
+        }
 
 
 return (
@@ -96,7 +107,10 @@ return (
                         <h2>技术属性</h2>
                     </div>
                     <div className={dataStandStyle.descItemDiv2}>
-                        <p><span>标准类别:</span>{dataItem.category}</p>
+                        <p>
+                            <span>标准类别:</span>{dataItem.category}
+                            <button id="downLoadCodeTable" onClick={downLoadCodeTable} style={{color:"white",backgroundColor:"#036ED6"}} >下载码值表</button>
+                        </p>
                         <p><span>数据格式:</span>{dataItem.format}</p>
                         <p><span>代码编码规则:</span>{dataItem.codeRule}</p>
                         <p><span>取值范围:</span>{dataItem.radous}</p>
