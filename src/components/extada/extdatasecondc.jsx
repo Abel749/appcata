@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState,useEffect } from 'react';
 import Link from "next/link";
 import config from "../../../next.config";
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 
 const data =[];
 

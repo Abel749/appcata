@@ -4,8 +4,8 @@ import {Input,List,Row,Col} from 'antd';
 const { Search } = Input;
 import Link from "next/link";
 import config from "../../../next.config";
-import searchDataStyle from "../../styles/searchdata.module.css";
-import dataCenterStyle from "../../styles/dataCenter.module.css";
+import searchDataStyle from "../../styles/Searchdata.module.css";
+import dataCenterStyle from "../../styles/DataCenter.module.css";
 
 const data = [];
 

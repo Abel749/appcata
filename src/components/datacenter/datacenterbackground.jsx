@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input } from 'antd';
-import dataCenterStyle from '../../styles/dataCenter.module.css';
+import dataCenterStyle from '../../styles/DataCenter.module.css';
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
 

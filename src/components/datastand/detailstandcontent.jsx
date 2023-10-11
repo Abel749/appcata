@@ -2,9 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { useState,useEffect } from 'react';
 import config from "../../../next.config";
-import dataCenterStyle from '../../styles/dataCenter.module.css';
-import searchDataStyle from "../../styles/searchdata.module.css";
-import dataStandStyle from "../../styles/datastand.module.css";
+import dataCenterStyle from '../../styles/DataCenter.module.css';
+import searchDataStyle from "../../styles/Searchdata.module.css";
+import dataStandStyle from "../../styles/Datastand.module.css";
 import {Input, List} from "antd";
 const { Search } = Input;
 

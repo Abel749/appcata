@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Row} from "antd";
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 
 const ExtDataWhere = () => (
     <div className={exTaDaStyle.baseCard}>

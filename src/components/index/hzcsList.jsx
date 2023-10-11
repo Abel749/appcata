@@ -1,6 +1,6 @@
 import React from 'react';
 import {Carousel} from "antd";
-import indexStyle from '../../styles/index.module.css';
+import indexStyle from '../../styles/Index.module.css';
 
 const HzCsList = () => (
     <div className={indexStyle.baseCard}>

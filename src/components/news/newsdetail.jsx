@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import config from "../../../next.config";
 import axios from "axios";
-import newsStyle from "../../styles/news.module.css";
+import newsStyle from "../../styles/News.module.css";
 import ReactMarkdown from "react-markdown";
 
 const data = [];
@@ -15,7 +15,7 @@ const NewsDetail= (props) => {
     }, []);
 
     const getNewsDetail = async () => {
-        let detailUrl = config.baseUrl.Url
+        let detailUrl = config.baseUrl.Url;
         let url = window.location.href.toString();
         if(url.indexOf('newsContentId') > 0) {
             let arr = url.split('=');

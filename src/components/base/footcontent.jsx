@@ -1,10 +1,10 @@
 import React from 'react';
-import commonStyle from "../../styles/common.module.css";
+import commonStyle from "../../styles/Common.module.css";
 
 const FootContent = () => {
 
   return (
-  <> 
+  <>
     <div className={commonStyle.footerStyle}>
         <div className={commonStyle.footerLeft}>
          <img src="/index/footer.png" />

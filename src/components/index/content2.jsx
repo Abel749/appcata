@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import { List} from 'antd';
-import indexStyle from '../../styles/index.module.css';
+import indexStyle from '../../styles/Index.module.css';
+import config from "../../../next.config";
 
 const linkToBlood =  (id) => {
     if("container3"== id){
-        window.open("http://10.84.188.105:3000/");
+        window.open(config.baseUrl.Url3);
     }
 }
 const data = [];

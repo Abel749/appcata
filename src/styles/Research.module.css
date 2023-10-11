@@ -1,15 +1,15 @@
 
 @media screen and (max-device-width:1800px) {
     .banner {
-      height: 480px;
-      border-top-width: 1px;
-      border-top-style: solid;
-      border-top-color: aliceblue;
-      background-image: url('/research/u628.png');
-      background-size: 88% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #036ED6;
+        height: 480px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: aliceblue;
+        background-image: url('/research/u628.png');
+        background-size: 88% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #036ED6;
     }
     .baseCard {
         width: 84%;
@@ -46,15 +46,15 @@
 
 @media screen and (min-device-width: 1800px ) {
     .banner {
-      height: 520px;
-      border-top-width: 1px;
-      border-top-style: solid;
-      border-top-color: aliceblue;
-      background-image: url('/research/u628.png');
-      background-size: 64% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #036ED6;
+        height: 520px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: aliceblue;
+        background-image: url('/research/u628.png');
+        background-size: 64% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #036ED6;
     }
     .baseCard {
         width: 64%;

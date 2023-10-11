@@ -4,7 +4,7 @@ import axios from "axios";
 import config from "../../next.config";
 
 const ErrorPage = (props) => {
-  
+
   return (
       <ErrorPageLayout propName={props.user} />
   )

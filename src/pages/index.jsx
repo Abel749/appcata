@@ -3,7 +3,7 @@ import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
 const Home = (props) => {
-  
+
   return (
       <IndexLayout propName={props.user} />
   )

@@ -1,5 +1,5 @@
 import React from 'react';
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 
 const ExtDataBackground = () => (
 

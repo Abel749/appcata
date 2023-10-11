@@ -1,7 +1,7 @@
 import { Tabs,Row } from 'antd';
 import React from 'react';
 import DataStandFirstC from "./datastandfirstc";
-import dataStandStyle from "../../styles/datastand.module.css";
+import dataStandStyle from "../../styles/Datastand.module.css";
 
 const items = [
   {

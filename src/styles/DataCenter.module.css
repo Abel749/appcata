@@ -114,7 +114,7 @@
     min-width: 130px;
 }
 
-.select option { 
+.select option {
     overflow-x: auto;
 }
 

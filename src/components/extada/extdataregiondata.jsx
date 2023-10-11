@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import china from "../../pages/api/china.js"
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 import * as echarts from 'echarts';
 
 let myChart3 =null;

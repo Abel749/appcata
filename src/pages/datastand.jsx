@@ -3,7 +3,7 @@ import axios from "axios";
 import config from "../../next.config";
 import DataStandLayout from "../components/datastand/datastandlayout";
 const DataStand = (props) => {
-  
+
   return (
           <DataStandLayout propName={props.user} />
   )

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Carousel, Col, Row} from "antd";
-import researchStyle from "../../styles/research.module.css";
+import researchStyle from "../../styles/Research.module.css";
 import config from "../../../next.config";
 import axios from "axios";
 import Link from "next/link";

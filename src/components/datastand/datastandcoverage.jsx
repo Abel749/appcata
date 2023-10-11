@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {Col, Row} from 'antd';
 import * as echarts from 'echarts';
-import dataStandStyle from "../../styles/datastand.module.css";
+import dataStandStyle from "../../styles/Datastand.module.css";
 
 let myChart1 =null;
 

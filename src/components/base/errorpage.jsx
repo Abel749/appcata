@@ -1,5 +1,5 @@
 import React from 'react';
-import commonStyle from '../../styles/common.module.css';
+import commonStyle from '../../styles/Common.module.css';
 
 const ErrorPage= () => {
     return (

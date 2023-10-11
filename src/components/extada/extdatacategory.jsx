@@ -2,7 +2,7 @@ import { Tabs,Row } from 'antd';
 import React from 'react';
 import ExtDataFirstC from './extdatafirstc';
 import ExtDataSecondC from './extdatasecondc';
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 
 
 const items = [

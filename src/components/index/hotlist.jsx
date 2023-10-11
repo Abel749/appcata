@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Row} from "antd";
-import indexStyle from '../../styles/index.module.css';
+import indexStyle from '../../styles/Index.module.css';
 
 const HotList = () => (
     <div className={indexStyle.baseCard}>

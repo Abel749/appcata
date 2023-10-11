@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import newsStyle from '../../styles/news.module.css';
+import newsStyle from '../../styles/News.module.css';
 import {List, Row } from "antd";
 import Link from "next/link";
 import config from "../../../next.config";
 import axios from "axios";
-import indexStyle from "../../styles/index.module.css";
+import indexStyle from "../../styles/Index.module.css";
 
 const data = [];
 const newsData = [{ newTitle :'', synopsis:'', picUrl:''}];

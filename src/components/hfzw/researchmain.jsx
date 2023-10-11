@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import researchStyle from '../../styles/research.module.css';
+import researchStyle from '../../styles/Research.module.css';
 import {Col, List, Row} from "antd";
 import config from "../../../next.config";
 import axios from "axios";

@@ -253,7 +253,8 @@
   top: 80%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
+  margin-left: -50%;
+  margin-top: -32%;
   padding: 10px;
   border-radius: 5px;
 }
@@ -266,9 +267,10 @@
   font-size: 24px;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform:none;
   width: 96%;
-  margin-left: -2%;
+  margin-left: -50%;
+  margin-top: -32%;
   height: 40%;
   background-color:#358BDE;
   display: none;

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {Col, Row} from 'antd';
 import * as echarts from 'echarts';
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 
 let myChart1 =null;
 let myChart2 =null;

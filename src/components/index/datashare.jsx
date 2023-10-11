@@ -1,6 +1,6 @@
 import {Row } from 'antd';
 import React, {useEffect} from 'react';
-import indexStyle from '../../styles/index.module.css';
+import indexStyle from '../../styles/Index.module.css';
 
 
 const DataShare = () => {

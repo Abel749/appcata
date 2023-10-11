@@ -1,6 +1,6 @@
 import {Row,Col } from 'antd';
 import React from 'react';
-import dataStandStyle from "../../styles/datastand.module.css";
+import dataStandStyle from "../../styles/Datastand.module.css";
 
 const DataStandStat = () => (
     <div className={dataStandStyle.topItem}>

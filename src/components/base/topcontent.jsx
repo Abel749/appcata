@@ -2,8 +2,9 @@ import Link from 'next/link';
 import {Row,Col} from 'antd';
 import AvatarLogin from './avatarlogin';
 import Image from "next/image";
-import commonStyle from '../../styles/common.module.css';
+import commonStyle from '../../styles/Common.module.css';
 import {useEffect} from "react";
+import config from "../../../next.config";
 
 const TopContent = (props) => {
 
@@ -14,7 +15,7 @@ const TopContent = (props) => {
 	}, []);// eslint-disable-line
 
 	const linkToBlood = async () => {
-		window.open("http://10.84.188.105:3000/");
+		window.open(config.baseUrl.Url3);
 	}
 
 	return(

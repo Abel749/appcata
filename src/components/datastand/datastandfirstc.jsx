@@ -1,7 +1,7 @@
 import { Col, List} from 'antd';
 import axios from "axios";
 import React, { useState,useEffect } from 'react';
-import dataStandStyle from "../../styles/datastand.module.css";
+import dataStandStyle from "../../styles/Datastand.module.css";
 import Link from "next/link";
 import config from "../../../next.config";
 const data = [];

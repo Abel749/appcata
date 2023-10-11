@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import debounce from 'lodash.debounce';
-import s from '../../styles/comp.module.css';
+import s from '../../styles/Comp.module.css';
 
 class Comp extends Component{
     constructor(p) {
@@ -10,8 +10,24 @@ class Comp extends Component{
         }
     }
     componentDidMount() {
-        window.addEventListener('resize', this.setScale)
+
+        this.scrolltops()
+        console.log('window.innerHeight', window.innerHeight);
+        alert(window.innerHeight)
+
     }
+    scrolltops=()=> {
+        window.addEventListener('scroll', () => {
+            if(document.documentElement.scrollTop>900){
+                this.setState({sop:true})
+            }else {
+                this.setState({sop:false})
+            }
+        })
+    }
+
+
+
     getScale=() => {
         const {width=1920, height=1080} = this.props
         let ww=window.innerWidth/width
@@ -29,8 +45,8 @@ class Comp extends Component{
             <div
                 className={s.scaleBox}
                 style={{
-                    transform: `scale(${scale}) translate(-50%, -50%)`,
-                    WebkitTransform: `scale(${scale}) translate(-50%, -50%)`,
+                    transform: `scale(${scale}) translate(-18%, -16%)`,
+                    WebkitTransform: `scale(${scale}) translate(-18%, -16%)`,
                     width,
                     height
                 }}

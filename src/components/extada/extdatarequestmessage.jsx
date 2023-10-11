@@ -2,7 +2,7 @@ import {Col, List, Row} from "antd";
 import config from "../../../next.config";
 import axios from "axios";
 import React, {useEffect, useState} from "react";
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 
 const ExtDataRequestMessage = () => {
 

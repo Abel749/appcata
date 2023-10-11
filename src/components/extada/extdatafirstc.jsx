@@ -1,7 +1,7 @@
 import { Col, List} from 'antd';
 import axios from "axios";
 import React, { useState,useEffect } from 'react';
-import exTaDaStyle from "../../styles/extada.module.css";
+import exTaDaStyle from "../../styles/Extada.module.css";
 import Link from "next/link";
 import config from "../../../next.config";
 const data = [];

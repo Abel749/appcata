@@ -3,7 +3,7 @@ import nookies from "nookies";
 import axios from "axios";
 import config from "../../next.config";
 const ResearchList = (props) => {
-  
+
     return (
         <ResearchListLayout propName={props.user} />
     )

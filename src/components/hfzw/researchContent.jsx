@@ -3,8 +3,8 @@ import axios from "axios";
 import {List,  Row} from 'antd';
 import Link from "next/link";
 import config from "../../../next.config";
-import newsStyle from "../../styles/news.module.css";
-import researchStyle from "../../styles/research.module.css";
+import newsStyle from "../../styles/News.module.css";
+import researchStyle from "../../styles/Research.module.css";
 
 const data = [];
 
